@@ -27,7 +27,7 @@ $_.ready(function(e) {
 
     tab.addClass('jquery-compatible').setColor('#000').setHeight('100px');
 
-    $(tab).removeClass('jquery-compatible').append(new Tab('#def'));
+    $(tab).removeClass('jquery-compatible').setColor('#fff').append(new Tab('#def'));
 
     console.log(tab instanceof Tab); // true
     console.log(tab instanceof Instance); // true
