@@ -1,356 +1,435 @@
-Architecture Decision Records (ADRs)
-This document consolidates all Architecture Decision Records (ADRs) for Instance.js, a lightweight base class for building reusable DOM components in vanilla JavaScript. 
+# Architecture Decision Records (ADRs)
+
+This document consolidates all Architecture Decision Records (ADRs) for **Instance.js**, a lightweight base class for building reusable DOM components in vanilla JavaScript.
+
 ADRs are chronological records of key architectural choices, following the standard template for context, decisions, alternatives, consequences, and outcomes.
+
 Each ADR is self-contained but references prior ones where relevant. For the full codebase and changelog, see the Instance.js repository.
 
-ADR 001: Adopting Class-Based Modular Inheritance for Reusable DOM Components via `new`
-Status: Accepted
-Date: October 1, 2025
-Author: Ashraile
-Context: Framework design for Instance.js (base class for DOM component instances)
-Context
-The foundational prototype for Instance.js stemmed from a desire to create reusable, self-contained DOM components that could be instantiated declaratively with the new keyword—e.g., new Scrollbar(container)—mirroring constructor patterns in languages like Java or C#, but in vanilla JavaScript. Early sketches used factory functions or plain objects, but these lacked true modularity: Subcomponents (e.g., a Tab extending Panel) couldn't inherit behaviors cleanly, leading to code duplication and brittle composition.
-ES6+ classes provide a syntactic sugar over prototypes that enables modular, hierarchical inheritance (class Scrollbar extends Instance), with built-in support for constructors, super(), and lifecycle hooks. This crystallized the "prototype idea" into a scalable architecture for DOM components, where each class represents a UI primitive with encapsulated state and methods.
-Decision
+---
+
+## ADR 001: Adopting Class-Based Modular Inheritance for Reusable DOM Components via `new`
+
+**Status:** Accepted  
+**Date:** October 1, 2025  
+**Author:** Ashraile  
+**Context:** Framework design for Instance.js (base class for DOM component instances)
+
+### Context
+
+The foundational prototype for Instance.js stemmed from a desire to create reusable, self-contained DOM components that could be instantiated declaratively with the `new` keyword—e.g., `new Scrollbar(container)`—mirroring constructor patterns in languages like Java or C#, but in vanilla JavaScript. Early sketches used factory functions or plain objects, but these lacked true modularity: Subcomponents (e.g., a `Tab` extending `Panel`) couldn't inherit behaviors cleanly, leading to code duplication and brittle composition.
+
+ES6+ classes provide a syntactic sugar over prototypes that enables modular, hierarchical inheritance (`class Scrollbar extends Instance`), with built-in support for constructors, `super()`, and lifecycle hooks. This crystallized the "prototype idea" into a scalable architecture for DOM components, where each class represents a UI primitive with encapsulated state and methods.
+
+### Decision
+
 Establish class-based inheritance as the core paradigm for Instance.js components:
 
-Define Instance as the base class, providing shared utilities (e.g., mounting, querying).
-Encourage subclassing: class Scrollbar extends Instance { constructor(container) { super(container); /* custom init */ } }.
-Leverage new for instantiation: Returns the augmented component instance directly (refined in later ADRs).
-Support zero-boilerplate: No manual setup beyond extends and overrides.
+- Define `Instance` as the base class, providing shared utilities (e.g., mounting, querying).
+- Encourage subclassing: `class Scrollbar extends Instance { constructor(container) { super(container); /* custom init */ } }`.
+- Leverage `new` for instantiation: Returns the augmented component instance directly (refined in later ADRs).
+- Support zero-boilerplate: No manual setup beyond `extends` and overrides.
 
-This formalizes the new Component() pattern as the entry point for reusable DOM modules.
-Alternatives Considered
+This formalizes the `new Component()` pattern as the entry point for reusable DOM modules.
 
-Factory Functions: Use function createScrollbar(container) { return { ... }; } for instantiation.
+> **NOTE:** jQuery is a library, not a framework. It was 'kept' because of its flexibility and ease of use for prototyping. If you just want to manipulate the DOM, why invoke a monolith?
 
-Discarded: Lacks native inheritance; super() unavailable; harder to compose hierarchies.
+### Alternatives Considered
 
+**React/Vue (i.e. existing frameworks)**  
+Discarded:
+- **(React)**: JSX's transpilation requirements introduced significant build-step overhead. *'Why can't I just write code that works without extensive tooling?'*
+- **Personal preference**: Solutions tied to certain corporate ecosystems (i.e. Zuckerborg) didn't align with my vision for a lightweight, vanilla JS approach.
+- **(Vue)**: Components are not instantiated via the `new` keyword. Vue's declarative mounting cycle, while elegant, didn't feel as programmatically direct as constructor-based instantiation.
 
-Object Literals/Composables: Build via { init: () => {}, mount: () => {} } merged at runtime.
+**Factory Functions**: Use `function createScrollbar(container) { return { ... }; }` for instantiation.  
+Discarded: Lacks native inheritance; `super()` unavailable; harder to compose hierarchies.
 
-Discarded: No static analysis (e.g., IDE autocompletion); inheritance via manual Object.create() is verbose.
+**Object Literals/Composables**: Build via `{ init: () => {}, mount: () => {} }` merged at runtime.  
+Discarded: No static analysis (e.g., IDE autocompletion); inheritance via manual `Object.create()` is verbose.
 
+**Custom Elements (Web Components)**: Register via `customElements.define('scroll-bar', ScrollbarClass)`.  
+Discarded: Ties to HTML tags; overkill for non-declarative, programmatic use; doesn't quite fit jQuery-like fluency.
 
-Custom Elements (Web Components): Register via customElements.define('scroll-bar', ScrollbarClass).
+> **EDIT** *(October 26, 2025)*: I now strongly suspect that some feature of Web Components will have a natural logical integration with Instance (specifically with regards to instantiation of truly custom elements like `<scrollbar></scrollbar>`).
 
-Discarded: Ties to HTML tags; overkill for non-declarative, programmatic use; doesn't fit jQuery-like fluency.
+### Consequences
 
-
-
-Consequences
-
-Modular scalability: Easy extension (e.g., FancyScrollbar extends Scrollbar) with shared base logic.
-Familiar ergonomics: new aligns with JS norms; classes enable tools like TypeScript.
-Foundation for evolution: Paves way for hooks like observers (ADR 002) and privates (ADR 003).
-Minor learning curve: Assumes ES6+ knowledge, but polyfills cover legacy.
+- **Modular scalability**: Easy extension (e.g., `FancyScrollbar extends Scrollbar`) with shared base logic.
+- **Familiar ergonomics**: `new` aligns with JS norms; classes enable tools like TypeScript.
+- **Foundation for evolution**: Paves way for hooks like observers (ADR 002) and privates (ADR 003).
+- **Minor learning curve**: Assumes ES6+ knowledge, but polyfills cover legacy.
 
 This decision bootstraps Instance.js as an inheritance-first framework, transforming ad-hoc prototypes into a cohesive system.
-References
 
-MDN: Classes - Using classes
-ECMA-262, §14 Classes (2025 Edition)
-"JavaScript: The Good Parts" (Douglas Crockford, 2008) - Prototypal inheritance foundations
+### References
 
-Final Outcome:
-Embrace ES6+ class-based inheritance extending Instance for reusable DOM components, instantiated via new—establishing modular, extensible architecture from the prototype phase.
+- [MDN: Classes - Using classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+- ECMA-262, §14 Classes (2025 Edition)
+- "JavaScript: The Good Parts" (Douglas Crockford, 2008) - Prototypal inheritance foundations
 
-ADR 002: Introducing MutationObserver for Reactive DOM Insertion Hooks
-Status: Accepted
-Date: October 8, 2025
-Author: Ashraile
-Context: Framework design for Instance.js (base class for DOM component instances)
-Context
-In the initial design of Instance.js, components required reliable lifecycle hooks for DOM insertion, especially in asynchronous rendering scenarios (e.g., dynamic appends via third-party code or async fetches). Manual checks like polling document.contains(element) were inefficient, error-prone, and resource-intensive, leading to missed events or unnecessary CPU cycles.
-The MutationObserver API offers a performant, event-based solution to detect subtree changes, such as when an element is added to a root node. This enables reactive callbacks without blocking constructors or requiring global event emitters.
-Decision
-Incorporate MutationObserver as a core static utility (Instance.whenInsertedTo(rootNode, element, callbackScope, callback)) for insertion detection. Key mechanics:
+### Final Outcome
 
-Input validation via Instance.require() for Node types and function callbacks.
-Immediate callback if already inserted (rootNode.contains(element)).
-Otherwise, instantiate an observer on the root with { childList: true, subtree: true }, scanning added nodes for matches.
-Auto-disconnect after trigger; scope observers via WeakMap for cleanup.
+Embrace ES6+ class-based inheritance extending `Instance` for reusable DOM components, instantiated via `new`—establishing modular, extensible architecture from the prototype phase.
 
-This underpins methods like init(), deferring onInserted() and sync() until true mounting.
-Alternatives Considered
+---
 
-requestAnimationFrame Polling: Frame-tied checks for containment.
+## ADR 002: Introducing MutationObserver for Reactive DOM Insertion Hooks
 
+**Status:** Accepted  
+**Date:** October 8, 2025  
+**Author:** Ashraile  
+**Context:** Framework design for Instance.js (base class for DOM component instances)
+
+### Context
+
+In the initial design of Instance.js, components required reliable lifecycle hooks for DOM insertion, especially in asynchronous rendering scenarios (e.g., dynamic appends via third-party code or async fetches). Manual checks like polling `document.contains(element)` were inefficient, error-prone, and resource-intensive, leading to missed events or unnecessary CPU cycles.
+
+The `MutationObserver` API offers a performant, event-based solution to detect subtree changes, such as when an element is added to a root node. This enables reactive callbacks without blocking constructors or requiring global event emitters.
+
+### Decision
+
+Incorporate `MutationObserver` as a core static utility (`Instance.whenInsertedTo(rootNode, element, callbackScope, callback)`) for insertion detection. Key mechanics:
+
+- Input validation via `Instance.require()` for Node types and function callbacks.
+- Immediate callback if already inserted (`rootNode.contains(element)`).
+- Otherwise, instantiate an observer on the root with `{ childList: true, subtree: true }`, scanning added nodes for matches.
+- Auto-disconnect after trigger; scope observers via WeakMap for cleanup (see ADR-003)
+
+This underpins methods like `init()`, deferring `onInserted()` and `sync()` until true mounting.
+
+### Alternatives Considered
+
+**requestAnimationFrame Polling**: Frame-tied checks for containment.  
 Discarded: Drains battery in long-lived apps; imprecise for non-visual inserts.
 
-
-Custom DOM Events: Dispatch 'inserted' events on append.
-
+**Custom DOM Events**: Dispatch 'inserted' events on append.  
 Discarded: Assumes control over all insertion paths; fails for external appends.
 
-
-setInterval Fallback: Timed containment queries.
-
+**setInterval Fallback**: Timed containment queries.  
 Discarded: Worse perf than Observer; arbitrary delays.
 
+### Consequences
 
-
-Consequences
-
-Efficient reactivity: Sub-millisecond detection, no persistent overhead.
-Leak-proof: Observers self-destruct; WeakMap scoping (forthcoming in ADR 003) ties to scopes.
-Broad support: IE11+ native; polyfills minimal.
-Adds ~40 LOC but centralizes DOM awareness, easing future hooks like unmount watchers.
+- **Efficient reactivity**: Sub-millisecond detection, no persistent overhead.
+- **Leak-proof**: Observers self-destruct; WeakMap scoping (forthcoming in ADR 003) ties to scopes.
+- **Broad support**: IE11+ native; polyfills minimal.
+- Adds ~40 LOC but centralizes DOM awareness, easing future hooks like unmount watchers.
 
 This establishes reactive foundations early in the framework's lifecycle.
-References
 
-MDN: MutationObserver API
-WHATWG DOM Living Standard: MutationObserver (2025 Edition)
-"JavaScript: The Definitive Guide" (David Flanagan, 7th Ed., 2020) - Event-driven DOM
+### References
 
-Final Outcome:
-Leverage MutationObserver for precise, low-overhead insertion hooks, enabling robust component lifecycles without polling or assumptions about insertion timing.
+- [MDN: MutationObserver API](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver)
+- WHATWG DOM Living Standard: MutationObserver (2025 Edition)
+- "JavaScript: The Definitive Guide" (David Flanagan, 7th Ed., 2020) - Event-driven DOM
 
-ADR 003: Adopting WeakMap Scoping for Private State and Observer Management
-Status: Accepted
-Date: October 15, 2025
-Author: Ashraile
-Context: Framework design for Instance.js (base class for DOM component instances)
-Context
-As Instance.js incorporated reactive features like MutationObserver (ADR 002), managing private instance data (e.g., initialization flags, options) and transient resources (e.g., observers) became critical. Direct properties on elements risked exposure or conflicts, while global Maps could leak memory on GC'd components. JavaScript's WeakMap provides key-value storage keyed by objects, with automatic cleanup when keys are garbage-collected—ideal for scoping privates and resources to instance lifetimes.
+### Final Outcome
+
+Leverage `MutationObserver` for precise, low-overhead insertion hooks, enabling robust component lifecycles without polling or assumptions about insertion timing.
+
+---
+
+## ADR 003: Adopting WeakMap Scoping for Private State and Observer Management
+
+**Status:** Accepted  
+**Date:** October 15, 2025  
+**Author:** Ashraile  
+**Context:** Framework design for Instance.js (base class for DOM component instances)
+
+### Context
+
+As Instance.js incorporated reactive features like `MutationObserver` (ADR 002), managing private instance data (e.g., initialization flags, options) and transient resources (e.g., observers) became critical. Direct properties on elements risked exposure or conflicts, while global Maps could leak memory on GC'd components. JavaScript's `WeakMap` provides key-value storage keyed by objects, with automatic cleanup when keys are garbage-collected—ideal for scoping privates and resources to instance lifetimes.
+
 This prevents memory bloat in long-running apps with dynamic component creation/destruction.
-Decision
+
+### Decision
+
 Use static WeakMaps for all private and scoped storage:
 
-#privateData = new WeakMap(): Holds per-instance state (e.g., { isInitialized: false, options: {} }), accessed via bound getters/setters (get #private(), set #private(data)).
-#observers = new WeakMap(): Maps callback scopes to active MutationObservers for targeted disconnection (e.g., on remove()).
+- `#privateData = new WeakMap()`: Holds per-instance state (e.g., `{ isInitialized: false, options: {} }`), accessed via bound getters/setters (`get #private()`, `set #private(data)`).
+- `#observers = new WeakMap()`: Maps callback scopes to active MutationObservers for targeted disconnection (e.g., on `remove()`).
 
-Keys are elements or scopes; values auto-evict on GC. Accessors bind to the element for this.#private-like ergonomics, bypassing # field limits on host objects.
-Alternatives Considered
+Keys are elements or scopes; values auto-evict on GC. Accessors bind to the element for `this.#private`-like ergonomics, bypassing `#` field limits on host objects.
 
-Plain Objects/Maps: Direct storage on this or global registry.
+### Alternatives Considered
 
+**Plain Objects/Maps**: Direct storage on `this` or global registry.  
 Discarded: Leaks memory; exposes internals; no auto-cleanup.
 
-
-Symbols for Privates: Use Symbol('private') properties on elements.
-
+**Symbols for Privates**: Use `Symbol('private')` properties on elements.  
 Discarded: Still enumerable/reflectable; doesn't scope transients like observers.
 
+**Closure-Local Storage**: Encapsulate data in constructor closures.  
+Discarded: Breaks subclass access; complicates `super()` sharing.
 
-Closure-Local Storage: Encapsulate data in constructor closures.
+### Consequences
 
-Discarded: Breaks subclass access; complicates super() sharing.
-
-
-
-Consequences
-
-Memory safety: Automatic GC for detached components/observers; no manual cleanup beyond disconnects.
-Encapsulation: Privates invisible to Object.keys() or JSON; WeakMap ops are O(1).
-Ergonomics: Feels like native privates (this.#private.isInitialized), with ~20 bytes overhead per map.
-Scalability: Handles 10k+ instances without bloat; integrates seamlessly with direct-element model (later ADRs).
+- **Memory safety**: Automatic GC for detached components/observers; no manual cleanup beyond disconnects.
+- **Encapsulation**: Privates invisible to `Object.keys()` or JSON; WeakMap ops are O(1).
+- **Ergonomics**: Feels like native privates (`this.#private.isInitialized`), with ~20 bytes overhead per map.
+- **Scalability**: Handles 10k+ instances without bloat; integrates seamlessly with direct-element model (later ADRs).
 
 This pattern becomes a cornerstone for resource hygiene across the framework.
-References
 
-MDN: WeakMap
-ECMA-262, §9.5.12 WeakMap Objects (2025 Edition)
-"You-Don't-Know-JS: Scope & Closures" (Kyle Simpson, 2014) - Weak references in practice
+### References
 
-Final Outcome:
-Standardize WeakMap scoping for private data and observers, ensuring leak-free, encapsulated state management tied to object lifetimes.
+- [MDN: WeakMap](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
+- ECMA-262, §9.5.12 WeakMap Objects (2025 Edition)
+- "You-Don't-Know-JS: Scope & Closures" (Kyle Simpson, 2014) - Weak references in practice
 
-ADR 004: Enhancing Class Constructors for jQuery Compatibility via Object Modification
-Status: Accepted
-Date: October 20, 2025
-Author: Ashraile
-Context: Framework design for Instance.js (base class for DOM component instances)
-Context
-During early prototyping of Instance.js, the goal was to blend modern ES6+ class-based inheritance with jQuery's fluent, collection-like API for DOM manipulation. jQuery objects ($(selector)) are array-like wrappers that support method chaining (e.g., .append().css()) and treat elements as pseudo-collections (e.g., $(el)[0] for the raw node).
-Standard classes in JavaScript are functions (hence objects) and can be dynamically extended with properties or methods. However, integrating jQuery compatibility required ensuring that Instance subclasses could seamlessly adopt jQuery's fn methods without prototype pollution or manual delegation. This meant modifying the class constructor object itself to merge jQuery behaviors, while preserving vanilla JS extensibility.
-Decision
-We decided to treat class constructors as modifiable objects, dynamically merging jQuery's $.fn methods onto Instance.prototype during initialization. This is triggered lazily (on first instantiation) and skips existing properties to allow overrides.
+### Final Outcome
+
+Standardized WeakMap scoping for private data and observers, ensuring leak-free, encapsulated state management tied to object lifetimes.
+
+---
+
+## ADR 004: Enhancing Class Constructors for jQuery Compatibility via Object Modification
+
+**Status:** Accepted  
+**Date:** October 20, 2025  
+**Author:** Ashraile  
+**Context:** Framework design for Instance.js (base class for DOM component instances)
+
+### Context
+
+During early prototyping of Instance.js, the goal was to blend modern ES6+ class-based inheritance with jQuery's fluent, collection-like API for DOM manipulation. jQuery objects (`$(selector)`) are array-like wrappers that support method chaining (e.g., `.append().css()`) and treat elements as pseudo-collections (e.g., `$(el)[0]` for the raw node).
+
+Standard classes in JavaScript are functions (hence objects) and can be dynamically extended with properties or methods. However, integrating jQuery compatibility required ensuring that Instance subclasses could seamlessly adopt jQuery's `fn` methods without prototype pollution or manual delegation. This meant modifying the class constructor object itself to merge jQuery behaviors, while preserving vanilla JS extensibility.
+
+### Decision
+
+We decided to treat class constructors as modifiable objects, (adding `this[0]` and `this.length`), dynamically merging jQuery's `$.fn` methods onto `Instance.prototype` during initialization. This is triggered lazily (on first instantiation) (`new Instance()`) and skips existing properties to allow overrides.
+
 The approach:
 
-Check for jQuery availability.
-Iterate Object.keys($.fn) and copy function properties to Instance.prototype if not already defined.
-Expose as a static mergeJQuery(force) method for manual control.
+- Check for jQuery availability.
+- Iterate `Object.keys($.fn)` and copy function properties to `Instance.prototype` if not already defined.
+- Expose as a static `mergeJQuery(force)` method for manual control.
 
-This enables new Instance(el).append('<p>') to behave like $(el).append('<p>'), with Instance methods always taking precedence.
-Alternatives Considered
+This enables `new Instance(el).append('<p>')` to behave like `$(el).append('<p>')`, with Instance methods always taking precedence.
 
-Manual Delegation: In each Instance method, forward calls to $(this.main) if jQuery is present.
+### Alternatives Considered
 
+**Manual Delegation**: In each Instance method, forward calls to `$(this.main)` if jQuery is present.  
 Discarded: Bloats code, runtime overhead, and breaks chaining if jQuery methods mutate the wrapper.
 
-
-Global Prototype Extension: Directly augment HTMLElement.prototype with jQuery methods.
-
+**Global Prototype Extension**: Directly augment `HTMLElement.prototype` with jQuery methods.  
 Discarded: Pollutes the global namespace, conflicts with other libs, violates zero-boilerplate principle.
 
+**Wrapper Factory**: Always return a jQuery-like wrapper instead of the class instance.  
+Discarded: Reintroduces opacity (e.g., `instance !== element`), conflicting with direct DOM access goals.
 
-Wrapper Factory: Always return a jQuery-like wrapper instead of the class instance.
+### Consequences
 
-Discarded: Reintroduces opacity (e.g., instance !== element), conflicting with direct DOM access goals.
-
-
-
-Consequences
-
-Seamless jQuery interop: Instance instances act as single-element collections (instance[0] === instance, instance.length = 1).
-Backward compatibility: Works without jQuery (falls back to native DOM).
-Minor prototype bloat: Adds ~100-200 methods, but only on demand and with overrides.
-Encourages hybrid usage: Developers can mix vanilla, Instance, and jQuery styles without friction.
+- **Seamless jQuery interop**: Instance instances act as single-element collections (`instance[0] === instance`, `instance.length = 1`).
+- **Backward compatibility**: Works without jQuery (falls back to native DOM).
+- **Minor prototype bloat**: Adds ~100-200 methods, but only on demand and with overrides.
+- **Encourages hybrid usage**: Developers can mix vanilla, Instance, and jQuery styles without friction.
 
 Future versions could auto-detect jQuery versions or support other libs like Zepto.
-References
 
-MDN: Classes - JavaScript (functions as objects)
-jQuery API: Core - jQuery.fn
-ECMA-262, §19.2.3 The Function Constructor (2025 Edition)
+### References
 
-Final Outcome:
+- [MDN: Classes - JavaScript (functions as objects)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+- [jQuery API: Core - jQuery.fn](https://api.jquery.com/jQuery.fn/)
+- ECMA-262, §19.2.3 The Function Constructor (2025 Edition)
+
+### Final Outcome
+
 Modify class constructors as objects to merge jQuery compatibility, enabling fluent, collection-like DOM components without wrappers or pollution.
 
-ADR 005: Dropping Proxy-Based Architecture for Instance
-Status: Accepted
-Date: October 25, 2025
-Author: Ashraile
-Context: Framework design for Instance.js (base class for DOM component instances)
-Context
+---
+
+## ADR 005: Dropping Proxy-Based Architecture for Instance
+
+**Status:** Accepted  
+**Date:** October 25, 2025  
+**Author:** Ashraile  
+**Context:** Framework design for Instance.js (base class for DOM component instances)
+
+### Context
+
 The original design for the Instance base class considered wrapping all instances in a Proxy to:
-Enforce API method constraints (e.g., access validation before initialization).
-Intercept or augment property access dynamically.
-Maintain zero‑boilerplate extensibility for subclasses (class A extends Instance).
-However, making the proxied Instance behave identically to the non‑proxied version requires proxy transparency — specifically preserving:
-Object identity (proxy === target),
-Prototype relationships (proxy instanceof Base),
-Full equality semantics,
-Transparent subclassing via new.target.
+
+- Enforce API method constraints (e.g., access validation before initialization).
+- Intercept or augment property access dynamically.
+- Maintain zero-boilerplate extensibility for subclasses (`class A extends Instance`).
+
+However, making the proxied Instance behave identically to the non-proxied version requires **proxy transparency** — specifically preserving:
+
+- Object identity (`proxy === target`),
+- Prototype relationships (`proxy instanceof Base`),
+- Full equality semantics,
+- Transparent subclassing via `new.target`.
+
 Current ECMAScript proxies (as of ES2025) are opaque by design and do not support these features.
-Decision
-We dropped the use of Proxies for the core Instance behavior, retaining the standard, non‑proxied implementation.
-The reasoning is that a fully proxified Instance layer would require Transparent Proxies, a feature proposed in research but not standardized or available in any production JavaScript engine.
+
+### Decision
+
+We dropped the use of Proxies for the core Instance behavior, retaining the standard, non-proxied implementation.
+
+The reasoning is that a fully proxified Instance layer would require **Transparent Proxies**, a feature proposed in research but not standardized or available in any production JavaScript engine.
+
 Transparent Proxies would be required to:
-Unify object identity and equality with their target (proxy === target).
-Maintain correct prototype and instanceof behavior.
-Avoid breaking subclass instantiation patterns that depend on new.target.
-Without engine‑level transparency, proxy-based identity introduces inconsistent behavior during subclass creation, equality checks, WeakMap lookups, and reflective operations. These side effects violate the framework’s “zero boilerplate subclassing guarantee.”
-Alternatives Considered
-Keep Proxy Wrapping with Bound Method Caching:
+
+- Unify object identity and equality with their target (`proxy === target`).
+- Maintain correct prototype and `instanceof` behavior.
+- Avoid breaking subclass instantiation patterns that depend on `new.target`.
+
+Without engine-level transparency, proxy-based identity introduces inconsistent behavior during subclass creation, equality checks, WeakMap lookups, and reflective operations. These side effects violate the framework's "zero boilerplate subclassing guarantee."
+
+### Alternatives Considered
+
+**Keep Proxy Wrapping with Bound Method Caching**:  
 Discarded due to complexity, identity divergence, and loss of subclass transparency.
-Use a Custom Wrapper Object (mimicking Proxy behavior via accessors):
+
+**Use a Custom Wrapper Object** (mimicking Proxy behavior via accessors):  
 Viable for partial behavior interception (get, set), but cannot transparently reproduce identity semantics. Used in limited form for optional diagnostics.
-Wait for Transparent Proxy support:
+
+**Wait for Transparent Proxy support**:  
 The feature remains experimental in SpiderMonkey research builds and has not entered any ECMAScript proposal stage.
-Consequences
-Simplified implementation of Instance and subclass creation.
-Full consistency with standard ECMAScript object semantics and equality.
-Loss of automatic, low‑level interception capabilities that would have benefited debugging or strict API enforcement.
-Future framework versions could reevaluate proxy usage if Transparent Proxies become standardized.
-References
-Transparent Object Proxies for JavaScript, Matthias Keil et al., ECOOP 2015
-ECMA-262, §9.5 Proxy Object Internal Methods and Internal Slots (2025 Edition)
-MDN: Proxy - JavaScript
-Final Outcome:
-Maintain a non‑proxified Instance implementation to ensure predictable inheritance, equality, and instanceof semantics until ECMAScript standardizes Transparent Proxies.
 
-ADR 006: Implementing Meta-Constructor for Subclass Constructors as Instances of Superclass
-Status: Accepted
-Date: October 25, 2025
-Author: Ashraile
-Context: Framework design for Instance.js (base class for DOM component instances)
-Context
-Following the Proxy drop (ADR 005), ensuring robust inheritance required addressing a subtlety in JavaScript class semantics: While class B extends A sets B.__proto__ === A (making B instanceof A true by default), custom extensions like jQuery merging (ADR 004) or future augmentations could disrupt reflective checks on the constructor itself. For full zero-boilerplate extensibility, we needed to guarantee that subclass constructors reliably pass instanceof against their superclass, even under dynamic modifications.
-This ensures meta-programming patterns (e.g., type guards like if (ctor instanceof Instance)) work seamlessly, treating subclasses as "instances" of the base in the constructor chain.
-Decision
-Implement a meta-constructor using a custom Symbol.hasInstance on Instance (and propagate to subclasses). The handler explicitly verifies the subclass constructor's prototype chain or marker properties, falling back to native behavior:
+### Consequences
 
-For subclass constructors: Confirms def.prototype instanceof base or equivalent linkage.
-Auto-propagates during instantiation: If new.target !== Instance, set subclass[Symbol.hasInstance] via an internal helper.
+- Simplified implementation of Instance and subclass creation.
+- Full consistency with standard ECMAScript object semantics and equality.
+- Loss of automatic, low-level interception capabilities that would have benefited debugging or strict API enforcement.
+- Future framework versions could reevaluate proxy usage if Transparent Proxies become standardized.
 
-This enforces SubClass instanceof Instance === true without altering core prototype wiring.
-Alternatives Considered
+### References
 
-Rely on Native instanceof: Assume default B.__proto__ = A suffices.
+- "Transparent Object Proxies for JavaScript", Matthias Keil et al., ECOOP 2015
+- ECMA-262, §9.5 Proxy Object Internal Methods and Internal Slots (2025 Edition)
+- [MDN: Proxy - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
 
-Discarded: Fragile under dynamic merges (e.g., jQuery additions could shadow); doesn't handle anon extend() factories cleanly.
+### Final Outcome
 
+Maintain a non-proxified Instance implementation to ensure predictable inheritance, equality, and `instanceof` semantics until ECMAScript standardizes Transparent Proxies.
 
-Manual Propagation: Require subclasses to explicitly set Symbol.hasInstance.
+---
 
+## ADR 006: Implementing Meta-Constructor for Subclass Constructors as Instances of Superclass
+
+**Status:** Accepted  
+**Date:** October 25, 2025  
+**Author:** Ashraile  
+**Context:** Framework design for Instance.js (base class for DOM component instances)
+
+### Context
+
+Following the Proxy drop (ADR 005), ensuring robust inheritance required addressing a subtlety in JavaScript class semantics: While `class B extends A` sets `B.__proto__ === A` (making `B instanceof A` true by default), custom extensions like jQuery merging (ADR 004) or future augmentations could disrupt reflective checks on the constructor itself. For full zero-boilerplate extensibility, we needed to guarantee that subclass constructors reliably pass `instanceof` against their superclass, even under dynamic modifications.
+
+This ensures meta-programming patterns (e.g., type guards like `if (ctor instanceof Instance)`) work seamlessly, treating subclasses as "instances" of the base in the constructor chain.
+
+### Decision
+
+Implement a meta-constructor using a custom `Symbol.hasInstance` on Instance (and propagate to subclasses). The handler explicitly verifies the subclass constructor's prototype chain or marker properties, falling back to native behavior:
+
+- **For subclass constructors**: Confirms `def.prototype instanceof base` or equivalent linkage.
+- **Auto-propagates during instantiation**: If `new.target !== Instance`, set `subclass[Symbol.hasInstance]` via an internal helper.
+
+This enforces `SubClass instanceof Instance === true` without altering core prototype wiring.
+
+### Alternatives Considered
+
+**Rely on Native instanceof**: Assume default `B.__proto__ = A` suffices.  
+Discarded: Fragile under dynamic merges (e.g., jQuery additions could shadow); doesn't handle anon `extend()` factories cleanly.
+
+**Manual Propagation**: Require subclasses to explicitly set `Symbol.hasInstance`.  
 Discarded: Violates zero-boilerplate; users forget, breaking tools.
 
-
-Proxy Constructors: Wrap subclass constructors in Proxies for interception.
-
+**Proxy Constructors**: Wrap subclass constructors in Proxies for interception.  
 Discarded: Reintroduces opacity issues (ADR 005); overkill for type checks.
 
+### Consequences
 
-
-Consequences
-
-Bulletproof inheritance: class Tab extends Instance; Tab instanceof Instance === true, even for anonymous extensions via Instance.extend().
-Enables advanced patterns: Factory validation, plugin systems checking base types.
-Zero runtime cost: Static hook, evaluated only on instanceof calls.
-Compatibility: Preserves function-vs-instance distinctions (e.g., Tab instanceof Function === true).
+- **Bulletproof inheritance**: `class Tab extends Instance; Tab instanceof Instance === true`, even for anonymous extensions via `Instance.extend()`.
+- **Enables advanced patterns**: Factory validation, plugin systems checking base types.
+- **Zero runtime cost**: Static hook, evaluated only on `instanceof` calls.
+- **Compatibility**: Preserves function-vs-instance distinctions (e.g., `Tab instanceof Function === true`).
 
 This solidifies the class layer before shifting to element-level innovations.
-References
 
-MDN: Symbol.hasInstance (constructor-level checks)
-ECMA-262, §19.2.3.6 Function.prototype[@@hasInstance] (2025 Edition)
-Exploring ES6: Classes and Inheritance (Axel Rauschmayer, 2016)
+### References
 
-Final Outcome:
-Use Symbol.hasInstance as a meta-constructor to ensure subclass constructors are recognized as instances of their superclass, enabling reliable reflective inheritance checks.
+- [MDN: Symbol.hasInstance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) (constructor-level checks)
+- ECMA-262, §19.2.3.6 Function.prototype[@@hasInstance] (2025 Edition)
+- "Exploring ES6: Classes and Inheritance" (Axel Rauschmayer, 2016)
 
-ADR 007: Adopting Direct Element Architecture for Native DOM/JQuery Hybrid Instances
-Status: Accepted
-Date: October 26, 2025 (1:30 AM)
-Author: Ashraile
-Context: Framework design for Instance.js (base class for DOM component instances)
-Context
-With jQuery merging (ADR 004), Proxy elimination (ADR 005), and subclass constructor typing secured (ADR 006), a pivotal realization surfaced: DOM elements are extensible objects (HTMLElement instances) that can be directly augmented with methods and properties. By overriding the constructor to return the element itself—after marking it with metadata and copying prototype methods per-instance—Instances evolve into true hybrids: Native DOM nodes that also embody class logic, jQuery collection traits, and inheritance.
-This "direct element" breakthrough eliminates all wrapper indirection, achieving new Instance() === element while retaining fluent chaining and type safety.
-Decision
-Adopt the direct element architecture as the core pattern:
+### Final Outcome
 
-Constructor parses args to create/query the element, adds markers (_isInstance: true, _instanceClass), and sets collection props ([0], length).
-Traverse the prototype chain in reverse (parent → child) to copy/bind methods/getters onto the element via _copyMethodsToElement—ensuring super() calls work naturally due to spec-defined lexical binding.
-Temporarily expose this._element for subclass constructor access, then return the element outright.
-Leverage WeakMaps for private state (e.g., #privateData), sidestepping # field limitations on host objects.
+Use `Symbol.hasInstance` as a meta-constructor to ensure subclass constructors are recognized as instances of their superclass, enabling reliable reflective inheritance checks.
 
-Subclasses invoke super() normally; auto-return handles the rest.
-Alternatives Considered
+---
 
-Selective Copying: Augment only core methods, proxy others.
+## ADR 007: Adopting Direct Element Architecture for Native DOM/jQuery Hybrid Instances
 
+**Status:** Accepted  
+**Date:** October 26, 2025 (1:30 AM)  
+**Author:** Ashraile  
+**Context:** Framework design for Instance.js (base class for DOM component instances)
+
+### Context
+
+With jQuery merging (ADR 004), Proxy elimination (ADR 005), and subclass constructor typing secured (ADR 006), a pivotal realization surfaced: **DOM elements are extensible objects** (`HTMLElement` instances) that can be directly augmented with methods and properties. By overriding the constructor to return the element itself—after marking it with metadata and copying prototype methods per-instance—Instances evolve into true hybrids: Native DOM nodes that also embody class logic, jQuery collection traits, and inheritance.
+
+This "direct element" breakthrough eliminates all wrapper indirection, achieving `new Instance() === element` while retaining fluent chaining and type safety.
+
+### Decision
+
+Adopt the **direct element architecture** as the core pattern:
+
+- Constructor parses args to create/query the element, adds markers (`_isInstance: true`, `_instanceClass`), and sets collection props (`[0]`, `length`).
+- Traverse the prototype chain in **reverse** (parent → child) to copy/bind methods/getters onto the element via `_copyMethodsToElement`—ensuring `super()` calls work naturally due to spec-defined lexical binding.
+- Temporarily expose `this._element` for subclass constructor access, then return the element outright.
+- Leverage WeakMaps for private state (e.g., `#privateData`), sidestepping `#` field limitations on host objects.
+
+Subclasses invoke `super()` normally; auto-return handles the rest.
+
+### Alternatives Considered
+
+**Selective Copying**: Augment only core methods, proxy others.  
 Discarded: Partial fluency undermines jQuery-like seamlessness.
 
+**Non-Class Factory**: Shift to a function returning augmented elements.  
+Discarded: Sacrifices ES6 `extends`, `new.target`, and `super()` expressiveness.
 
-Non-Class Factory: Shift to a function returning augmented elements.
-
-Discarded: Sacrifices ES6 extends, new.target, and super() expressiveness.
-
-
-Deferred Augmentation: Copy methods lazily on first call.
-
+**Deferred Augmentation**: Copy methods lazily on first call.  
 Discarded: Adds runtime checks; direct copy is simpler and predictable.
 
+### Consequences
 
-
-Consequences
-
-Pinnacle of zero-friction: Direct access (instance.style.color), chaining (instance.append().css()), and typing (instance instanceof Tab).
-jQuery synergy: Merged methods view it as a collection; child overrides dominate.
-Accepted costs: Per-instance method copies (~200 bytes); console displays element type (mitigable with Symbol.toStringTag).
-Unlocks future: Effortless reactivity, lifecycle integration without layers.
+- **Pinnacle of zero-friction**: Direct access (`instance.style.color`), chaining (`instance.append().css()`), and typing (`instance instanceof Tab`).
+- **jQuery synergy**: Merged methods view it as a collection; child overrides dominate.
+- **Accepted costs**: Per-instance method copies (~200 bytes); console displays element type (mitigable with `Symbol.toStringTag`).
+- **Unlocks future**: Effortless reactivity, lifecycle integration without layers.
 
 This caps the architecture evolution, redefining DOM components as unified class/DOM/jQuery entities.
-References
 
-MDN: Using classes - Constructor Return Override
-ECMA-262, §9.1.13 OrdinaryDefineOwnProperty (dynamic augmentation, 2025 Edition)
-ECMA-262, §14.3.9 Runtime Semantics: Method Definition Evaluation (lexical super binding, 2025 Edition)
-jQuery Internals: Augmenting Objects as Collections
+### References
 
-Final Outcome:
+- [MDN: Using classes - Constructor Return Override](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#constructor)
+- ECMA-262, §9.1.13 OrdinaryDefineOwnProperty (dynamic augmentation, 2025 Edition)
+- ECMA-262, §14.3.9 Runtime Semantics: Method Definition Evaluation (lexical super binding, 2025 Edition)
+- jQuery Internals: Augmenting Objects as Collections
+
+### Final Outcome
+
 Implement direct element return and per-instance augmentation for transparent, hybrid Instances—delivering full semantics without wrappers or experimental reliance.
+
+---
+
+## Summary
+
+Instance.js evolved through seven key architectural decisions:
+
+1. **Class-based inheritance** (ADR 001) - Foundation with `new` keyword
+2. **MutationObserver hooks** (ADR 002) - Reactive lifecycle
+3. **WeakMap privates** (ADR 003) - Memory-safe encapsulation
+4. **jQuery merging** (ADR 004) - Fluent API compatibility
+5. **Proxy rejection** (ADR 005) - Maintained transparency
+6. **Meta-constructor typing** (ADR 006) - Robust inheritance
+7. **Direct element architecture** (ADR 007) - True element identity
+
+The result: A revolutionary pattern where `instance === element`, combining native DOM, class inheritance, and jQuery fluency without wrappers or abstraction layers.
