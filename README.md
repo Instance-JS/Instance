@@ -1,3 +1,5 @@
+EDIT: Still some tweaks remaining regarding correctly merging host methods. HOWEVER. This does indeed work in my private env. It's 6 AM, I'm dead tired, can't port it now. Must be refined 'tomorrow' (today)
+
 Usage:
 
 ```javascript
