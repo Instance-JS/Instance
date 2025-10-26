@@ -218,7 +218,7 @@ Discarded: Bloats code, runtime overhead, and breaks chaining if jQuery methods 
 Discarded: Pollutes the global namespace, conflicts with other libs, violates zero-boilerplate principle.
 
 **Wrapper Factory**: Always return a jQuery-like wrapper instead of the class instance.  
-Discarded: Reintroduces opacity (e.g., `instance !== element`), conflicting with direct DOM access goals.
+Discarded: Introduces opacity (see ADR-005), conflicting with inheritance goals.
 
 ### Consequences
 
