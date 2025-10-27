@@ -69,8 +69,14 @@ class Level4 extends Level3 extends Level2 extends Level1 extends Instance
 - ✅ Template literals
 
 ```javascript
-class MyWidget extends Instance {
-  async loadData() {
+class CustomModule extends Instance {
+    async fetchFromAPI() {
+        // await some value
+    }
+}
+
+class MyWidget extends CustomModule {
+  async loadDataAndSetColor() {
     const data = await super.fetchFromAPI();
     this.style.backgroundColor = 'green'; // Direct DOM access
     return data;
