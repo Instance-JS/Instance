@@ -1,4 +1,6 @@
-EDIT: Still some tweaks remaining regarding correctly merging host methods. HOWEVER. This does indeed work in my private env. It's 6 AM, I'm dead tired, can't port it now. Must be refined 'tomorrow' (today)
+EDIT: October 26, 2025. Instance-1.0.0.beta.2 Still some tweaks remaining regarding correctly merging host methods. HOWEVER. This does indeed work in my private env. It's 6 AM, I'm dead tired, can't port it now. Must be refined 'tomorrow' (today)
+
+Edit: October 27, 2025. Instance-1.0.0-beta.4 passed all 56 unit tests.
 
 Usage:
 
@@ -24,7 +26,7 @@ class Tab extends Instance {
 
 let $_ = new Instance(document);
 
-$_.ready(function(e) {
+document.addEventListener('DOMContentLoaded', function(e) {
     let tab = new Tab('#tab');
     tab.addClass('jquery-compatible').setColor('#000').setHeight('100px');
     $(tab).removeClass('jquery-compatible').setColor('#fff').append(new Tab('#def'));
