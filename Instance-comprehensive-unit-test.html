@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instance.js Comprehensive Unit Tests</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+	  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+	  crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: monospace; padding: 20px; color: #0f0;
+    }
+    .log { margin: 5px 0; }
+    .true { color: blue; }
+    .false { color: red; }
+    .strong { font-weight: bold; }
+    .icon { font-size: 1.2em; }
+    :root {
+      position: relative;
+      left: 0; top: 0; right: 0; bottom: 0;
+      background: #000;
+      background: linear-gradient(125deg,#334, #000);
+    }
+    .neutral {
+      color: #aab;
+      color: green;
+      margin-left: 15px;
+    }
+    .test-section {
+      border-left: 3px solid #0f0;
+      padding-left: 15px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Instance.js Comprehensive Unit Test Suite</h1>
+  <div id='tab'></div>
+  <div id='def'></div>
+  <div id="logs"></div>
+
+  <script src='Instance-1.0.0-beta.4.js'></script>
+  <script>
+    console.log($);
+
+    // ═══════════════════════════════════════════════════════════════════════════
+    // TEST CLASSES
+    // ═══════════════════════════════════════════════════════════════════════════
+
+    // Basic inheritance chain
+    class Tab extends Instance {
+      setColor(color) {
+        this.style.backgroundColor = color;
+        return this;
+      }
+
+      setHeight(height) {
+        this.style.height = height;
+        return this;
+      }
+
+      append(content) {
+        console.log('Tab.append() called');
+        super.append(content);
+        return this;
+      }
+    }
+
+    class FancyTab extends Tab {
+      setColor(color) {
+        console.log('FancyTab.setColor() called');
+        super.setColor(color);
+        this.style.border = '2px solid ' + color;
+        return this;
+      }
+    }
+
+    // Deeper inheritance (4 levels)
+    class Level1 extends Instance {
+      level1Method() {
+        this.dataset.level1 = 'called';
+        return this;
+      }
+    }
+
+    class Level2 extends Level1 {
+      level2Method() {
+        super.level1Method();
+        this.dataset.level2 = 'called';
+        return this;
+      }
+    }
+
+    class Level3 extends Level2 {
+      level3Method() {
+        super.level2Method();
+        this.dataset.level3 = 'called';
+        return this;
+      }
+    }
+
+    class Level4 extends Level3 {
+      level4Method() {
+        super.level3Method();
+        this.dataset.level4 = 'called';
+        return this;
+      }
+    }
+
+    // Async methods test
+    class AsyncBase extends Instance {
+      async fetchData() {
+        await new Promise(resolve => setTimeout(resolve, 10));
+        this.dataset.baseFetched = 'true';
+        return 'base-data';
+      }
+    }
+
+    class AsyncChild extends AsyncBase {
+      async fetchData() {
+        const baseData = await super.fetchData();
+        await new Promise(resolve => setTimeout(resolve, 10));
+        this.dataset.childFetched = 'true';
+        return baseData + '-child-data';
+      }
+    }
+
+    // Getters/Setters test
+    class GetSetBase extends Instance {
+      get value() {
+        return this.dataset.value || 'base-default';
+      }
+      
+      set value(val) {
+        this.dataset.value = 'base-' + val;
+      }
+    }
+
+    class GetSetChild extends GetSetBase {
+      get value() {
+        const baseValue = super.value;
+        return baseValue + '-child';
+      }
+      
+      set value(val) {
+        super.value = val;
+        this.dataset.childSet = 'true';
+      }
+    }
+
+    // Static methods test
+    class StaticBase extends Instance {
+      static createDefault() {
+        const el = new this();
+        el.dataset.created = 'base';
+        return el;
+      }
+      
+      static getType() {
+        return 'base';
+      }
+    }
+
+    class StaticChild extends StaticBase {
+      static createDefault() {
+        const el = super.createDefault();
+        el.dataset.created = 'child';
+        return el;
+      }
+      
+      static getType() {
+        return super.getType() + '-child';
+      }
+    }
+
+    // ═══════════════════════════════════════════════════════════════════════════
+    // TEST UTILITIES
+    // ═══════════════════════════════════════════════════════════════════════════
+
+    const logsDiv = document.getElementById('logs');
+    
+    function logCheck(label, result, extraValue = '') {
+      const color = result ? '#00ffcc' : 'red';
+      const icon = result ? '✅' : '❌';
+      
+      let highlightedLabel = label.replace(/(['"])(.*?)\1/g, '<span style="color: #F0761B;">$1$2$1</span>');
+      
+      const keywords = ['typeof', 'instanceof', 'Object.is', 'hasOwnProperty', 'isPrototypeOf', 'null', 'undefined', 'async', 'await', 'get', 'set', 'static'];
+      keywords.forEach(keyword => {
+        const regex = new RegExp(`\\b${keyword}\\b`, 'g');
+        highlightedLabel = highlightedLabel.replace(regex, `<span style="color: #00ffcc;">${keyword}</span>`);
+      });
+      
+      const boldLabel = `<span>${highlightedLabel}:</span>`;
+      const resultSpan = `<span style="color: ${color};">${result}</span><span class='neutral'>${extraValue ? ` // ${extraValue} ${icon}` : ''}</span>`;
+      logsDiv.innerHTML += `<div class="log"><span class="">${boldLabel}</span> <span>${resultSpan}</span></div>`;
+    }
+
+    function logSection(title) {
+      const section = `<div class="log" style="color: green; margin-top: 15px; margin-bottom: 5px;">
+        <pre style="margin: 0; font-family: monospace;">// ${'═'.repeat(63)}
+// ${title}
+// ${'═'.repeat(63)}</pre>
+      </div>`;
+      logsDiv.innerHTML += section;
+    }
+
+    function logMainSection(title) {
+      const section = `<div class="test-section" style="margin-top: 30px;">
+        <h2 style="color: #00ffcc; margin: 0 0 10px 0;">${title}</h2>
+      </div>`;
+      logsDiv.innerHTML += section;
+    }
+
+    // ═══════════════════════════════════════════════════════════════════════════
+    // RUN TESTS
+    // ═══════════════════════════════════════════════════════════════════════════
+
+    document.addEventListener('DOMContentLoaded', async function(e) {
+      
+      let tab = new Tab('#tab');
+      tab.addClass('jquery-compatible').setColor('#000').setHeight('100px');
+
+      // ─────────────────────────────────────────────────────────────────────────
+      // BASIC TESTS (Original)
+      // ─────────────────────────────────────────────────────────────────────────
+
+      logMainSection('PART 1: BASIC FUNCTIONALITY');
+
+      logSection('INSTANCEOF CHECKS (Symbol [hasInstance] Meta-Constructor) (ADR-006)');
+      logCheck('(Tab instanceof Instance)', (Tab instanceof Instance), 'Subclasses ARE Instances (meta-constructor)');
+      logCheck('(tab instanceof Instance)', (tab instanceof Instance), 'It IS the superclass');
+      logCheck('(tab instanceof Tab)', (tab instanceof Tab), 'And also the subclass');
+      logCheck('(tab instanceof HTMLElement)', (tab instanceof HTMLElement), "And also an element (ADR-007)");
+      logCheck('(tab instanceof HTMLDivElement)', (tab instanceof HTMLDivElement), 'Specific element type');
+      logCheck('(tab instanceof Element)', (tab instanceof Element), 'the element IS the class');
+      logCheck('(tab instanceof Node)', (tab instanceof Node));
+      logCheck('(tab instanceof Object)', (tab instanceof Object), 'everything is Object');
+
+      logSection('JQUERY COMPATIBILITY (Classes are [Function] Objects) (ADR-004)');
+      logCheck('(tab === tab[0])', (tab === tab[0]), 'jQuery compat: tab[0] is self'); 
+      logCheck('(tab.length === 1)', (tab.length === 1), 'The class object is array-like');
+      logCheck('($(tab)[0] === tab)', ($(tab)[0] === tab), 'jQuery wraps it, [0] returns it');
+      logCheck('($(tab).length === 1)', ($(tab).length === 1), 'jQuery sees it as collection');
+      logCheck('(tab.jquery === undefined)', (tab.jquery === undefined), 'NOT a jQuery object');
+      logCheck('($(tab).jquery !== undefined)', ($(tab).jquery !== undefined), 'but CAN be wrapped');
+
+      logSection('ELEMENT IDENTITY (Elements are [Class] Objects) (ADR-007)');
+      logCheck('(tab === tab)', (tab === tab), 'Not a Wrapper');
+      logCheck('(tab === document.querySelector("#tab"))', (tab === document.querySelector('#tab')), "Not a Proxy.");
+      logCheck('(tab.tagName === "DIV")', (tab.tagName === 'DIV'), 'It\'s the actual DOM element.');
+      logCheck('(tab.nodeType === 1)', (tab.nodeType === 1), 'It\'s the ACTUAL DOM element.');
+
+      logSection('NATIVE DOM COMPATIBILITY');
+      if (tab.parentNode) tab.parentNode.removeChild(tab);
+      logCheck('(tab.parentNode === null)', (tab.parentNode === null) === true, 'Pre-append: detached');
+      logCheck('Appending', document.body.appendChild(tab), 'appendChild returns the newly appended node');
+      logCheck('(document.body.contains(tab))', (document.body.contains(tab)));
+      logCheck('(document.getElementById("tab") === tab)', (document.getElementById('tab') === tab));
+
+      logSection('DIRECT DOM API ACCESS (No .root, .self, .element (etc) needed!)');
+      logCheck('(typeof tab.style === "object")', (typeof tab.style === 'object') === true);
+      logCheck('(typeof tab.classList === "object")', (typeof tab.classList === 'object') === true);
+      logCheck('(typeof tab.appendChild === "function")', (typeof tab.appendChild === 'function') === true);
+      logCheck('(typeof tab.addEventListener === "function")', (typeof tab.addEventListener === 'function') === true);
+      logCheck('(tab.addEventListener === document.addEventListener)', tab.addEventListener === document.addEventListener, 'shared method identity');
+      logCheck('(tab.parentNode === document.body)', (tab.parentNode === document.body) === true, 'appended');
+      
+      await new Promise(resolve => setTimeout(resolve, 100));
+
+      logSection('CUSTOM METHODS WORK (Instance API)');
+      logCheck('(typeof tab.setColor === "function")', (typeof tab.setColor === 'function') === true);
+      logCheck('(typeof tab.setHeight === "function")', (typeof tab.setHeight === 'function') === true);
+      logCheck('(typeof tab.init === "function")', (typeof tab.init === 'function') === true);
+      logCheck('(typeof tab.append === "function")', (typeof tab.append === 'function') === true);
+
+      logSection('METHOD CHAINING (Returns self)');
+      logCheck('(tab.setColor("#000") === tab)', (tab.setColor('#000') === tab) === true);
+      logCheck('(tab.addClass("test") === tab)', (tab.addClass('test') === tab) === true);
+      logCheck('($(tab).addClass("test")[0] === tab)', ($(tab).addClass('test')[0] === tab) === true);
+
+      logSection('METADATA MARKERS (Internal tracking)');
+      logCheck('(tab._isInstance === true)', (tab._isInstance === true) === true);
+      logCheck('(tab._instanceClass === Tab)', (tab._instanceClass === Tab) === true);
+
+      logSection('WEAKMAP "PSEUDOPRIVATE" DATA (Memory safe)');
+      logCheck('(typeof tab.isInitialized === "boolean")', (typeof tab.isInitialized === 'boolean'));
+      logCheck('(typeof tab.options === "object")', (typeof tab.options === 'object'));
+      logCheck('(tab.hasOwnProperty("isInitialized")', (tab.hasOwnProperty('isInitialized')), 'own property, stored in WeakMap');
+
+      logSection('TYPE CHECKING (Multiple valid ways)');
+      logCheck('(Tab.isPrototypeOf(tab) === false)', (Tab.isPrototypeOf(tab) === false) === true, "element's proto is HTMLElement");
+      logCheck('(tab.constructor === HTMLDivElement)', (tab.constructor === HTMLDivElement) === true, 'DOM constructor');
+      logCheck('(tab._instanceClass === Tab)', (tab._instanceClass === Tab) === true, 'Our marker');
+
+      logSection('COMPARISON EDGE CASES');
+      let sameTab = document.querySelector('#tab');
+      logCheck('(tab === sameTab)', (tab === sameTab) === true, 'SAME OBJECT!');
+      logCheck('(Object.is(tab, sameTab) === true)', (Object.is(tab, sameTab) === true) === true, 'Strict equality');
+
+      let weakMap = new WeakMap();
+      weakMap.set(tab, 'data');
+      logCheck('(weakMap.get(tab) === "data")', (weakMap.get(tab) === 'data') === true);
+
+      let weakSet = new WeakSet();
+      weakSet.add(tab);
+      logCheck('(weakSet.has(tab) === true)', (weakSet.has(tab) === true) === true);
+
+      logSection("WHAT DOESN'T WORK (For completeness)");
+      logCheck('Tab.prototype.isPrototypeOf(tab)', Tab.prototype.isPrototypeOf(tab), 'not in proto chain ❌');
+      logCheck('(tab.constructor === Tab)', (tab.constructor === Tab), 'constructor is HTMLDivElement ❌');
+
+      logSection('CLONING BEHAVIOR (Edge Test #1)');
+      let clone = tab.cloneNode(true);
+      logCheck('(clone instanceof Tab)', (clone instanceof Tab), 'cloneNode() returns plain DOM element ❌');
+      logCheck('(clone instanceof HTMLElement)', (clone instanceof HTMLElement) === true, 'Still a valid element ✅');
+      logCheck('(typeof clone.setColor === "undefined")', (typeof clone.setColor === 'undefined') === true, 'Custom methods not cloned ❌');
+      logCheck('(clone._isInstance === undefined)', (clone._isInstance === undefined) === true, 'Metadata not cloned ❌');
+      logCheck('(clone === tab)', (clone === tab), 'Clone is different object ✅');
+      logCheck('(clone.id === tab.id)', (clone.id === tab.id) === true, 'DOM attributes ARE cloned ✅');
+      
+      let wrappedClone = new Tab(clone);
+      logCheck('(wrappedClone instanceof Tab)', (wrappedClone instanceof Tab) === true, 'Can re-wrap cloned element ✅');
+      logCheck('(typeof wrappedClone.setColor === "function")', (typeof wrappedClone.setColor === 'function') === true, 'Re-wrapped clone has methods ✅');
+      logCheck('(wrappedClone === clone)', (wrappedClone === clone) === true, 'Re-wrapping returns same element ✅');
+
+      // ─────────────────────────────────────────────────────────────────────────
+      // SUPER CALLS TEST (2-3 Levels)
+      // ─────────────────────────────────────────────────────────────────────────
+
+      logMainSection('PART 2: SUPER CALLS & INHERITANCE');
+
+      logSection('SUPER CALLS (2 Levels: Tab -> Instance)');
+      
+      let testDiv = document.createElement('div');
+      testDiv.textContent = 'Test content';
+      
+      try {
+        tab.append(testDiv);
+        logCheck('Tab.append() with super call', tab.contains(testDiv), 'Super call to Instance.append works ✅');
+      } catch (e) {
+        logCheck('Tab.append() with super call', false, 'Super call failed: ' + e.message + ' ❌');
+      }
+
+      logSection('SUPER CALLS (3 Levels: FancyTab -> Tab -> Instance)');
+      let fancy = new FancyTab();
+      fancy.id = 'fancy';
+      document.body.appendChild(fancy);
+      
+      logCheck('(fancy instanceof FancyTab)', (fancy instanceof FancyTab) === true);
+      logCheck('(fancy instanceof Tab)', (fancy instanceof Tab) === true);
+      logCheck('(fancy instanceof Instance)', (fancy instanceof Instance) === true);
+      
+      try {
+        fancy.setColor('#ff0000');
+        const hasBorder = fancy.style.border.includes('2px solid');
+        const hasBackground = fancy.style.backgroundColor !== '';
+        logCheck('FancyTab.setColor() with super', hasBorder && hasBackground, `Multi-level super - border: ${hasBorder}, bg: ${hasBackground}`);
+      } catch (e) {
+        logCheck('FancyTab.setColor() with super', false, 'Multi-level super failed: ' + e.message + ' ❌');
+      }
+
+      // ─────────────────────────────────────────────────────────────────────────
+      // DEEPER INHERITANCE (4 Levels)
+      // ─────────────────────────────────────────────────────────────────────────
+
+      logMainSection('PART 3: DEEP INHERITANCE STRESS TEST');
+
+      logSection('4-LEVEL INHERITANCE CHAIN');
+      let level4 = new Level4();
+      level4.id = 'level4-test';
+      document.body.appendChild(level4);
+
+      logCheck('(level4 instanceof Level4)', (level4 instanceof Level4) === true);
+      logCheck('(level4 instanceof Level3)', (level4 instanceof Level3) === true);
+      logCheck('(level4 instanceof Level2)', (level4 instanceof Level2) === true);
+      logCheck('(level4 instanceof Level1)', (level4 instanceof Level1) === true);
+      logCheck('(level4 instanceof Instance)', (level4 instanceof Instance) === true);
+      logCheck('(level4 instanceof HTMLElement)', (level4 instanceof HTMLElement) === true);
+
+      logSection('4-LEVEL SUPER CALL CHAIN');
+      try {
+        level4.level4Method();
+        const allCalled = level4.dataset.level1 === 'called' && 
+                         level4.dataset.level2 === 'called' && 
+                         level4.dataset.level3 === 'called' && 
+                         level4.dataset.level4 === 'called';
+        logCheck('All 4 levels called via super chain', allCalled, 
+          `L1:${level4.dataset.level1} L2:${level4.dataset.level2} L3:${level4.dataset.level3} L4:${level4.dataset.level4}`);
+      } catch (e) {
+        logCheck('4-level super chain', false, 'Failed: ' + e.message + ' ❌');
+      }
+
+      // ─────────────────────────────────────────────────────────────────────────
+      // ASYNC METHODS
+      // ─────────────────────────────────────────────────────────────────────────
+
+      logMainSection('PART 4: ASYNC METHODS & SUPER');
+
+      logSection('ASYNC METHOD INHERITANCE');
+      let asyncEl = new AsyncChild();
+      asyncEl.id = 'async-test';
+      document.body.appendChild(asyncEl);
+
+      logCheck('(asyncEl instanceof AsyncChild)', (asyncEl instanceof AsyncChild) === true);
+      logCheck('(asyncEl instanceof AsyncBase)', (asyncEl instanceof AsyncBase) === true);
+      logCheck('(asyncEl instanceof Instance)', (asyncEl instanceof Instance) === true);
+
+      try {
+        const result = await asyncEl.fetchData();
+        const baseCalled = asyncEl.dataset.baseFetched === 'true';
+        const childCalled = asyncEl.dataset.childFetched === 'true';
+        const correctReturn = result === 'base-data-child-data';
+        
+        logCheck('Async super call to base', baseCalled, 'Base async method executed');
+        logCheck('Async child method executed', childCalled, 'Child async method executed');
+        logCheck('Async return value correct', correctReturn, `Returned: ${result}`);
+        logCheck('Full async inheritance chain', baseCalled && childCalled && correctReturn, 'All async operations succeeded');
+      } catch (e) {
+        logCheck('Async inheritance', false, 'Failed: ' + e.message + ' ❌');
+      }
+
+      // ─────────────────────────────────────────────────────────────────────────
+      // GETTERS/SETTERS
+      // ─────────────────────────────────────────────────────────────────────────
+
+      logMainSection('PART 5: GETTERS/SETTERS & SHADOWING');
+
+      logSection('GETTER/SETTER INHERITANCE');
+      let getset = new GetSetChild();
+      getset.id = 'getset-test';
+      document.body.appendChild(getset);
+
+      logCheck('(getset instanceof GetSetChild)', (getset instanceof GetSetChild) === true);
+      logCheck('(getset instanceof GetSetBase)', (getset instanceof GetSetBase) === true);
+      logCheck('(getset instanceof Instance)', (getset instanceof Instance) === true);
+
+      try {
+        // Test getter without setter
+        const defaultValue = getset.value;
+        logCheck('Getter with super (default)', defaultValue === 'base-default-child', `Got: ${defaultValue}`);
+
+        // Test setter
+        getset.value = 'test';
+        const wasSet = getset.dataset.childSet === 'true';
+        logCheck('Setter called child logic', wasSet, 'Child setter executed');
+        
+        const setValue = getset.value;
+        const correctValue = setValue === 'base-test-child';
+        logCheck('Getter after setter with super', correctValue, `Got: ${setValue}`);
+        logCheck('Super setter modified data', getset.dataset.value === 'base-test', `Base set: ${getset.dataset.value}`);
+      } catch (e) {
+        logCheck('Getter/Setter inheritance', false, 'Failed: ' + e.message + ' ❌');
+      }
+
+      // ─────────────────────────────────────────────────────────────────────────
+      // STATIC METHODS
+      // ─────────────────────────────────────────────────────────────────────────
+
+      logMainSection('PART 6: STATIC METHODS');
+
+      logSection('STATIC METHOD INHERITANCE');
+      
+      logCheck('StaticBase has static methods', typeof StaticBase.createDefault === 'function', 'Base static methods exist');
+      logCheck('StaticChild has static methods', typeof StaticChild.createDefault === 'function', 'Child static methods exist');
+      logCheck('StaticChild inherits from StaticBase', StaticChild.prototype instanceof StaticBase, 'Prototype chain correct');
+
+      try {
+        // Test base static method
+        const baseEl = StaticBase.createDefault();
+        logCheck('StaticBase.createDefault() works', baseEl instanceof StaticBase, 'Returns Instance');
+        logCheck('Base static created correctly', baseEl.dataset.created === 'base', `Created by: ${baseEl.dataset.created}`);
+        
+        // Test child static method with super
+        const childEl = StaticChild.createDefault();
+        logCheck('StaticChild.createDefault() works', childEl instanceof StaticChild, 'Returns Instance');
+        logCheck('Child static overrides base', childEl.dataset.created === 'child', `Created by: ${childEl.dataset.created}`);
+        
+        // Test static method calling super
+        const baseType = StaticBase.getType();
+        const childType = StaticChild.getType();
+        logCheck('Static super call works', childType === 'base-child', `Base: ${baseType}, Child: ${childType}`);
+      } catch (e) {
+        logCheck('Static method inheritance', false, 'Failed: ' + e.message + ' ❌');
+      }
+
+      // ─────────────────────────────────────────────────────────────────────────
+      // FINAL SUMMARY
+      // ─────────────────────────────────────────────────────────────────────────
+
+      logMainSection('TEST SUITE COMPLETE');
+      logsDiv.innerHTML += '<div class="log" style="color: #00ffcc; margin-top: 20px; font-size: 1.2em;">✅ All tests executed. Review results above.</div>';
+    });
+  </script>
+</body>
+</html>
