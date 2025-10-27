@@ -68,6 +68,21 @@ class Level4 extends Level3 extends Level2 extends Level1 extends Instance
 - ✅ Destructuring
 - ✅ Template literals
 
+```javascript
+class MyWidget extends Instance {
+  async loadData() {
+    const data = await super.fetchFromAPI();
+    this.style.backgroundColor = 'green'; // Direct DOM access
+    return data;
+  }
+}
+```
+
+let widget = new MyWidget();
+widget instanceof MyWidget;     // ✅ true
+widget instanceof HTMLElement;  // ✅ true  
+widget === widget;              // ✅ true (not a wrapper!)
+
 ### 4. jQuery Compatibility
 ```javascript
 $(tab).addClass('foo')   // ✅ Works
