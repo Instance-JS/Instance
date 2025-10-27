@@ -76,12 +76,12 @@ class MyWidget extends Instance {
     return data;
   }
 }
-```
 
 let widget = new MyWidget();
 widget instanceof MyWidget;     // ✅ true
 widget instanceof HTMLElement;  // ✅ true  
 widget === widget;              // ✅ true (not a wrapper!)
+```
 
 ### 4. jQuery Compatibility
 ```javascript
