@@ -3,7 +3,9 @@ See CHANGELOG.md for history.
 Usage:
 
 ```javascript
-// can include jQuery in another file (optional)
+//  can include jQuery in another file (optional)
+// `See Instance-comprehensive-unit-test.html` for the complete version
+
 class Tab extends Instance {
   /*
     // not necessary to explicitly include, as super(...args) is auto-called when no constructor is provided.
@@ -30,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     $(tab).removeClass('jquery-compatible').setColor('#fff').append(new Tab('#def'));
     
     // ═══════════════════════════════════════════════════════════
-    // IDENTITY CHECKS (The Revolutionary Part)
+    // INSTANCEOF CHECKS (Symbol [hasInstance] Meta-Constructor) (ADR-006)
     // ═══════════════════════════════════════════════════════════
     console.log(tab instanceof Tab);                    // true ✅
     console.log(tab instanceof Instance);               // true ✅
@@ -40,23 +42,23 @@ document.addEventListener('DOMContentLoaded', function(e) {
     console.log(tab instanceof Node);                   // true ✅
     console.log(tab instanceof Object);                 // true ✅ (everything is Object)
     console.log(Tab instanceof Instance);               // true ✅ (Meta-constructor from ADR 006)
-    
+
     // ═══════════════════════════════════════════════════════════
-    // ELEMENT IDENTITY (No Wrapper!)
-    // ═══════════════════════════════════════════════════════════
-    console.log(tab === tab[0]);                        // true ✅ (jQuery compat: tab[0] is self)
-    console.log(tab === document.querySelector('#tab'));// true ✅ (IT'S THE ACTUAL DOM ELEMENT!)
-    console.log(tab.nodeType === 1);                    // true ✅ (Element node)
-    console.log(tab.tagName === 'DIV');                 // true ✅ (Real DOM element)
-    
-    // ═══════════════════════════════════════════════════════════
-    // JQUERY COMPATIBILITY (Seamless Integration)
+    // JQUERY COMPATIBILITY (Classes are [Function] Objects) (ADR-004)
     // ═══════════════════════════════════════════════════════════
     console.log($(tab)[0] === tab);                     // true ✅ (jQuery wraps it, [0] returns it)
     console.log($(tab).length === 1);                   // true ✅ (jQuery sees it as collection)
     console.log(tab.length === 1);                      // true ✅ (Array-like)
     console.log(tab.jquery === undefined);              // true ✅ (NOT a jQuery object)
     console.log($(tab).jquery !== undefined);           // true ✅ (but CAN be wrapped)
+    
+    // ═══════════════════════════════════════════════════════════
+    // ELEMENT IDENTITY (Elements are [Class] Objects) (ADR-007)
+    // ═══════════════════════════════════════════════════════════
+    console.log(tab === tab[0]);                        // true ✅ (jQuery compat: tab[0] is self)
+    console.log(tab === document.querySelector('#tab'));// true ✅ (IT'S THE ACTUAL DOM ELEMENT!)
+    console.log(tab.nodeType === 1);                    // true ✅ (Element node)
+    console.log(tab.tagName === 'DIV');                 // true ✅ (Real DOM element)
     
     // ═══════════════════════════════════════════════════════════
     // DIRECT DOM API ACCESS (No .element needed!)
