@@ -1,6 +1,4 @@
-EDIT: October 26, 2025. Instance-1.0.0.beta.2 Still some tweaks remaining regarding correctly merging host methods. HOWEVER. This does indeed work in my private env. It's 6 AM, I'm dead tired, can't port it now. Must be refined 'tomorrow' (today)
-
-Edit: October 27, 2025. Instance-1.0.0-beta.4 passed all 56 unit tests.
+See CHANGELOG.md for history.
 
 Usage:
 
