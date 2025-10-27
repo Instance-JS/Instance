@@ -225,7 +225,7 @@ Discarded: Introduces opacity (see ADR-005), conflicting with inheritance goals.
 - **Seamless jQuery interop**: Instance instances act as single-element collections (`instance[0] === instance`, `instance.length = 1`).
 - **Backward compatibility**: Works without jQuery (falls back to native DOM).
 - **Minor prototype bloat**: Adds ~100-200 methods, but only on demand and with overrides.
-- **Encourages hybrid usage**: Developers can mix vanilla, Instance, and jQuery styles without friction.
+- **Encourages hybrid usage**: Developers can mix Instance, and jQuery styles without friction.
 
 Future versions could auto-detect jQuery versions or support other libs like Zepto.
 
