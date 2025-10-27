@@ -13,7 +13,7 @@ Async super calls (await super.method()) resolve correctly. (To be honest, this 
 ## 1.0.0-beta.2 (2025-10-26)
 ### ✨ Enhancements
 - **Direct Element Architecture** (ADR 007): `new Instance()` now *is* the DOM element—true identity, zero wrappers, fluent chaining with native DOM/jQuery.
-- Auto-method copying from prototype chain (preserves `super()`, overrides correctly).
+- Auto-method copying from prototype chain (preserves `super()`, overrides correctly [mostly, see changelog]).
 - Custom `Symbol.hasInstance` for seamless `instanceof Subclass`.
 - jQuery auto-merge on first init (overrides optional).
 
