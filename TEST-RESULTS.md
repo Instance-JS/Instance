@@ -71,22 +71,23 @@ class Level4 extends Level3 extends Level2 extends Level1 extends Instance
 ```javascript
 class CustomModule extends Instance {
     async fetchFromAPI() {
-        // await some value
+        // await some value [return new Promise(...)]
     }
 }
 
 class MyWidget extends CustomModule {
-  async loadDataAndSetColor() {
-    const data = await super.fetchFromAPI();
-    this.style.backgroundColor = 'green'; // Direct DOM access
-    return data;
-  }
+    async loadDataAndSetColor() {
+        const data = await super.fetchFromAPI();
+        this.style.backgroundColor = 'green'; // Direct DOM access
+        return data;
+    }
 }
 
 let widget = new MyWidget();
 widget instanceof MyWidget;     // ✅ true
 widget instanceof HTMLElement;  // ✅ true  
 widget === widget;              // ✅ true (not a wrapper!)
+widget.loadDataAndSetColor().then(data => console.log('Loaded:', data, 'BG green?', getComputedStyle(widget).backgroundColor)); // example
 ```
 
 ### 4. jQuery Compatibility
