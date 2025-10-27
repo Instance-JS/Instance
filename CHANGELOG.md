@@ -7,7 +7,7 @@ Async super calls (await super.method()) resolve correctly. (To be honest, this 
 
 ### Other
   - Unit Testing Completed: All 56 unit tests pass (100% coverage), including multi-level inheritance, async cascades, getters/setters shadowing, static factories, error bubbling, and Symbol.hasInstance upgrades.
-  - *Pro Tip*: Beta.3? Yeah, I skipped that one - Semver deemed skipping a version appropriate. 😅 Full diff: [beta.2...beta.4](link-to-compare).
+  - *Woops*: Beta.3? Yeah, I skipped that one - Semver deemed skipping a version appropriate. 😅 Full diff: [beta.2...beta.4](link-to-compare).
   - No Breaking Changes: Backward-compatible with `beta.2`; deprecations for legacy .main/.element props (use `this` directly for DOM access).
 
 ## 1.0.0-beta.2 (2025-10-26)
