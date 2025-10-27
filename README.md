@@ -3,8 +3,8 @@ See CHANGELOG.md for history.
 Usage:
 
 ```javascript
-//  can include jQuery in another file (optional)
-// `See Instance-comprehensive-unit-test.html` for the complete version
+// (Optional): Include jQuery in another file (for the jQuery checks)
+// See Instance-comprehensive-unit-test.html for the complete version
 
 class Tab extends Instance {
   /*
@@ -29,7 +29,6 @@ let $_ = new Instance(document);
 document.addEventListener('DOMContentLoaded', function(e) {
     let tab = new Tab('#tab');
     tab.addClass('jquery-compatible').setColor('#000').setHeight('100px');
-    $(tab).removeClass('jquery-compatible').setColor('#fff').append(new Tab('#def'));
     
     // ═══════════════════════════════════════════════════════════
     // INSTANCEOF CHECKS (Symbol [hasInstance] Meta-Constructor) (ADR-006)
