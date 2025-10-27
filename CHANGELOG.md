@@ -1,8 +1,8 @@
 ## 1.0.0-beta.4 (2025-10-27) (pseudo-stable)
 
 ### Fixed
-  - Host Method Merging: Resolved critical issues from `beta.2` where host methods (e.g., read-only APIs like `document.children`) were not correctly merged into subclass prototypes. Beta.4 fixes edge cases, ensuring seamless inheritance without shadowing or breakage.
-  - `super` and `async super`: Deep super chaining now fully supports natives (e.g., remove() bubbling through 4+ levels).
+  - Host Method Merging: Resolved critical issues from `beta.2` where some host methods (e.g. read-only APIs like `document.children`) did not seamlessly merge into subclass prototypes (throwing on copy). `Beta.4` fixes edge cases, ensuring seamless inheritance without shadowing or breakage.
+  - `super` and `async super`: Deep `super` chaining now fully supports natives (e.g., remove() bubbling through 4+ levels).
 Async super calls (await super.method()) resolve correctly. (To be honest, this was already true, it was just the host method merging getting in the way).
 
 ### Other
