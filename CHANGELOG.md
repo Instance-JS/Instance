@@ -1,4 +1,4 @@
-## 1.0.0-beta.4 (2025-10-27) (pseudo-stable)
+## 1.0.0-beta.4 (2025-10-27) (meta-stable)
 
 ### Fixed
   - Host Method Merging: Resolved critical issues from `beta.2` where some host methods (e.g. read-only APIs like `document.children`) did not seamlessly merge into subclass prototypes (throwing on copy). `Beta.4` fixes edge cases, ensuring seamless inheritance without shadowing or breakage.
