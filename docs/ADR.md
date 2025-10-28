@@ -39,7 +39,7 @@ This formalizes the `new Component()` pattern as the entry point for reusable DO
 **React/Vue (i.e. existing frameworks)**  
 Discarded:
 - **(React)**: JSX's transpilation requirements introduced significant build-step overhead. *'Why can't I just write code that works without extensive tooling?'*
-- **Personal preference**: Solutions tied to certain corporate ecosystems (i.e. Zuckerborg) didn't align with my vision for a lightweight, vanilla JS approach.
+- **Personal preference**: Solutions tied to certain for-profit corporate ecosystems (i.e. Zuckerborg) didn't align with my vision for a lightweight, flexible, vanilla JS approach.
 - **(Vue)**: Components are not instantiated via the `new` keyword. Vue's declarative mounting cycle, while elegant, didn't feel as programmatically direct as constructor-based instantiation.
 
 **Factory Functions**: Use `function createScrollbar(container) { return { ... }; }` for instantiation.  
