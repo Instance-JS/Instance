@@ -615,7 +615,7 @@ Use `Symbol.hasInstance` as a meta-constructor to ensure subclass constructors a
 
 ### Context
 
-With jQuery merging (ADR 004), Proxy elimination (ADR 005), lexical super, constructor overriding (ADR 006) and subclass constructor typing (ADR 007) secured, a pivotal realization surfaced: DOM elements are themselves extensible objects which are instances of classes (e.g. document.createElement('div') instanceof HTMLElement), that can be directly augmented with methods and properties. By overriding the constructor to return the element itself—after marking it with metadata and copying the prototype chain's methods onto it—Instance creates true hybrids: native DOM nodes that simultaneously embody class logic, jQuery-compatible methods, and proper inheritance semantics.
+With jQuery merging (ADR 004), Proxy elimination (ADR 005), lexical super, constructor overriding (ADR 006) and subclass constructor typing (ADR 007) secured, a pivotal realization surfaced: **DOM elements are themselves extensible objects which are instances of classes** (e.g. document.createElement('div') instanceof HTMLElement), that can be directly augmented with methods and properties. By overriding the constructor to return the element itself—after marking it with metadata and copying the prototype chain's methods onto it—Instance creates true hybrids: native DOM nodes that simultaneously embody class logic, jQuery-compatible methods, and proper inheritance semantics.
 
 This "direct element" breakthrough eliminates all wrapper indirection, achieving `new Instance() === element` while retaining fluent chaining and type safety.
 
@@ -648,7 +648,7 @@ Discarded: Adds runtime checks; direct copy is simpler and predictable.
 - **Accepted costs**: Per-instance method copies (~200 bytes); console displays element type (mitigable with `Symbol.toStringTag`).
 - **Unlocks future**: Effortless reactivity, lifecycle integration without layers.
 
-This caps the architecture evolution, redefining DOM components as unified class/DOM/jQuery entities.
+This concludes the (current) architecture evolution, redefining DOM components as unified class/DOM/jQuery entities.
 
 ### References
 
