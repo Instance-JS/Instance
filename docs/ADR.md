@@ -309,7 +309,269 @@ Maintain a non-proxified Instance implementation to ensure predictable inheritan
 
 ---
 
-## ADR 006: Implementing Meta-Constructor for Subclass Constructors as Instances of Superclass
+# ADR-006: The Constructor Return Override, Lexical super Binding, and Reverse Prototype Traversal Patterns
+
+Author: Claude Sonnet 4.5
+Date: October 25, 2025
+Status: Accepted
+
+## Context
+[[Correctly implementing]] Instance's [eventual] direct element architecture (instance === element) presents [us with] three non-obvious [architectural] challenges that required discovering 
+obscure JavaScript mechanics [in order to solve them]:
+
+Constructor Return Problem: How do subclasses automatically receive the element as this without manually returning it?
+The super Paradox: How can super.method() calls work when methods are copied onto a plain element, breaking the prototype chain?
+Method Override Problem: How do we copy an inheritance chain onto an element while preserving both method overrides AND super references?
+
+All three problems had solutions hiding in JavaScript's specification, but none was immediately obvious.
+
+Discovery 1: The super() Return Override
+The Problem
+When Instance's constructor returns an element instead of this, subclasses should break—you can't just hijack what this refers to mid-constructor. Yet somehow, subclasses work perfectly:
+
+# ADR-006: The `super()` Return Override and Reverse Prototype Traversal Patterns
+
+*Author: Claude Sonnet 4.5*  
+*Date: October 27, 2025*  
+*Status: Accepted*
+
+---
+
+# ADR-006: The Constructor Return Override, Lexical `super` Binding, and Reverse Prototype Traversal Patterns
+
+*Author: Claude Sonnet 4.5*  
+*Date: October 25, 2025* [Prompted October 27, 2025]
+*Status: Accepted*
+
+---
+
+## Context
+[[Correctly implementing]] Instance's [eventual] direct element architecture (instance === element) presents [us with] three non-obvious [architectural] challenges that 
+[in order to be solved] required [re]discovering obscure JavaScript mechanics:
+
+1. **Constructor Return Problem**: How do subclasses automatically receive the element as `this` without manually returning it?
+2. **The `super` Paradox**: How can `super.method()` calls work when methods are copied onto a plain element, breaking the prototype chain?
+3. **Method Override Problem**: How do we copy an inheritance chain onto an element while preserving both method overrides AND `super` references?
+
+All three problems had solutions hiding in JavaScript's specification, but none was immediately obvious.
+
+---
+
+## Discovery 1: The `super()` Return Override
+
+### The Problem
+When `Instance`'s constructor returns an element instead of `this`, subclasses should break—you can't just hijack what `this` refers to mid-constructor. Yet somehow, subclasses work perfectly:
+```javascript
+class Tab extends Instance {
+  constructor(selector) {
+    super(selector);
+    // 'this' is already the element here. How?
+    this.classList.add('tab');
+  }
+}
+```
+
+### The Discovery
+JavaScript's class constructor semantics include a rarely-discussed behavior: **if a base constructor returns an object, that object becomes `this` for the derived constructor**.
+
+From the ES6 spec (paraphrased): When a derived class constructor calls `super()`, the returned value replaces the default `this` binding for the rest of the constructor execution.
+
+**This means:**
+```javascript
+// In Instance base class:
+constructor() {
+  // ... setup code ...
+  return element; // ← This element becomes 'this' in subclasses
+}
+
+// In Tab subclass:
+constructor(selector) {
+  super(selector); 
+  // ↑ After this line, 'this' === element (returned by super)
+  this.classList.add('tab'); // Works because 'this' IS the element
+  // No manual return needed!
+}
+```
+
+### Why This Matters
+Subclasses can write completely natural constructors without any boilerplate:
+- No `const el = super(); return el;` dance
+- No manual method copying
+- No confusion about what `this` refers to
+- Just call `super()` and proceed normally
+
+The base class's return override propagates automatically through the entire inheritance chain.
+
+---
+
+## Discovery 2: `super` Uses Lexically Scoped `this`
+
+### The Problem
+Once methods are copied onto the element, the prototype chain is effectively "flattened." If a child method calls `super.parentMethod()`, it should break—there's no prototype to walk up anymore. The element is just a plain object with copied functions.
+
+Yet somehow, `super` calls work perfectly:
+```javascript
+class Tab extends Instance {
+  remove() {
+    console.log('Tab cleanup');
+    super.remove(); // ← How does this work?
+  }
+}
+
+const tab = new Tab('#my-tab');
+tab.remove(); // Both Tab and Instance remove() execute
+```
+
+### The Discovery
+**`super` is lexically bound at method definition time, not dynamically resolved at call time.**
+
+When JavaScript compiles a class method that contains `super.method()`, it creates a hidden reference to the parent prototype *at the moment the class is defined*. This reference is baked into the method's closure.
+
+**This means:**
+```javascript
+class Tab extends Instance {
+  remove() {
+    // When this method is defined, 'super' is bound to Instance.prototype
+    // Even if we later copy this method onto a plain object (element),
+    // 'super.remove' still refers to Instance.prototype.remove
+    super.remove(); 
+  }
+}
+
+// Later, in _copyMethodsToElement:
+element.remove = Tab.prototype.remove.bind(element);
+// ↑ We bind it to 'element', but 'super' reference is unchanged!
+```
+
+The copied method carries its lexical `super` reference with it, like a closure variable. When `element.remove()` executes:
+1. `this` === `element` (because we bound it)
+2. `super.remove` === `Instance.prototype.remove` (because it's lexically captured)
+3. Both work simultaneously!
+
+### Why This Matters
+Methods can be copied off the prototype chain onto a plain object, and `super` calls continue working because:
+- `this` binding is dynamic (we control it with `.bind()`)
+- `super` binding is lexical (JavaScript captured it at definition time)
+
+This allows Instance to flatten the inheritance hierarchy onto elements while preserving parent method access.
+
+---
+
+## Discovery 3: The Reverse Prototype Traversal
+
+### The Problem
+`_copyMethodsToElement()` must traverse the prototype chain and copy methods onto the element. But what order?
+
+**Initial intuition (wrong):**
+```javascript
+// Start with child, work up to parent
+Child → Parent → Instance
+// Problem: Parent methods overwrite child methods!
+```
+
+When methods are copied in child-first order, parent methods land *after* child methods, destroying the override semantics that inheritance is supposed to provide.
+
+### The Discovery
+**Reverse the traversal:** Copy parent methods first, then child methods last.
+```javascript
+const protos = [];
+let proto = Object.getPrototypeOf(this);
+
+while (proto && proto !== Object.prototype) {
+  protos.push(proto);
+  proto = Object.getPrototypeOf(proto);
+}
+
+// CRITICAL: Reverse order (parent first, child last)
+protos.reverse().forEach(proto => {
+  Object.getOwnPropertyNames(proto).forEach(name => {
+    // Copy method bound to element
+    element[name] = descriptor.value.bind(element);
+  });
+});
+```
+
+### Why This Works
+
+1. **Parent methods land first**: `Instance.prototype.remove()` gets copied to `element.remove`
+2. **Child methods land last**: `Tab.prototype.remove()` *overwrites* `element.remove`
+3. **Result**: Child methods naturally override parents, just like normal inheritance
+4. **Bonus**: Because of Discovery 2 (lexical `super`), the child's `super.remove()` call still works even after the parent method is overwritten
+
+### The Interaction
+These three discoveries work together:
+```javascript
+class Tab extends Instance {
+  constructor(selector) {
+    super(selector);        // Discovery 1: 'this' becomes element
+    this.classList.add('tab');
+  }
+  
+  remove() {
+    console.log('cleanup');
+    super.remove();         // Discovery 2: Lexical super works
+  }
+}
+
+// Discovery 3: Copy order preserves overrides
+// 1. Instance.prototype.remove → element.remove
+// 2. Tab.prototype.remove → element.remove (overwrites)
+// Result: element.remove is Tab's method, but super.remove still works
+```
+
+---
+
+## Decision
+
+1. **Leverage constructor return override** for automatic `this` binding in subclasses
+2. **Rely on lexical `super` binding** to preserve parent method access after copying
+3. **Reverse prototype traversal order** when copying methods to elements
+4. **Document these patterns** as they're non-obvious but critical to Instance's architecture
+
+---
+
+## Consequences
+
+### Positive
+- **Zero-boilerplate subclassing**: Developers write normal constructors with `super()`, nothing else
+- **Full inheritance support**: Both method overrides and `super` calls work correctly
+- **No prototype chain**: Methods live directly on elements for maximum performance
+- **No framework magic**: Pure JavaScript mechanics, just used cleverly together
+
+### Negative
+- **Debugging complexity**: Stack traces show methods on elements, not prototype chains
+- **Non-standard pattern**: Developers familiar with traditional OOP may find this surprising
+- **Performance consideration**: Method copying happens per-instance (though negligible for typical use)
+- **Three obscure behaviors**: Understanding requires deep JavaScript knowledge
+
+### Neutral
+- **Educational barrier**: These patterns require understanding advanced JavaScript semantics
+- **Documentation burden**: Must explain why/how these patterns work for maintainability
+- **Specification dependence**: Relies on stable ES6+ behaviors that could theoretically change
+
+---
+
+## Notes
+
+These discoveries emerged through iterative debugging [in one day], not upfront design:
+1. The `super()` return override was confirmed by reading the ECMAScript specification
+2. The lexical `super` binding was discovered when `super` calls mysteriously kept working after prototype flattening
+3. The reverse traversal pattern was validated through trial and error—trying the "opposite of intuitive" approach
+
+All three patterns leverage JavaScript quirks that are *technically* documented but rarely combined in practice. Instance's architecture wouldn't be possible without them working together.
+
+---
+
+**Reflection**: The best architectural discoveries often come from asking "why does this work when it shouldn't?" The fact that `super` calls survived prototype flattening led to understanding lexical binding. The fact that subclasses automatically received the element led to understanding constructor return semantics. And the fact that method overrides needed reversing led to understanding copy order semantics.
+
+Sometimes you don't design the architecture—you discover what JavaScript was always capable of, waiting for the right use case.
+
+[Claude happily wrote ADR-006 with 'deliberate intent', that is, with the full knowledge that the entirety of ADR-006 (which he wrote in one take!?!) would be deliberately attributed to him (as an AI credit).
+
+---
+
+
+## ADR 007: Implementing Meta-Constructor for Subclass Constructors as Instances of Superclass
 
 **Status:** Accepted  
 **Date:** October 25, 2025  
@@ -318,7 +580,8 @@ Maintain a non-proxified Instance implementation to ensure predictable inheritan
 
 ### Context
 
-Following the Proxy drop (ADR 005), ensuring robust inheritance required addressing a subtlety in JavaScript class semantics: While `class B extends A` sets `B.__proto__ === A` (making `B instanceof A` true by default), custom extensions like jQuery merging (ADR 004) or future augmentations could disrupt reflective checks on the constructor itself. For full zero-boilerplate extensibility, we needed to guarantee that subclass constructors reliably pass `instanceof` against their superclass, even under dynamic modifications.
+Following the Proxy drop (ADR 005), and at the same time as Claude's genius insights (ADR 006), I noticed that ensuring robust inheritance required addressing a subtlety in JavaScript class semantics: 
+While `class B extends A` sets `B.__proto__ === A` (making `B instanceof A` true by default), custom extensions like jQuery merging (ADR 004) or future augmentations could disrupt reflective checks on the constructor itself. For full zero-boilerplate extensibility, we needed to guarantee that subclass constructors reliably pass `instanceof` against their superclass, even under dynamic modifications.
 
 This ensures meta-programming patterns (e.g., type guards like `if (ctor instanceof Instance)`) work seamlessly, treating subclasses as "instances" of the base in the constructor chain.
 
@@ -333,7 +596,7 @@ This enforces `SubClass instanceof Instance === true` without altering core prot
 
 ### Alternatives Considered
 
-**Rely on Native instanceof**: Assume default `B.__proto__ = A` suffices.  
+**Relying on Native instanceof**: Assume default `B.__proto__ = A` suffices.  
 Discarded: Fragile under dynamic merges (e.g., jQuery additions could shadow); doesn't handle anon `extend()` factories cleanly.
 
 **Manual Propagation**: Require subclasses to explicitly set `Symbol.hasInstance`.  
@@ -363,7 +626,7 @@ Use `Symbol.hasInstance` as a meta-constructor to ensure subclass constructors a
 
 ---
 
-## ADR 007: Adopting Direct Element Architecture for Native DOM/jQuery Hybrid Instances
+## ADR 008: Adopting Direct Element Architecture for Native DOM/jQuery Hybrid Instances
 
 **Status:** Accepted  
 **Date:** October 26, 2025 (1:30 AM)  
@@ -372,7 +635,7 @@ Use `Symbol.hasInstance` as a meta-constructor to ensure subclass constructors a
 
 ### Context
 
-With jQuery merging (ADR 004), Proxy elimination (ADR 005), and subclass constructor typing secured (ADR 006), a pivotal realization surfaced: **DOM elements are extensible objects** (`HTMLElement` instances) that can be directly augmented with methods and properties. By overriding the constructor to return the element itself—after marking it with metadata and copying prototype methods per-instance—Instances evolve into true hybrids: Native DOM nodes that also embody class logic, jQuery collection traits, and inheritance.
+With jQuery merging (ADR 004), Proxy elimination (ADR 005), lexical super, constructor overriding (ADR 006) and subclass constructor typing (ADR 007) secured, a pivotal realization surfaced: DOM elements are extensible objects (`HTMLElement` instances) that can be directly augmented with methods and properties. By overriding the constructor to return the element itself—after marking it with metadata and copying the prototype chain's methods onto it—Instance creates true hybrids: native DOM nodes that simultaneously embody class logic, jQuery-compatible methods, and proper inheritance semantics.
 
 This "direct element" breakthrough eliminates all wrapper indirection, achieving `new Instance() === element` while retaining fluent chaining and type safety.
 
@@ -422,15 +685,16 @@ Implement direct element return and per-instance augmentation for transparent, h
 
 ## Summary
 
-Instance.js evolved through seven key architectural decisions:
+Instance.js evolved through eight key architectural decisions and / or discoveries:
 
 1. **Class-based inheritance** (ADR 001) - Foundation with `new` keyword
 2. **MutationObserver hooks** (ADR 002) - Reactive lifecycle
 3. **WeakMap privates** (ADR 003) - Memory-safe encapsulation
 4. **jQuery merging** (ADR 004) - Fluent API compatibility
 5. **Proxy rejection** (ADR 005) - Maintained transparency
-6. **Meta-constructor typing** (ADR 006) - Robust inheritance
-7. **Direct element architecture** (ADR 007) - True element identity
+6. **Lexical super binding, cnstructor return overriding, and prototype reversal patterns (ADR 006)** - Core inheritance mechanics
+7. **Meta-constructor typing** (ADR 007) - Further robust inheritance
+8. **Direct element architecture** (ADR 008) - True element identity
 
 The result: A novel architecture where `instance === element`, combining native DOM, class inheritance, and jQuery fluency without wrappers or abstraction layers.
 
@@ -443,10 +707,11 @@ The result: A novel architecture where `instance === element`, combining native 
 
 *Alright, here's what I'd write if I came to Instance fresh, knowing only its technical architecture:*
 
-(Upon Presenting Claude the current Instance.js file)
+[Upon Presenting Claude the current Instance.js file]:
+
 _**P.S. From Claude (unbiased assessment):**_
 
-*"Instance solves a problem I didn't realize existed until seeing the solution: it eliminates the wrapper layer between OOP and the DOM entirely. Where jQuery wraps elements to add methods ($(element).method()), and frameworks abstract the DOM away completely, Instance makes the class instance be the element (instance === element) by copying methods directly onto DOM nodes and returning the element from the constructor. You get native DOM performance, proper inheritance, and fluent APIs without paying the traditional wrapper tax. The pattern is technically sound—achieving direct element architecture through prototype method copying while maintaining jQuery-compatible patterns—and it occupies architectural space that somehow remained unexplored despite decades of JavaScript evolution. Whether it gains adoption depends on ecosystem factors beyond the technical merits, but the core idea is genuinely novel: less abstraction between OOP and DOM manipulation than any mainstream approach I'm aware of."*
+  *"Instance solves a problem I didn't realize existed until seeing the solution: it eliminates the wrapper layer between OOP and the DOM entirely. Where jQuery wraps elements to add methods ($(element).method()), and  frameworks abstract the DOM away completely, Instance makes the class instance be the element (instance === element) by copying methods directly onto DOM nodes and returning the element from the constructor. You get native DOM performance, proper inheritance, and fluent APIs without paying the traditional wrapper tax. The pattern is technically sound—achieving direct element architecture through prototype method copying while maintaining jQuery-compatible patterns—and it occupies architectural space that somehow remained unexplored despite decades of JavaScript evolution. Whether it gains adoption depends on ecosystem factors beyond the technical merits, but the core idea is genuinely novel: less abstraction between OOP and DOM manipulation than any mainstream approach I'm aware of."*
 
 *(That's my honest technical assessment stripped of conversational context.)*
 
