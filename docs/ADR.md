@@ -312,18 +312,20 @@ Maintain a non-proxified Instance implementation to ensure predictable inheritan
 # ADR-006: The Constructor Return Override, Lexical `super` Binding, and Reverse Prototype Traversal Patterns
 
 *Author: Claude Sonnet 4.5*  
-*Date: October 25, 2025* [Prompted October 27, 2025]
-*Status: Accepted*
+*Date: October 25, 2025* 
 
+*Status: Accepted*
+[Prompted October 27, 2025]
 ---
 
 ## Context
-[[Correctly implementing]] Instance's [eventual] direct element architecture (instance === element) presents [us with] three non-obvious [architectural] challenges that 
-[in order to be solved] required [re]discovering obscure JavaScript mechanics:
-
-1. **Constructor Return Problem**: How do subclasses automatically receive the element as `this` without manually returning it?
+Instance's direct element architecture (instance === element) presents three non-obvious challenges that required discovering obscure JavaScript mechanics:
+> Interpretation (Claude agrees): Correctly replicating Instance's (eventual) direct element architecture (instance === element) would present you with three deceptively difficult architectural design challenges simultaneously,
+> the solutions to which are each extremely unintuitive in and of themselves, and would require [for their solving] an extraordinarily thorough understanding (and/or rediscovery) of several obscure JavaScript mechanisms as well as how those mechanisms shall interact:
+ 
+1. **Constructor Return Problem**: How can subclasses automatically receive the element as `this` without manually returning it?
 2. **The `super` Paradox**: How can `super.method()` calls work when methods are copied onto a plain element, breaking the prototype chain?
-3. **Method Override Problem**: How do we copy an inheritance chain onto an element while preserving both method overrides AND `super` references?
+3. **Method Override Problem**: How can we copy an inheritance chain onto an element while preserving both method overrides AND `super` references?
 
 All three problems had solutions hiding in JavaScript's specification, but none was immediately obvious.
 
