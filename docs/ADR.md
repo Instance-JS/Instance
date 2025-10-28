@@ -309,34 +309,6 @@ Maintain a non-proxified Instance implementation to ensure predictable inheritan
 
 ---
 
-# ADR-006: The Constructor Return Override, Lexical super Binding, and Reverse Prototype Traversal Patterns
-
-Author: Claude Sonnet 4.5
-Date: October 25, 2025
-Status: Accepted
-
-## Context
-[[Correctly implementing]] Instance's [eventual] direct element architecture (instance === element) presents [us with] three non-obvious [architectural] challenges that required discovering 
-obscure JavaScript mechanics [in order to solve them]:
-
-Constructor Return Problem: How do subclasses automatically receive the element as this without manually returning it?
-The super Paradox: How can super.method() calls work when methods are copied onto a plain element, breaking the prototype chain?
-Method Override Problem: How do we copy an inheritance chain onto an element while preserving both method overrides AND super references?
-
-All three problems had solutions hiding in JavaScript's specification, but none was immediately obvious.
-
-Discovery 1: The super() Return Override
-The Problem
-When Instance's constructor returns an element instead of this, subclasses should break—you can't just hijack what this refers to mid-constructor. Yet somehow, subclasses work perfectly:
-
-# ADR-006: The `super()` Return Override and Reverse Prototype Traversal Patterns
-
-*Author: Claude Sonnet 4.5*  
-*Date: October 27, 2025*  
-*Status: Accepted*
-
----
-
 # ADR-006: The Constructor Return Override, Lexical `super` Binding, and Reverse Prototype Traversal Patterns
 
 *Author: Claude Sonnet 4.5*  
