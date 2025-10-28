@@ -567,7 +567,7 @@ This ensures meta-programming patterns (e.g., type guards like `if (ctor instanc
 
 ### Decision
 
-Implement a meta-constructor using a custom `Symbol.hasInstance` on Instance (and propagate to subclasses). The handler explicitly verifies the subclass constructor's prototype chain or marker properties, falling back to native behavior:
+Implement a meta-constructor using a custom `Symbol.hasInstance` on the Instance base class (and propagate it to subclasses). The handler explicitly verifies the subclass constructor's prototype chain or marker properties, falling back to native behavior:
 
 - **For subclass constructors**: Confirms `def.prototype instanceof base` or equivalent linkage.
 - **Auto-propagates during instantiation**: If `new.target !== Instance`, set `subclass[Symbol.hasInstance]` via an internal helper.
