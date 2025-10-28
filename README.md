@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     // ═══════════════════════════════════════════════════════════
     console.log(tab instanceof Tab);                    // true ✅
     console.log(tab instanceof Instance);               // true ✅
-    console.log(tab instanceof HTMLElement);            // true ✅ (IT'S ACTUALLY AN ELEMENT!)
+    console.log(tab instanceof HTMLElement);            // true ✅ (The class IS the element!)
     console.log(tab instanceof HTMLDivElement);         // true ✅ (Specific element type)
     console.log(tab instanceof Element);                // true ✅
     console.log(tab instanceof Node);                   // true ✅
