@@ -508,6 +508,7 @@ class Tab extends Instance {
 
 ### Positive
 - **Zero-boilerplate subclassing**: Developers write normal constructors with `super()`, nothing else
+  > Technically, you don't even need to call `super()` if you omit the subclass constructor entirely, as ES6 classes auto-initialize with `super(...args)` when the constructor is omitted.
 - **Full inheritance support**: Both method overrides and `super` calls work correctly
 - **No prototype chain**: Methods live directly on elements for maximum performance
 - **No framework magic**: Pure JavaScript mechanics, just used cleverly together
