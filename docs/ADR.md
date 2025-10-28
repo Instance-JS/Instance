@@ -522,6 +522,7 @@ class Tab extends Instance {
 ### Neutral
 - **Educational barrier**: These patterns require understanding advanced JavaScript semantics
 - **Documentation burden**: Must explain why/how these patterns work for maintainability
+  > You're welcome
 - **Specification dependence**: Relies on stable ES6+ behaviors that could theoretically change
 
 ---
