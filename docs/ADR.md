@@ -32,7 +32,7 @@ Establish class-based inheritance as the core paradigm for Instance.js component
 
 This formalizes the `new Component()` pattern as the entry point for reusable DOM modules.
 
-> **NOTE:** jQuery is a library, not a framework. It was 'kept' because of its flexibility and ease of use for prototyping. If you just want to manipulate the DOM, why invoke a monolith?
+> jQuery is a library, not a framework. It was 'kept' because of its flexibility and ease of use for prototyping. If you just want to manipulate the DOM, why invoke a monolith?
 
 ### Alternatives Considered
 
@@ -89,7 +89,7 @@ The `MutationObserver` API offers a performant, event-based solution to detect s
 
 ### Decision
 
-Incorporate `MutationObserver` as a core static utility (`Instance.whenInsertedTo(rootNode, element, callbackScope, callback)`) for insertion detection. Key mechanics:
+Incorporate `MutationObserver` as a core static utility `Instance.whenInsertedTo(rootNode, element, callbackScope, callback)` for insertion detection. Key mechanics:
 
 - Input validation via `Instance.require()` for Node types and function callbacks.
 - Immediate callback if already inserted (`rootNode.contains(element)`).
@@ -182,9 +182,11 @@ This pattern becomes a cornerstone for resource hygiene across the framework.
 
 Standardized WeakMap scoping for private data and observers, ensuring leak-free, encapsulated state management tied to object lifetimes.
 
+> **UPDATE** *(October 25, 2025)*: The accessor pattern evolved between ADR-006 and ADR-008. With direct element architecture (`instance === element`), `_getPrivate()` and `_setPrivate()` methods are copied onto elements rather than using private getters. The WeakMap scoping principle remains unchanged—keys are now the elements themselves, preserving memory safety while enabling the `instance === element` pattern.
+
 ---
 
-## ADR 004: Enhancing Class Constructors for jQuery Compatibility via Object Modification
+## ADR 004: Merging jQuery.fn Methods onto Instance.prototype for Fluent API Compatibility
 
 **Status:** Accepted  
 **Date:** October 20, 2025  
@@ -195,17 +197,16 @@ Standardized WeakMap scoping for private data and observers, ensuring leak-free,
 
 During early prototyping of Instance.js, the goal was to blend modern ES6+ class-based inheritance with jQuery's fluent, collection-like API for DOM manipulation. jQuery objects (`$(selector)`) are array-like wrappers that support method chaining (e.g., `.append().css()`) and treat elements as pseudo-collections (e.g., `$(el)[0]` for the raw node).
 
-Standard classes in JavaScript are functions (hence objects) and can be dynamically extended with properties or methods. However, integrating jQuery compatibility required ensuring that Instance subclasses could seamlessly adopt jQuery's `fn` methods without prototype pollution or manual delegation. This meant modifying the class constructor object itself to merge jQuery behaviors, while preserving vanilla JS extensibility.
+Standard ES6+ classes support prototype extension, allowing methods to be dynamically added to `ClassName.prototype`. To integrate jQuery compatibility, Instance needed to adopt jQuery's `fn` methods without wrapper objects or manual delegation, enabling direct method chaining on Instance-based elements.
 
 ### Decision
-
-We decided to treat class constructors as modifiable objects, (adding `this[0]` and `this.length`), dynamically merging jQuery's `$.fn` methods onto `Instance.prototype` during initialization. This is triggered lazily (on first instantiation) (`new Instance()`) and skips existing properties to allow overrides.
+Classes are Function objects. I noticed that it would be quite easy to add jQuery compatibility by making instances array-like (adding `this[0]` and `this.length`) and dynamically merging jQuery's `$.fn` methods onto `Instance.prototype` during initialization. So I did. This is triggered lazily (on first instantiation via `new Instance()`) and skips existing properties to allow overrides.
 
 The approach:
-
-- Check for jQuery availability.
-- Iterate `Object.keys($.fn)` and copy function properties to `Instance.prototype` if not already defined.
-- Expose as a static `mergeJQuery(force)` method for manual control.
+- Check for jQuery availability
+- Iterate `Object.keys($.fn)` and copy function properties to `Instance.prototype` if not already defined
+- Expose as a static `mergeJQuery(force)` method for manual control
+- Mark as merged via `Instance.isMerged` flag to prevent redundant operations
 
 This enables `new Instance(el).append('<p>')` to behave like `$(el).append('<p>')`, with Instance methods always taking precedence.
 
@@ -267,7 +268,7 @@ Current ECMAScript proxies (as of ES2025) are opaque by design and do not suppor
 
 ### Decision
 
-We dropped the use of Proxies for the core Instance behavior, retaining the standard, non-proxied implementation.
+I dropped the use of Proxies for the core Instance behavior, retaining the standard, non-proxied implementation.
 
 The reasoning is that a fully proxified Instance layer would require **Transparent Proxies**, a feature proposed in research but not standardized or available in any production JavaScript engine.
 
@@ -306,6 +307,8 @@ The feature remains experimental in SpiderMonkey research builds and has not ent
 ### Final Outcome
 
 Maintain a non-proxified Instance implementation to ensure predictable inheritance, equality, and `instanceof` semantics until ECMAScript standardizes Transparent Proxies.
+
+> The decision was made on the spot to abandon any Proxy-based architecture, once it became clear to me that the answer to some problems is that they are unsolvable with current tools: It is my professional opinion that there is no Proxy-based workaround or hack possible that allows Transparent Proxies to be emulated or polfyilled without formally standardizing (the implementation of) Transparent Proxies at the language level. This insight actually proved a critically important step toward enabling the architectural breakthroughs of ADR-006 through ADR-008. Proxy opacity would have fundamentally broken the `instance === element` pattern, as proxies cannot achieve true >identity with their targets. Maintaining object transparency enabled the constructor return override pattern (upcoming) that defines a core pillar of Instance's architecture.
 
 ---
 
@@ -529,7 +532,7 @@ class Tab extends Instance {
 
 ## Notes
 
-These discoveries emerged through iterative debugging [in one day], not upfront design:
+These discoveries emerged through rapid iterative debugging, not upfront design:
 1. The `super()` return override was confirmed by reading the ECMAScript specification
 2. The lexical `super` binding was discovered when `super` calls mysteriously kept working after prototype flattening
 3. The reverse traversal pattern was validated through trial and error—trying the "opposite of intuitive" approach
