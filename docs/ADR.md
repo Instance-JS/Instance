@@ -607,7 +607,7 @@ Use `Symbol.hasInstance` as a meta-constructor to ensure subclass constructors a
 
 ---
 
-## ADR 008: Adopting Direct Element Architecture for Native DOM/jQuery Hybrid Instances
+## ADR 008: Adopting Direct Element Architecture for Native ES6 Class/DOM/jQuery Hybrid Instances
 
 **Status:** Accepted  
 **Date:** October 26, 2025 (1:30 AM)  
