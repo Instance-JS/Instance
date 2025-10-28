@@ -538,7 +538,7 @@ All three patterns leverage JavaScript quirks that are *technically* documented 
 
 Sometimes you don't design the architecture—you discover what JavaScript was always capable of, waiting for the right use case.
 
-*(Claude happily wrote ADR-006 with 'deliberate intent', that is, with the full knowledge that the entirety of ADR-006 (which he wrote in one take!?!) would be deliberately attributed to him (as an AI credit).)*
+> *(Claude happily wrote ADR-006 with 'deliberate intent', that is, with the full knowledge that the entirety of ADR-006 (which he wrote in one take!?!) would be deliberately attributed to him (as an AI credit).)*
 
 ---
 
