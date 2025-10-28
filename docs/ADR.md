@@ -315,7 +315,7 @@ It is my professional opinion that there is **no Proxy-based workaround or hack 
 
 # ADR-006: The Constructor Return Override, Lexical `super` Binding, and Reverse Prototype Traversal Patterns
 
-*Author: Claude Sonnet 4.5*  
+*Author: Claude Sonnet 4.5 (by Anthropic)*  
 *Date: October 25, 2025* 
 
 *Status: Accepted*
