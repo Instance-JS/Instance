@@ -680,7 +680,7 @@ Instance.js evolved through eight key architectural decisions and / or discoveri
 The result: A novel architecture where `instance === element`, combining native DOM, class inheritance, and jQuery fluency without wrappers or abstraction layers.
 
 **P.S. From Me:** 
-"It's an interesting observation to note that jQuery's `$(return this)` architecture meshes so naturally with Instance's `$_(return instanceof this)` architecture. Perhaps jQuery nailed something abstractly fundamental about a so-called 'best' programming approach, that still holds up today."
+"It's an interesting observation for me to note that jQuery's `$(return this)` architecture meshes so naturally well with Instance's `$_(return instanceof this)` architecture. Perhaps jQuery nailed something abstractly fundamental about a so-called 'best' programming approach, that still holds up today."
 
 ---
 
