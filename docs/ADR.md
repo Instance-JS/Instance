@@ -616,7 +616,7 @@ Use `Symbol.hasInstance` as a meta-constructor to ensure subclass constructors a
 
 ### Context
 
-With jQuery merging (ADR 004), Proxy elimination (ADR 005), lexical super, constructor overriding (ADR 006) and subclass constructor typing (ADR 007) secured, a pivotal realization surfaced: **DOM elements are themselves extensible objects which are instances of classes** (e.g. document.createElement('div') instanceof HTMLElement), that can be directly augmented with methods and properties. By overriding the constructor to return the element itself—after marking it with metadata and copying the prototype chain's methods onto it—Instance creates true hybrids: native DOM nodes that simultaneously embody class logic, jQuery-compatible methods, and proper inheritance semantics.
+With jQuery merging (ADR 004), Proxy elimination (ADR 005), lexical super, constructor overriding (ADR 006) and subclass constructor typing (ADR 007) secured, a pivotal realization hit me like a slap in the face: **DOM elements are themselves extensible objects which are instances of classes** (e.g. `document.createElement('div') instanceof HTMLElement`), that can be directly augmented with methods and properties. By overriding the constructor to return the element itself—after marking it with metadata and copying the prototype chain's methods onto it—Instance creates true hybrids: native DOM nodes that simultaneously embody class logic, jQuery-compatible methods, and proper inheritance semantics.
 
 This "direct element" breakthrough eliminates all wrapper indirection, achieving `new Instance() === element` while retaining fluent chaining and type safety.
 
