@@ -7,6 +7,7 @@
   - `tab.constructor === Tab` => `true`
   - `tab.constructor.native === HTMLDivElement` => also `true` (if a div)
   - if tab is a button, `tab.constructor.native` is `HTMLButtonElement` and so on
+  - Auto-override of constructor can be configured in options: `{ constructor: [true|false] }` (defaults to `true` if omitted)
   - Implemented in beta.5
 
 ### Prototyped:
