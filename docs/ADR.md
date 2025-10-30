@@ -51,8 +51,6 @@ Discarded: No static analysis (e.g., IDE autocompletion); inheritance via manual
 **Custom Elements (Web Components)**: Register via `customElements.define('scroll-bar', ScrollbarClass)`.  
 Discarded: Ties to HTML tags; overkill for non-declarative, programmatic use; doesn't quite fit jQuery-like fluency.
 
-> **EDIT** *(October 26, 2025)*: I now strongly suspect that some feature of Web Components will have a natural logical integration with Instance (specifically with regards to instantiation of truly custom elements like `<scrollbar></scrollbar>`).
-
 ### Consequences
 
 - **Modular scalability**: Easy extension (e.g., `FancyScrollbar extends Scrollbar`) with shared base logic.
