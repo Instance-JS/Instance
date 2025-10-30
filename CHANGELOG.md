@@ -23,7 +23,7 @@
 
 ### TODO:
   - A lot
-  - Full Direct Element Architecture commpliance: make `(Tab.prototype.isPrototypeOf(tab) === true` AND `HTMLDivElement.isPrototypeOf(tab) === true`. (it's the only remaining `false` check...as far as I know.
+  - Full Direct Element Architecture compliance: make `(Tab.prototype.isPrototypeOf(tab) === true` AND `HTMLDivElement.isPrototypeOf(tab) === true`. (it's the only remaining `false` check...as far as I know.
   - Switch Instance element metadata properties to Symbols to avoid polluting DOM element namespace except where its intentional.
   - Handle edge cases of descriptor inheritance, fully delineate descriptor inheritance model across each mode.
   - Fully flesh out Instance API
