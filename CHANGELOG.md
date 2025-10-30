@@ -13,7 +13,7 @@
 ### Prototyped:
   - new Kernel class using cached native statics to minimize tampering (whether accidental or intentional).
   - Supports inheritance of custom metadata descriptors (enumerable, configurable, writable) (set via `Object.defineProperty` or possibly even via @decorators) on Subclasses
-  - Modes: `'flexible'` | `'strict'` | `strictest`
+  - Modes: `'flexible'` | `'strict'` | `'strictest'`
   - *Flexible*: subclass descriptors override parent ones by default; descriptors are not inherited.
   - *Strict*: non-configurable, non-writable subclass metadata descriptor.value can be overridden by identically-named child methods, however metadata descriptors are inherited from parent (and cannot be overridden when 'false')
   - *Strictest*: non-configurable, non-writable subclass descriptors can NOT be overridden by identically-named child methods.
