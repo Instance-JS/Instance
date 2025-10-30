@@ -1,9 +1,9 @@
 # Architecture Decision Records (ADRs)
 
 
-> *  Instance is not a framework. It is not a library. It is not a wrapper around the DOM. Instance IS the DOM, or, more precisely, it is a meta-layer
- *  that handles the abstraction of merging both the ES6 Class Model and the Document Object Model into one unified architecture. No build tools.
- *  No dependencies (unless you want them). Just pure javascript.
+> Instance is not a framework. It is not a library. It is not a wrapper around the DOM. Instance IS the DOM, or, more precisely, it is a meta-layer
+> that handles the abstraction of merging both the ES6 Class Model and the Document Object Model into one unified architecture. No build tools.
+> No dependencies (unless you want them). Just pure javascript.
 
 This document consolidates all Architecture Decision Records (ADRs) for **Instance.js**.
 ADRs are chronological records of key architectural choices, following the standard template for context, decisions, alternatives, consequences, and outcomes.
