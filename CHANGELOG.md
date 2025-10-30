@@ -1,9 +1,13 @@
 ## 1.0.0-beta.5 (2025-10-30) (prototype)
 
 ### Solved
-  - `tab.constructor === Tab`
-  - `tab.constructor.native === HTMLDivElement` (if a div)
+  - Tricky question answered: if a tab (lowercase 't') is both a Tab (Instance) and an Element, what should its constructor return? Is it a Tab first? Or an Element?
+  - Completely new programming territory with no precedent, requires careful thought to arrive at logical conclusion.
+  - Answer: Both, but prioritize its class definition
+  - `tab.constructor === Tab` => `true`
+  - `tab.constructor.native === HTMLDivElement` => also `true` (if a div)
   - if tab is a button, `tab.constructor.native` is `HTMLButtonElement` and so on
+  - Implemented in beta.5
 
 ### Prototyped:
   - new Kernel class using cached native statics to minimize tampering (whether accidental or intentional).
