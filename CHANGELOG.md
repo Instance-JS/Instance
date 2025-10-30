@@ -1,3 +1,33 @@
+## 1.0.0-beta.5 (2025-10-30) (prototype)
+
+### Solved
+  - `tab.constructor === Tab`
+  - `tab.constructor.native === HTMLDivElement` (if a div)
+  - if tab is a button, `tab.constructor.native` is `HTMLButtonElement` and so on
+
+### Prototyped:
+  - new Kernel class using cached native statics to minimize tampering (whether accidental or intentional).
+  - Supports inheritance of custom metadata descriptors (enumerable, configurable, writable) (set via `Object.defineProperty` or possibly even via @decorators) on Subclasses
+  - Modes: `'flexible'` | `'strict'` | `strictest`
+  - *Flexible*: subclass descriptors override parent ones by default; descriptors are not inherited.
+  - *Strict*: non-configurable, non-writable subclass metadata descriptor.value can be overridden by identically-named child methods, however metadata descriptors are inherited from parent (and cannot be overridden when 'false')
+  - *Strictest*: non-configurable, non-writable subclass descriptors can NOT be overridden by identically-named child methods.
+
+### Removed
+  - this.element, this._element, some other vars. I don't like programmatic clutter.
+
+### TODO:
+  - A lot
+  - Full Direct Element Architecture commpliance: make `(Tab.prototype.isPrototypeOf(tab) === true` AND `HTMLDivElement.isPrototypeOf(tab) === true`. (it's the only remaining `false` check...as far as I know.
+  - Switch Instance element metadata properties to Symbols to avoid polluting DOM element namespace except where its intentional.
+  - Handle edge cases of descriptor inheritance, fully delineate descriptor inheritance model across each mode.
+  - Fully flesh out Instance API
+  - Simplify and/or fully harden the Kernel.
+  - Minor polish
+  - Might remove `this.main`, we'll see. Probably won't do this one, let's be honest.
+  - Make strictest mode explicitly throw instead of merely warning to console. Keep strict mode as warn-by-default.
+  - API: May change 'strictest' to 'strict' for minimal dev learning curve, and change current 'strict' mode to some other name (rigid, perhaps)
+
 ## 1.0.0-beta.4 (2025-10-27) (meta-stable)
 
 ### Fixed
