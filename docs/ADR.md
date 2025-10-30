@@ -1,7 +1,11 @@
 # Architecture Decision Records (ADRs)
 
-This document consolidates all Architecture Decision Records (ADRs) for **Instance.js**, a lightweight base class for building reusable DOM components in vanilla JavaScript.
 
+> *  Instance is not a framework. It is not a library. It is not a wrapper around the DOM. Instance IS the DOM, or, more precisely, it is a meta-layer
+ *  that handles the abstraction of merging both the ES6 Class Model and the Document Object Model into one unified architecture. No build tools.
+ *  No dependencies (unless you want them). Just pure javascript.
+
+This document consolidates all Architecture Decision Records (ADRs) for **Instance.js**.
 ADRs are chronological records of key architectural choices, following the standard template for context, decisions, alternatives, consequences, and outcomes.
 
 Each ADR is self-contained but references prior ones where relevant. For the full codebase and changelog, see the Instance.js repository.
@@ -30,7 +34,7 @@ Establish class-based inheritance as the core paradigm for Instance.js component
 - Leverage `new` for instantiation: Returns the augmented component instance directly (refined in later ADRs).
 - Support zero-boilerplate: No manual setup beyond `extends` and overrides.
 
-This formalizes the `new Component()` pattern as the entry point for reusable DOM modules.
+This formalizes the `new Subclass()` via `class Subclass extends Instance {}` pattern as the entry point for reusable DOM modules.
 
 > jQuery is a library, not a framework. It was 'kept' because of its flexibility and ease of use for prototyping. If you just want to manipulate the DOM, why invoke a monolith?
 
