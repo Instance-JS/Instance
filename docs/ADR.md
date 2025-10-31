@@ -1,10 +1,9 @@
 # Architecture Decision Records (ADRs)
 
 **Origin Story**:
-> Instance.js began as a side project with the understated goal of accelerating UI prototyping for my main project without build tools.
-> These ADRs document the architectural discoveries that transformed a "quick prototyping tool" into a standalone meta-layer occupying unexplored design space between jQuery (wrapper-based) and Web Components (declarative-only).
-> The architectural discoveries documented here emerged organically through iterative problem-solving rather than upfront design.
-> In case you were curious, my main project will apply similar meta-programming patterns to cryptocurrency systems.
+> Instance.js began as a side project with the understated goal of accelerating UI prototyping for my main project without build tools. The architectural discoveries documented here emerged organically through iterative problem-solving rather than upfront design.
+> These ADRs document how a "quick prototyping tool" transformed into a standalone meta-layer occupying unexplored design space between jQuery (wrapper-based) and Web Components (declarative-only).
+> In case you were curious, my main project applies similar meta-programming patterns across cryptocurrency systems.
 
 This document consolidates all Architecture Decision Records (ADRs) for **Instance.js**.
 ADRs are chronological records of key architectural choices, following the standard template for context, decisions, alternatives, consequences, and outcomes.
