@@ -932,7 +932,6 @@ From the test suite output:
 
 ---
 
-
 ### The Logical Progression
 
 **Phase 1: Constructor Duality (this ADR)**
@@ -942,40 +941,7 @@ tab.constructor.native = HTMLDivElement  // Native identity
 ```
 ✅ Both constructors coexist
 
-**Phase 2: Prototype Duality (ADR-010)**
-```javascript
-Tab.prototype.isPrototypeOf(tab)           // Should be true
-HTMLDivElement.prototype.isPrototypeOf(tab) // Should be true
-```
-❓ How to make both prototype chains coexist?
-
-### The Insight
-
-If we can have **two constructors via nesting**, why not **two prototype chains via fusion**?
-
-```javascript
-// Constructor nesting:
-constructor → constructor.native
-
-// Led to prototype fusion:
-element → SpecializedClass.prototype → Tab.prototype → Instance.prototype → HTMLDivElement.prototype
-```
-
-The constructor duality pattern **foreshadowed** the meta-class approach.
-
-### Self-Similar Pattern
-
-Both solutions use **composition** to preserve dual identity:
-
-| Concept | Pattern | Implementation |
-|---------|---------|----------------|
-| Constructor | Nesting | `constructor.native` |
-| Prototype | Fusion | Specialized meta-class chain |
-| Result | Duality | Both identities valid |
-
-This is why ADR-009 (Constructor Duality) **leads to** ADR-010 (Dual Prototype Chains).
-
----
+The constructor duality pattern **foreshadowed** Phase 2: the approach in ADR-010.
 
 ## Consequences
 
@@ -1087,12 +1053,7 @@ This is not a compromise or workaround. This is the **correct** answer: an Insta
 
 ## Key Insight
 
-This ADR documents the moment of realization that **enabled** the dual prototype chain solution. Without understanding that an object can have two constructors, we wouldn't have conceived of fusing two prototype chains.
-
-**Constructor duality → Prototype duality**
-
-The nested metadata pattern (`constructor.native`) directly inspired the fused meta-class pattern (SpecializedClass bridging both prototypes).
-
+This ADR documents the moment of realization (the nested metadata pattern) that **enabled** ADR-010.
 ---
 
 ## References
