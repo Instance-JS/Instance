@@ -142,11 +142,11 @@
 | :---: | :---: | :--- | :--- |
 | `<blink>` | **Netscape** | Makes enclosed text flash on and off. | **🔴 Dangerous & Non-Conforming** (Seizure hazard) |
 | `<bgsound>` | **Microsoft IE** | Plays a sound file automatically in the background. | **🔴 Non-Conforming & Obsolete** (Anti-pattern, replaced by `<audio>`) |
+| `<ilayer>` | Netscape | Inline version of `<layer>`, for overlapping inline content. | **🔴 Non-Conforming & Obsolete** |
 | `<layer>` | **Netscape** | Used for creating layers of content for absolute positioning. | **🔴 Non-Conforming** (Replaced by CSS positioning) |
 | `<marquee>` | **Microsoft IE** | Scrolls text horizontally or vertically, but lacks an accessible stop / pause mechanism | **🔴 Dangerous, Non-Conforming & Obsolete** (Seizure hazard, use CSS, or native browser controls) |
 | `<nolayer>` | **Netscape** | Fallback content for browsers that didn't support `<layer>`. | **🔴 Non-Conforming** |
-| `<spacer>` | Netscape | Inserts fixed white space without semantic meaning. | 🔴 Non-Conforming & Obsolete (Replaced by CSS margins/padding) |
-| `<ilayer>` | Netscape | Inline version of <layer>, for overlapping inline content. | 🔴 Non-Conforming & Obsolete |
+| `<spacer>` | Netscape | Inserts fixed white space without semantic meaning. | **🔴 Non-Conforming & Obsolete** (Replaced by CSS margins/padding) |
 
 
 >🧩 Fun fact: The `<marquee>` element remained supported in Microsoft Edge until the Chromium engine switch in 2020 — making it one of the longest-surviving non-conforming tags in web history.
