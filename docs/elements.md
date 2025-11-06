@@ -8,7 +8,7 @@
 | `<abbr>` | HTML4 onward | Defines an abbreviation or acronym. | **🟢 Semantic** |
 | `<acronym>` | HTML3 | Defines an acronym; superseded by `<abbr>`. | **🔴 Obsolete** |
 | `<address>` | HTML4 onward | Contact information for the nearest `<article>` or `<body>`. | **🟢 Semantic** |
-| `<applet>` | HTML3 | Deprecated Java embedder. | **🔴 Obsolete** (Security risk) |
+| `<applet>` | HTML3 | Deprecated Java embedder-once ran mini-apps, now a relic. | **🔴 Obsolete** (Security risk) |
 | `<area>` | HTML3 onward | Defines a clickable region inside an image map (`<map>`). | **🟢 Standard** |
 | `<article>` | HTML5 | Represents independent, self-contained content (e.g., a blog post). | **🟢 Modern & Semantic** |
 | `<aside>` | HTML5 | Secondary content that is tangentially related to the main content (e.g., sidebars). | **🟢 Modern & Semantic** |
