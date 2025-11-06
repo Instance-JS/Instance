@@ -63,7 +63,7 @@
 | `<input>` | HTML2 onward | User input field (text, checkbox, radio, etc.). | **🟢 Essential** |
 | `<ins>` | HTML4 onward | Marks text that has been **inserted** into the document. | **🟢 Semantic** |
 | `<kbd>` | HTML4 onward | Denotes **keyboard input** or other input methods. | **🟢 Semantic** |
-| `<keygen>` | HTML5 | Generated public-private key pairs for form submission. | **🔴 Dangerous, Obsolete** (Removed from all browsers due to cryptographic security concerns) |
+| `<keygen>` | HTML5 | Generated public-private key pairs for form submission. | **🔴 Dangerous & Obsolete** (Removed from all browsers due to cryptographic security concerns) |
 | `<label>` | HTML4 onward | Associates a caption with a form control. | **🟢 Semantic** |
 | `<legend>` | HTML4 onward | Caption for a `<fieldset>`. | **🟢 Standard** |
 | `<li>` | HTML2 onward | List item in `<ul>` or `<ol>`. | **🟢 Essential** |
@@ -71,7 +71,7 @@
 | `<main>` | HTML5 | Main content area of the document (should be unique). | **🟢 Modern & Semantic** |
 | `<map>` | HTML3 onward | Image map container for clickable areas. | **🟢 Standard** |
 | `<mark>` | HTML5 | Highlights text for **relevance** (e.g., search results). | **🟢 Modern & Semantic** |
-| `<marquee>` | HTML3 | Scrolls text or images horizontally or vertically. | **🔴 Dangerous, Obsolete** (Non-standard, can cause seizures) |
+| `<marquee>` | HTML3 | Scrolls text or images horizontally or vertically. | **🔴 Dangerous & Obsolete** (Non-standard, can cause seizures) |
 | `<menu>` | HTML2 | **List of commands/menu options.** (Revived in HTML5, often renders like `<ul>`). | **🟢 Revived & Semantic** |
 | `<menuitem>` | HTML5 | Defines a command in a menu (never widely adopted). | **🔴 Obsolete** (Never fully implemented, explicitly spec obsolete) |
 | `<meta>` | HTML2 onward | Metadata (charset, viewport, description, etc.). | **🟢 Essential** |
