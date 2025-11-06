@@ -134,7 +134,7 @@
 
 ***
 
-## 💥 Non-Conforming, Vendor-Specific Elements
+### 💥 Non-Conforming, Vendor-Specific Elements
 
 *These elements were never formally defined by the official HTML specification (W3C or WHATWG), but gained significant de facto market share due to support from dominant browsers during the "Browser Wars." They are considered **Non-Conforming** in modern web development. They often relied on proprietary rendering engines like Trident (IE) or Gecko (Netscape) and were never standardized in any formal DTD or schema.*
 
@@ -147,6 +147,7 @@
 | `<nolayer>` | **Netscape** | Fallback content for browsers that didn't support `<layer>`. | **🔴 Non-Conforming** |
 | `<spacer>` | Netscape | Inserts fixed white space without semantic meaning. | 🔴 Non-Conforming & Obsolete (Replaced by CSS margins/padding) |
 | `<ilayer>` | Netscape | Inline version of <layer>, for overlapping inline content. | 🔴 Non-Conforming & Obsolete |
+
 
 >🧩 Fun fact: The `<marquee>` element remained supported in Microsoft Edge until the Chromium engine switch in 2020 — making it one of the longest-surviving non-conforming tags in web history.
 
