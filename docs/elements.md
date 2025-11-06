@@ -97,7 +97,7 @@
 | `<ruby>` | HTML5 | Wrapper for East Asian ruby annotation system. | **🟢 Standard** |
 | `<s>` | HTML4 onward | Strikethrough text, specifically for **content that is no longer accurate or relevant**. | **🟢 Semantic** |
 | `<samp>` | HTML4 onward | Represents sample output from a computer program. | **🟢 Semantic** |
-| `<script>` | HTML2 onward | Embeds JavaScript or external scripts. | **🟡 Essential, Moderate Risk** (XSS via unsanitized input) |
+| `<script>` | HTML2 onward | Embeds JavaScript or external scripts. | **🔵 Essential & Standard, Guarded Risk** (XSS on unsanitized input, third-party script attack vector) |
 | `<section>` | HTML5 | Thematic grouping of content (requires a heading). | **🟢 Modern & Semantic** |
 | `<select>` | HTML2 onward | Dropdown selection menu. | **🟢 Standard** |
 | `<slot>` | HTML5 (Web Components) | Placeholder for content injected into a Web Component. | **🟢 Modern** |
