@@ -71,7 +71,7 @@
 | `<main>` | HTML5 | Main content area of the document (should be unique). | **🟢 Modern & Semantic** |
 | `<map>` | HTML3 onward | Image map container for clickable areas. | **🟢 Standard** |
 | `<mark>` | HTML5 | Highlights text for **relevance** (e.g., search results). | **🟢 Modern & Semantic** |
-| `<marquee>` | HTML3 | Scrolls text or images horizontally or vertically. | **🔴 Dangerous & Obsolete** (Non-standard, can cause seizures) |
+| `<marquee>` | HTML3 | Scrolls text or images horizontally or vertically, but lacks a stop / pause mechanism. | **🔴 Dangerous & Obsolete** (Non-standard, can cause seizures) |
 | `<menu>` | HTML2 | **List of commands/menu options.** (Revived in HTML5, often renders like `<ul>`). | **🟢 Revived & Semantic** |
 | `<menuitem>` | HTML5 | Defines a command in a menu (never widely adopted). | **🟠 Obsolete** (Never fully implemented, explicitly spec obsolete) |
 | `<meta>` | HTML2 onward | Metadata (charset, viewport, description, etc.). | **🟢 Essential** |
@@ -134,16 +134,21 @@
 
 ***
 
-## Non-conforming Elements:
+## 💥 Non-Conforming, Vendor-Specific Elements
 
-*These are elements that were never formally defined by the spec, but had defacto market share due to their browser dominance*
+*These elements were never formally defined by the official HTML specification (W3C or WHATWG), but gained significant de facto market share due to support from dominant browsers during the "Browser Wars." They are considered **Non-Conforming** in modern web development. They often relied on proprietary rendering engines like Trident (IE) or Gecko (Netscape) and were never standardized in any formal DTD or schema.*
 
 | Name | Browser of Origin | Purpose / Behavior | Current Status |
-| `<blink>` | Netscape | Makes enclosed text flash on and off. | **🔴 Dangerous & Non-Conforming** (seizure hazard) |
-| `<bgsound>` | Microsoft IE | Plays a sound file automatically in the background. | **🔴 Non-Conforming & Obsolete** (Anti-pattern, replaced by <audio>) |
-| `<layer>` | Netscape | Used for creating layers of content for absolute positioning | **🔴 Non-Conforming** (Replaced by CSS) |
-| `<marquee>` | Microsoft IE | Scrolls text horizontally or vertically. | **🔴 Dangerous, Non-Conforming & Obsolete** (seizure hazard, use CSS or browser native scrolbars) |
-| `<nolayer>` | Netscape | Fallback content for browsers that didn't support <layer> | **🔴 Non-Conforming**
+| :---: | :---: | :--- | :--- |
+| `<blink>` | **Netscape** | Makes enclosed text flash on and off. | **🔴 Dangerous & Non-Conforming** (Seizure hazard) |
+| `<bgsound>` | **Microsoft IE** | Plays a sound file automatically in the background. | **🔴 Non-Conforming & Obsolete** (Anti-pattern, replaced by `<audio>`) |
+| `<layer>` | **Netscape** | Used for creating layers of content for absolute positioning. | **🔴 Non-Conforming** (Replaced by CSS positioning) |
+| `<marquee>` | **Microsoft IE** | Scrolls text horizontally or vertically, but lacks an accessible stop / pause mechanism | **🔴 Dangerous, Non-Conforming & Obsolete** (Seizure hazard, use CSS, or native browser controls) |
+| `<nolayer>` | **Netscape** | Fallback content for browsers that didn't support `<layer>`. | **🔴 Non-Conforming** |
+| `<spacer>` | Netscape | Inserts fixed white space without semantic meaning. | 🔴 Non-Conforming & Obsolete (Replaced by CSS margins/padding) |
+| `<ilayer>` | Netscape | Inline version of <layer>, for overlapping inline content. | 🔴 Non-Conforming & Obsolete |
+
+>🧩 Fun fact: The `<marquee>` element remained supported in Microsoft Edge until the Chromium engine switch in 2020 — making it one of the longest-surviving non-conforming tags in web history.
 
 ***
 
