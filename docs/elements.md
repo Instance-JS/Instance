@@ -8,7 +8,7 @@
 | `<abbr>` | HTML4 onward | Defines an abbreviation or acronym. | **🟢 Semantic** |
 | `<acronym>` | HTML3 | Defines an acronym; superseded by `<abbr>`. | **🔴 Obsolete** |
 | `<address>` | HTML4 onward | Contact information for the nearest `<article>` or `<body>`. | **🟢 Semantic** |
-| `<applet>` | HTML3 | Deprecated Java embedder-once ran mini-apps, now a relic. | **🔴 Obsolete** (Security risk) |
+| `<applet>` | HTML3 | Deprecated Java embedder-once ran mini-apps, now a relic. | **🔴 Dangerous & Obsolete** (Security risk) |
 | `<area>` | HTML3 onward | Defines a clickable region inside an image map (`<map>`). | **🟢 Standard** |
 | `<article>` | HTML5 | Represents independent, self-contained content (e.g., a blog post). | **🟢 Modern & Semantic** |
 | `<aside>` | HTML5 | Secondary content that is tangentially related to the main content (e.g., sidebars). | **🟢 Modern & Semantic** |
@@ -87,7 +87,7 @@
 | `<p>` | HTML2 onward | Paragraph of text. | **🟢 Essential** |
 | `<param>` | HTML4 onward | Parameter for `<object>`. | **🟢 Standard** |
 | `<picture>` | HTML5 | Container for responsive image sources (`<source>`). | **🟢 Modern & Standard** |
-| `<plaintext>` | Early HTML | Displays everything literally after this tag. | **🔴 Obsolete** |
+| `<plaintext>` | Early HTML | Displays everything literally after this tag. | **🔴 Dangerous & Obsolete** (Overrides the HTML parser, enables XSS) |
 | `<pre>` | HTML2 onward | **Preformatted text** (preserves whitespace). | **🟢 Standard** |
 | `<progress>` | HTML5 | Displays a task progress bar. | **🟢 Modern & Semantic** |
 | `<q>` | HTML4 onward | **Inline quotation** (browser often adds quotes). | **🟢 Semantic** |
@@ -124,7 +124,7 @@
 | `<title>` | HTML2 onward | Page title shown in the browser tab. | **🟢 Essential** |
 | `<tr>` | HTML2 onward | Table row. | **🟢 Essential** |
 | `<track>` | HTML5 | Text tracks (subtitles, captions) for media elements. | **🟢 Standard** |
-| `<tt>` | HTML3 | Monospace teletype text. | **🔴 Obsolete** |
+| `<tt>` | HTML3 | Monospace teletype text. | **🔴 Obsolete** (Use CSS) |
 | `<u>` | HTML3 onward | Underlined text for **non-textual annotation** (e.g., misspelling). **Not** for styling. | **🟢 Semantic (Re-defined)** |
 | `<ul>` | HTML2 onward | Unordered (bulleted) list. | **🟢 Essential** |
 | `<var>` | HTML4 onward | Variable name in code or math. | **🟢 Semantic** |
