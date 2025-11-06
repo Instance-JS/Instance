@@ -134,6 +134,15 @@
 
 ***
 
+| Name | Browser of Origin | Purpose / Behavior | Current Status
+| `<blink>` | Netscape | Makes enclosed text flash on and off. | **🔴 Dangerous & Non-Conforming** (seizure hazard) |
+| `<bgsound>` | Microsoft IE | Plays a sound file automatically in the background. | **🔴 Non-Conforming & Obsolete** (Anti-pattern, replaced by <audio>) |
+| `<layer>` | Netscape | Used for creating layers of content for absolute positioning | **🔴 Non-Conforming** (Replaced by CSS) |
+| `<marquee>` | Microsoft IE | Scrolls text horizontally or vertically. | **🔴 Dangerous, Non-Conforming & Obsolete** (seizure hazard, use CSS or browser native scrolbars) |
+| `<nolayer>` | Netscape | Fallback content for browsers that didn't support <layer> | ** 🔴 Non-Conforming**
+
+***
+
 ## 💬 Edge Case Clarifications
 
 These elements often cause confusion due to historical context or specialized semantic rules:
