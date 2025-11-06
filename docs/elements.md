@@ -42,7 +42,7 @@
 | `<dl>` | HTML2 onward | Description list (groups `<dt>`–`<dd>` pairs). | **🟢 Semantic** |
 | `<dt>` | HTML2 onward | Term or name being described in a description list. | **🟢 Semantic** |
 | `<em>` | HTML4 onward | Emphasized text (stress/importance changes meaning). | **🟢 Semantic** |
-| `<embed>` | HTML5 | Embeds external content, usually legacy media or plugins. | **🟡 Standard, Medium Risk** (Potential malicious plugin vector) |
+| `<embed>` | HTML5 | Embeds external content via plugins. | **🟡 Standard, Medium Risk** (Potential malicious plugin vector) |
 | `<fieldset>` | HTML4 onward | Groups related form controls. | **🟢 Standard** |
 | `<figcaption>` | HTML5 | Caption for a `<figure>`. | **🟢 Modern & Semantic** |
 | `<figure>` | HTML5 | Groups media (images, code, video) with an optional caption. | **🟢 Modern & Semantic** |
@@ -78,7 +78,7 @@
 | `<nav>` | HTML5 | Defines navigation links. | **🟢 Modern & Semantic** |
 | `<noframes>` | HTML3 | Fallback content for no-frames browsers. | **🔴 Obsolete** |
 | `<noscript>` | HTML4 onward | Fallback content when JavaScript is disabled. | **🟢 Standard** |
-| `<object>` | HTML4 onward | Embeds external content (often used for legacy plugins). | **🟠 Standard, High Risk** (Arbitrary code execution) |
+| `<object>` | HTML4 onward | Embeds more complex plugins; more attack surface | **🟠 Standard, High Risk** (Plugins can call other plugins) |
 | `<ol>` | HTML2 onward | Ordered (numbered) list. | **🟢 Standard** |
 | `<optgroup>` | HTML4 onward | Groups related options in a `<select>` dropdown. | **🟢 Standard** |
 | `<option>` | HTML2 onward | Defines an option in a `<select>` menu. | **🟢 Essential** |
