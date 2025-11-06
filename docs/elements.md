@@ -73,7 +73,7 @@
 | `<mark>` | HTML5 | Highlights text for **relevance** (e.g., search results). | **🟢 Modern & Semantic** |
 | `<marquee>` | HTML3 | Scrolls text or images horizontally or vertically. | **🔴 Obsolete** (Non-standard, can cause seizures) |
 | `<menu>` | HTML2 | **List of commands/menu options.** (Revived in HTML5, often renders like `<ul>`). | **🟢 Revived & Semantic** |
-| `<menuitem>` | HTML5 | Defines a command in a menu (never widely adopted). | **🔴 Obsolete** |
+| `<menuitem>` | HTML5 | Defines a command in a menu (never widely adopted). | **🔴 Obsolete** (Never fully implemented, explicitly spec obsolete) |
 | `<meta>` | HTML2 onward | Metadata (charset, viewport, description, etc.). | **🟢 Essential** |
 | `<meter>` | HTML5 | Displays a scalar measurement within a known range (gauge). | **🟢 Modern & Semantic** |
 | `<nav>` | HTML5 | Defines navigation links. | **🟢 Modern & Semantic** |
