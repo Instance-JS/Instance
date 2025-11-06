@@ -140,13 +140,13 @@
 
 | Name | Browser of Origin | Purpose / Behavior | Current Status |
 | :---: | :---: | :--- | :--- |
-| `<blink>` | **Netscape** | Makes enclosed text flash on and off. | **🔴 Dangerous, Non-Conforming & Obsolete** (Seizure hazard, replaced by CSS) |
-| `<bgsound>` | **Microsoft IE** | Plays a sound file automatically in the background. | **🔴 Non-Conforming & Obsolete** (Anti-pattern, replaced by `<audio>`) |
+| `<blink>` | **Netscape** | Makes enclosed text flash on and off. | **🔴 Dangerous, Non-Conforming & Obsolete** (Anti-pattern; Seizure hazard, replaced by CSS) |
+| `<bgsound>` | **Microsoft IE** | Plays a sound file automatically in the background. | **🔴 Non-Conforming & Obsolete** (Anti-pattern; replaced by `<audio>`) |
 | `<ilayer>` | Netscape | Inline version of `<layer>`, for overlapping inline content. | **🔴 Non-Conforming** |
-| `<layer>` | **Netscape** | Used for creating layers of content for absolute positioning. | **🔴 Non-Conforming & Obsolete** (Replaced by CSS positioning) |
-| `<marquee>` | **Microsoft IE** | Scrolls text horizontally or vertically, but lacks an accessible stop / pause mechanism | **🔴 Dangerous, Non-Conforming & Obsolete** (Seizure hazard, use CSS, or native browser controls) |
+| `<layer>` | **Netscape** | Used for creating layers of content for absolute positioning. | **🔴 Non-Conforming & Obsolete** (Anti-pattern; replaced by CSS positioning) |
+| `<marquee>` | **Microsoft IE** | Scrolls text horizontally or vertically, but lacks an accessible stop / pause mechanism | **🔴 Dangerous, Non-Conforming & Obsolete** (Anti-pattern; Seizure hazard, use CSS/JS, or native browser controls) |
 | `<nolayer>` | **Netscape** | Fallback content for browsers that didn't support `<layer>`. | **🔴 Non-Conforming** |
-| `<spacer>` | Netscape | Inserts fixed white space without semantic meaning. | **🔴 Non-Conforming & Obsolete** (Replaced by CSS margins/padding) |
+| `<spacer>` | Netscape | Inserts fixed white space without semantic meaning. | **🔴 Non-Conforming & Obsolete** (Anti-pattern; replaced by CSS margins/padding) |
 
 
 >🧩 Fun fact: The `<marquee>` element remained supported in Microsoft Edge until the Chromium engine switch in 2020 — making it one of the longest-surviving non-conforming tags in web history.
