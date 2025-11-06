@@ -6,7 +6,7 @@
 | :---: | :---: | :--- | :--- |
 | `<a>` | HTML2 onward | Anchor tag — creates hyperlinks. | **🟢 Essential** |
 | `<abbr>` | HTML4 onward | Defines an abbreviation or acronym. | **🟢 Semantic** |
-| `<acronym>` | HTML3 | Defines an acronym; superseded by `<abbr>`. | **🔴 Obsolete** |
+| `<acronym>` | HTML3 | Defines an acronym; superseded by `<abbr>`. | **🟠 Obsolete** |
 | `<address>` | HTML4 onward | Contact information for the nearest `<article>` or `<body>`. | **🟢 Semantic** |
 | `<applet>` | HTML3 | Deprecated Java embedder-once ran mini-apps, now a relic. | **🔴 Dangerous & Obsolete** (Security risk) |
 | `<area>` | HTML3 onward | Defines a clickable region inside an image map (`<map>`). | **🟢 Standard** |
@@ -15,17 +15,17 @@
 | `<audio>` | HTML5 | Embeds sound or music content. | **🟢 Modern & Essential** |
 | `<b>` | HTML2 onward | Bold text for **stylistic offset** without conveying extra importance (e.g., product names). | **🟢 Semantic (Re-defined)** |
 | `<base>` | HTML2 onward | Specifies the base URL for all relative links in the document. | **🟢 Standard** |
-| `<basefont>` | HTML3 | Sets default font for a page. | **🔴 Obsolete** (Use CSS) |
+| `<basefont>` | HTML3 | Sets default font for a page. | **🟠 Obsolete** (Use CSS) |
 | `<bdi>` | HTML5 | **Bidirectional Isolation**; isolates text direction for embedded content. | **🟢 Semantic** |
 | `<bdo>` | HTML4 onward | **Bidirectional Override**; forces text direction (`ltr` or `rtl`). | **🟢 Standard** |
-| `<big>` | HTML3 | Enlarges text size. | **🔴 Obsolete** (Use CSS) |
+| `<big>` | HTML3 | Enlarges text size. | **🟠 Obsolete** (Use CSS) |
 | `<blockquote>` | HTML2 onward | Quoted block of text from another source. | **🟢 Semantic** |
 | `<body>` | HTML2 onward | The document body container. | **🟢 Essential** |
 | `<br>` | HTML2 onward | Line break (a forced break within text). | **🟢 Essential** |
 | `<button>` | HTML4 onward | Clickable button element for forms or scripts. | **🟢 Essential** |
 | `<canvas>` | HTML5 | Drawing surface for graphics, charts, and animations. | **🟢 Modern & Essential** |
 | `<caption>` | HTML4 onward | Table caption. | **🟢 Semantic** |
-| `<center>` | HTML3 | Centers text or block-level content. | **🔴 Obsolete** (Use CSS) |
+| `<center>` | HTML3 | Centers text or block-level content. | **🟠 Obsolete** (Use CSS) |
 | `<cite>` | HTML4 onward | References the **title of a work** (book, song, etc.). | **🟢 Semantic** |
 | `<code>` | HTML4 onward | Inline fragment of computer code. | **🟢 Semantic** |
 | `<col>` | HTML4 onward | Defines common properties for one or more columns in a table. | **🟢 Standard** |
@@ -37,7 +37,7 @@
 | `<details>` | HTML5 | Expandable disclosure widget (summary visible, details hidden). | **🟢 Modern & Standard** |
 | `<dfn>` | HTML4 onward | Marks a term being **defined** within the document. | **🟢 Semantic** |
 | `<dialog>` | HTML5 | Modal or non-modal dialog box. | **🟢 Modern & Standard** |
-| `<dir>` | HTML2 | Directory list. | **🔴 Obsolete** (Use `<ul>`) |
+| `<dir>` | HTML2 | Directory list. | **🟠 Obsolete** (Use `<ul>`) |
 | `<div>` | HTML3 onward | Generic block-level container for grouping content. | **🟢 Essential** |
 | `<dl>` | HTML2 onward | Description list (groups `<dt>`–`<dd>` pairs). | **🟢 Semantic** |
 | `<dt>` | HTML2 onward | Term or name being described in a description list. | **🟢 Semantic** |
@@ -46,11 +46,11 @@
 | `<fieldset>` | HTML4 onward | Groups related form controls. | **🟢 Standard** |
 | `<figcaption>` | HTML5 | Caption for a `<figure>`. | **🟢 Modern & Semantic** |
 | `<figure>` | HTML5 | Groups media (images, code, video) with an optional caption. | **🟢 Modern & Semantic** |
-| `<font>` | HTML3 | Changes text font, color, or size. | **🔴 Obsolete** (Use CSS) |
+| `<font>` | HTML3 | Changes text font, color, or size. | **🟠 Obsolete** (Use CSS) |
 | `<footer>` | HTML5 | Footer content for the nearest sectioning content or document body. | **🟢 Modern & Semantic** |
 | `<form>` | HTML2 onward | Container for form controls to collect user input. | **🟢 Essential** |
-| `<frame>` | HTML3 | Defines a frame in a frameset. | **🔴 Obsolete** (Use `<iframe>`) |
-| `<frameset>` | HTML3 | Defines the layout of frames. | **🔴 Obsolete** (Use `<iframe>`) |
+| `<frame>` | HTML3 | Defines a frame in a frameset. | **🟠 Obsolete** (Use `<iframe>`) |
+| `<frameset>` | HTML3 | Defines the layout of frames. | **🟠 Obsolete** (Use `<iframe>`) |
 | `<h1>`–`<h6>` | HTML2 onward | Section headings (highest importance `<h1>` to lowest `<h6>`). | **🟢 Essential & Semantic** |
 | `<head>` | HTML2 onward | Metadata container for the document. | **🟢 Essential** |
 | `<header>` | HTML5 | Introductory content or navigational group for the nearest sectioning content. | **🟢 Modern & Semantic** |
@@ -73,11 +73,11 @@
 | `<mark>` | HTML5 | Highlights text for **relevance** (e.g., search results). | **🟢 Modern & Semantic** |
 | `<marquee>` | HTML3 | Scrolls text or images horizontally or vertically. | **🔴 Dangerous & Obsolete** (Non-standard, can cause seizures) |
 | `<menu>` | HTML2 | **List of commands/menu options.** (Revived in HTML5, often renders like `<ul>`). | **🟢 Revived & Semantic** |
-| `<menuitem>` | HTML5 | Defines a command in a menu (never widely adopted). | **🔴 Obsolete** (Never fully implemented, explicitly spec obsolete) |
+| `<menuitem>` | HTML5 | Defines a command in a menu (never widely adopted). | **🟠 Obsolete** (Never fully implemented, explicitly spec obsolete) |
 | `<meta>` | HTML2 onward | Metadata (charset, viewport, description, etc.). | **🟢 Essential** |
 | `<meter>` | HTML5 | Displays a scalar measurement within a known range (gauge). | **🟢 Modern & Semantic** |
 | `<nav>` | HTML5 | Defines navigation links. | **🟢 Modern & Semantic** |
-| `<noframes>` | HTML3 | Fallback content for no-frames browsers. | **🔴 Obsolete** |
+| `<noframes>` | HTML3 | Fallback content for no-frames browsers. | **🟠 Obsolete** (it's 2025) |
 | `<noscript>` | HTML4 onward | Fallback content when JavaScript is disabled. | **🟢 Standard** |
 | `<object>` | HTML4 onward | Embeds external content (often used for legacy plugins). | **🟠 Standard, High Risk** (Plugins can call other plugins) |
 | `<ol>` | HTML2 onward | Ordered (numbered) list. | **🟢 Standard** |
@@ -105,7 +105,7 @@
 | `<small>` | HTML4 onward | Small print (e.g., copyright, disclaimers, fine print). | **🟢 Semantic** |
 | `<source>` | HTML5 | Defines media source for `<audio>`, `<video>`, or `<picture>`. | **🟢 Standard** |
 | `<span>` | HTML3 onward | Generic **inline-level** container for styling or scripting. | **🟢 Essential** |
-| `<strike>` | HTML3 | Strikethrough. | **🔴 Obsolete** (Use `<s>` or `<del>`) |
+| `<strike>` | HTML3 | Strikethrough. | **🟠 Obsolete** (Use `<s>` or `<del>`) |
 | `<strong>` | HTML4 onward | **Strong importance** for text. | **🟢 Semantic** |
 | `<style>` | HTML2 onward | Embeds CSS styles. | **🟢 Essential** |
 | `<sub>` | HTML4 onward | Subscript text. | **🟢 Semantic** |
@@ -124,13 +124,13 @@
 | `<title>` | HTML2 onward | Page title shown in the browser tab. | **🟢 Essential** |
 | `<tr>` | HTML2 onward | Table row. | **🟢 Essential** |
 | `<track>` | HTML5 | Text tracks (subtitles, captions) for media elements. | **🟢 Standard** |
-| `<tt>` | HTML3 | Monospace teletype text. | **🔴 Obsolete** (Use CSS) |
+| `<tt>` | HTML3 | Monospace teletype text. | **🟠 Obsolete** (Use CSS) |
 | `<u>` | HTML3 onward | Underlined text for **non-textual annotation** (e.g., misspelling). **Not** for styling. | **🟢 Semantic (Re-defined)** |
 | `<ul>` | HTML2 onward | Unordered (bulleted) list. | **🟢 Essential** |
 | `<var>` | HTML4 onward | Variable name in code or math. | **🟢 Semantic** |
 | `<video>` | HTML5 | Embeds video media. | **🟢 Modern & Essential** |
 | `<wbr>` | HTML5 | **Word Break Opportunity** (suggested soft-hyphenation point). | **🟢 Standard** |
-| `<xmp>` | Early HTML | Displays literal HTML text. Can break your site if misused. | **🔴 Obsolete** (Use `<pre><code>`) |
+| `<xmp>` | Early HTML | Displays literal HTML text. Can break your site if misused. | **🟠 Obsolete** (Use `<pre><code>`) |
 
 ***
 
