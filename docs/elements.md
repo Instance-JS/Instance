@@ -154,6 +154,6 @@ HTML5 redefined these presentational tags to give them distinct semantic meaning
 
 * **`<rb>` (Ruby Base)**: This element was intended to explicitly mark the base text within a `<ruby>` container. However, in the HTML Living Standard, the base text is **inferred** to be any text *not* wrapped in an `<rt>` or `<rtc>`. Therefore, `<rb>` is **no longer necessary** and is classified as **Discouraged/Obsolete** to simplify markup.
 
-### 🛑 NOTE: The Non-Element `<xml>`
+### NOTE: The Non-Element `<xml>`
 
 * **`<xml>` (XML Declaration)**: This is **not a valid HTML element** and is not part of the HTML Living Standard. The XML declaration (`<?xml ... ?>`) is a **processing instruction** only relevant to strict XML parsing. Its inclusion in an HTML document served as `text/html` is **non-conforming** and should be replaced by the HTML5 DOCTYPE: `<!DOCTYPE html>`.
