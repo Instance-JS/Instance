@@ -42,7 +42,7 @@
 | `<dl>` | HTML2 onward | Description list (groups `<dt>`–`<dd>` pairs). | **🟢 Semantic** |
 | `<dt>` | HTML2 onward | Term or name being described in a description list. | **🟢 Semantic** |
 | `<em>` | HTML4 onward | Emphasized text (stress/importance changes meaning). | **🟢 Semantic** |
-| `<embed>` | HTML5 | Embeds external content, usually legacy media or plugins. | **🟡 Standard, but Medium Risk** (Potential malicious plugin vector) |
+| `<embed>` | HTML5 | Embeds external content, usually legacy media or plugins. | **🟡 Standard, Medium Risk** (Potential malicious plugin vector) |
 | `<fieldset>` | HTML4 onward | Groups related form controls. | **🟢 Standard** |
 | `<figcaption>` | HTML5 | Caption for a `<figure>`. | **🟢 Modern & Semantic** |
 | `<figure>` | HTML5 | Groups media (images, code, video) with an optional caption. | **🟢 Modern & Semantic** |
@@ -58,7 +58,7 @@
 | `<hr>` | HTML2 onward | Thematic break or section separator. | **🟢 Standard** |
 | `<html>` | 1991 onward | Root element of an HTML document. | **🟢 Essential** |
 | `<i>` | HTML2 onward | Text for an **alternate voice or mood** (e.g., technical terms, thoughts, ship names). | **🟢 Semantic (Re-defined)** |
-| `<iframe>` | HTML4 onward | Inline frame embedding another HTML document. | **🟡 Standard but Medium Risk** (XSS, clickjacking) |
+| `<iframe>` | HTML4 onward | Inline frame embedding another HTML document. | **🟡 Standard, Medium Risk** (XSS, clickjacking) |
 | `<img>` | HTML2 onward | Embeds an image. | **🟢 Essential** |
 | `<input>` | HTML2 onward | User input field (text, checkbox, radio, etc.). | **🟢 Essential** |
 | `<ins>` | HTML4 onward | Marks text that has been **inserted** into the document. | **🟢 Semantic** |
@@ -78,7 +78,7 @@
 | `<nav>` | HTML5 | Defines navigation links. | **🟢 Modern & Semantic** |
 | `<noframes>` | HTML3 | Fallback content for no-frames browsers. | **🔴 Obsolete** |
 | `<noscript>` | HTML4 onward | Fallback content when JavaScript is disabled. | **🟢 Standard** |
-| `<object>` | HTML4 onward | Embeds external content (often used for legacy plugins). | **🟡 Standard but High Risk** (Arbitrary code execution) |
+| `<object>` | HTML4 onward | Embeds external content (often used for legacy plugins). | **🟠 Standard, High Risk** (Arbitrary code execution) |
 | `<ol>` | HTML2 onward | Ordered (numbered) list. | **🟢 Standard** |
 | `<optgroup>` | HTML4 onward | Groups related options in a `<select>` dropdown. | **🟢 Standard** |
 | `<option>` | HTML2 onward | Defines an option in a `<select>` menu. | **🟢 Essential** |
@@ -97,7 +97,7 @@
 | `<ruby>` | HTML5 | Wrapper for East Asian ruby annotation system. | **🟢 Standard** |
 | `<s>` | HTML4 onward | Strikethrough text, specifically for **content that is no longer accurate or relevant**. | **🟢 Semantic** |
 | `<samp>` | HTML4 onward | Represents sample output from a computer program. | **🟢 Semantic** |
-| `<script>` | HTML2 onward | Embeds JavaScript or external scripts. | **🟡 Essential & Standard, Moderate Risk** (XSS via unsanitized input) ** |
+| `<script>` | HTML2 onward | Embeds JavaScript or external scripts. | **🟡 Essential, Low Risk** (XSS via unsanitized input) |
 | `<section>` | HTML5 | Thematic grouping of content (requires a heading). | **🟢 Modern & Semantic** |
 | `<select>` | HTML2 onward | Dropdown selection menu. | **🟢 Standard** |
 | `<slot>` | HTML5 (Web Components) | Placeholder for content injected into a Web Component. | **🟢 Modern** |
