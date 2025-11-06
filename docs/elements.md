@@ -70,7 +70,7 @@
 | `<main>` | HTML5 | Main content area of the document (should be unique). | **🟢 Modern & Semantic** |
 | `<map>` | HTML3 onward | Image map container for clickable areas. | **🟢 Standard** |
 | `<mark>` | HTML5 | Highlights text for **relevance** (e.g., search results). | **🟢 Modern & Semantic** |
-| `<marquee>` | HTML3 | Scrolls text or images horizontally or vertically. | **🔴 Obsolete** (Non-standard) |
+| `<marquee>` | HTML3 | Scrolls text or images horizontally or vertically. | **🔴 Obsolete** (Non-standard, can cause seizures) |
 | `<menu>` | HTML2 | **List of commands/menu options.** (Revived in HTML5, often renders like `<ul>`). | **🟢 Revived & Semantic** |
 | `<menuitem>` | HTML5 | Defines a command in a menu (never widely adopted). | **🔴 Obsolete** |
 | `<meta>` | HTML2 onward | Metadata (charset, viewport, description, etc.). | **🟢 Essential** |
