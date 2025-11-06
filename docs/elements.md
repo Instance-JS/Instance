@@ -108,7 +108,7 @@
 | `<strong>` | HTML4 onward | **Strong importance** for text. | **🟢 Semantic** |
 | `<style>` | HTML2 onward | Embeds CSS styles. | **🟢 Essential** |
 | `<sub>` | HTML4 onward | Subscript text. | **🟢 Semantic** |
-| `<summary>` | HTML5 | The visible heading/label for a `<details>` disclosure widget. | **🟢 Modern & **Standard** |
+| `<summary>` | HTML5 | The visible heading/label for a `<details>` disclosure widget. | **🟢 Modern & Standard** |
 | `<sup>` | HTML4 onward | Superscript text. | **🟢 Semantic** |
 | `<svg>` | HTML5 | Vector graphics via XML syntax. | **🟢 Modern & Standard** |
 | `<table>` | HTML2 onward | Table structure for tabular data. | **🟢 Essential** |
