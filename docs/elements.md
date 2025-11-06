@@ -157,3 +157,9 @@ HTML5 redefined these presentational tags to give them distinct semantic meaning
 ### NOTE: The Non-Element `<xml>`
 
 * **`<xml>` (XML Declaration)**: This is **not a valid HTML element** and is not part of the HTML Living Standard. The XML declaration (`<?xml ... ?>`) is a **processing instruction** only relevant to strict XML parsing. Its inclusion in an HTML document served as `text/html` is **non-conforming** and should be replaced by the HTML5 DOCTYPE: `<!DOCTYPE html>`.
+
+---
+Sources:
+
+WHATWG HTML Living Standard: https://html.spec.whatwg.org/ - The canonical, actively maintained HTML specification
+MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/HTML/Element - Comprehensive documentation and browser compatibility information for all HTML elements
