@@ -63,6 +63,7 @@
 | `<input>` | HTML2 onward | User input field (text, checkbox, radio, etc.). | **🟢 Essential** |
 | `<ins>` | HTML4 onward | Marks text that has been **inserted** into the document. | **🟢 Semantic** |
 | `<kbd>` | HTML4 onward | Denotes **keyboard input** or other input methods. | **🟢 Semantic** |
+| `<keygen>` | HTML5 | Generated public-private key pairs for form submission. | **🔴 Dangerous, Obsolete** (Removed from all browsers due to cryptographic security concerns) |
 | `<label>` | HTML4 onward | Associates a caption with a form control. | **🟢 Semantic** |
 | `<legend>` | HTML4 onward | Caption for a `<fieldset>`. | **🟢 Standard** |
 | `<li>` | HTML2 onward | List item in `<ul>` or `<ol>`. | **🟢 Essential** |
