@@ -161,5 +161,6 @@ HTML5 redefined these presentational tags to give them distinct semantic meaning
 ---
 Sources:
 
-WHATWG HTML Living Standard: https://html.spec.whatwg.org/ - The canonical, actively maintained HTML specification
-MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/HTML/Element - Comprehensive documentation and browser compatibility information for all HTML elements
+* WHATWG HTML Living Standard: https://html.spec.whatwg.org/ - The canonical, actively maintained HTML specification
+  
+* MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/HTML/Element - Comprehensive documentation and browser compatibility information for all HTML elements
