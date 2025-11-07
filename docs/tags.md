@@ -47,7 +47,7 @@ This naming convention applies case #1, but with modifications to acronyms only.
 | `<bdi>`  | `BDI`         | Bi-Directional Isolation             | Rule 1: Ties to 'Bi-Directional Isolation'; Rule 2: 'B-D-I', unpronounceable as a word. |
 | `<bdo>`  | `BDO`         | Bi-Directional Override              | Rule 1: Ties to 'Bi-Directional Override'; Rule 2: 'B-D-O'.               |
 | `<dfn>`  | `DFN`         | Definition                           | Rule 1: Ties to 'Definition For Notation'; Rule 2: 'D-F-N', enunciated letters. |
-| `<kbd>`  | `KBD`         | Keyboard Input                       | Rule 1: Ties to 'Keyboard'; Rule 2: 'K-B-D'.                              |
+| `<kbd>`  | `KBD`         | Keyboard Input                       | Rule 1: Ties to 'Keyboard' or 'Key Board'; Rule 2: 'K-B-D'.                              |
 | `<svg>`  | `SVG`         | Scalable Vector Graphics             | Rule 1: Ties to 'Scalable Vector Graphics'; Rule 2: 'S-V-G'.              |
 | `<xml>`  | `XML`         | Extensible Markup Language           | Rule 1: Ties to 'Extensible Markup Language'; Rule 2: 'X-M-L'.            |
 | `<wbr>`  | `WBR`         | Word Break Opportunity               | Rule 1: Ties to 'Word Break Rule'; Rule 2: 'W-B-R'.                       |
