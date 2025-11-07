@@ -194,7 +194,6 @@ Interestingly, `<marquee>` survived well into the modern era — remaining funct
 
 * **`<xml>` (XML Declaration)**: This is **not a valid HTML element** and is not part of the HTML Living Standard. The XML declaration (`<?xml ... ?>`) is a **processing instruction** only relevant to strict XML parsing. Its inclusion in an HTML document served as `text/html` is **non-conforming** and should be replaced by the HTML5 DOCTYPE: `<!DOCTYPE html>`.
 
-
 ### Editorial Note: `<acronym>` vs `<abbr>`
 
 The deprecation of `<acronym>` in favor of `<abbr>` represents a semantic conflation that this framework's documentation disavows.
@@ -207,10 +206,10 @@ and in particular maintain cohesion as to why those names were chosen above othe
 you are essentially choosing naming 'conventions' at random.
 
 This distinction matters enough that Instance.js (by accident as the most logical choice) maintains separate handling 
-for acronyms vs abbreviations in its constructor naming conventions (see Case Modes documentation), even though HTML no longer does.
+for element acronyms vs element abbreviations, in its constructor naming conventions (see Case Modes documentation), even though HTML no longer does.
 
-Had `<acronym>` remained distinct from `<abbr>`, my 'case-convention.md' documentation file would likely have been unnecessary—
-the spec itself would encode the distinction, and framework authors could reference it directly instead of figuring it out on their own.
+Had `<acronym>` remained distinct from `<abbr>`, my 'case-convention.md' documentation file would likely have been unnecessary~
+the spec itself would encode the distinction, and framework authors (as well as adopters) could reference it directly instead of brute-forcing it on their own.
 
 Not everyone is going to do what I did (architecture is inclusive of its own documentation) in order to preemptively solve a problem that most would never consider.
 
