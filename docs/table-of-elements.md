@@ -205,7 +205,7 @@ A distinction that is perhaps not immediately obvious to non-native English spea
 until one must formalize exactly **HOW** arbitrary-length variable names should be mapped within a case-sensitive data application and vice versa...
 and, more importantly, maintain internal consistency as to **WHY** those specific names were chosen above others. 
 Without a formally defined system with which to differentiate between acronyms and abbreviations / shorthand,
-one is essentially choosing naming 'conventions' at random.
+one is essentially choosing 'naming conventions' at random.
 
 This distinction matters enough that Instance.js (systematically arriving at the most logical conclusion), maintains separate handling 
 for element acronyms vs element abbreviations, in its constructor naming conventions (see Case Modes documentation), even though HTML no longer does.
