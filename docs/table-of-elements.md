@@ -206,7 +206,7 @@ until one must formalize exactly **HOW** arbitrary-length variable names should 
 and, just as importantly, maintain internal consistency as to **WHY** those specific names were chosen as acronyms (and thus capitalized) above others.
 
 Only then does it become clear that this deceptively difficult distinction is quite important: disparate systems cannot communicate with each other's internals
-without intrinsically knowing the other's case conventions. Thus it was chosen for Instance.js to maintain separate detection mechanisms
+without intrinsically knowing the other's core abstraction: case conventions. Thus it was chosen for Instance.js to maintain separate detection mechanisms
 for both element acronyms and element abbreviations, to align with its own internal model (see Case Modes documentation), even though HTML itself no longer does.
 
 Without a formally defined system with which to differentiate between acronyms and abbreviations / shorthand,
