@@ -31,7 +31,7 @@ This naming convention applies default case (case #1), but with modifications to
 > 
 >2. **Orthographic Dominance**: The tag is 'unpronounceable' in natural language, forcing you to enunciate each letter: (`<DFN>`: 'D-F-N' [acronym]), (`<del>`: `Del` [not an acronym])
 > 
->3. **The Exception Rule:**: `<img>` is `Img`. It’s almost always contextually understood as “image,” not 'I-M-G'.
+>3. **The Exception Rule:**: `<img>` is `Img`. It’s almost always contextualized as “image,” not 'I-M-G'.
 
 | Tag       |   X-Acronym     | Full Meaning                          | Reasoning                                                                 |
 |-----------|----------------|---------------------------------------|---------------------------------------------------------------------------|
