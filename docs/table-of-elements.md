@@ -203,7 +203,7 @@ Acronyms (multi-word 1-to-1 initialisms like SVG, HTML) and abbreviations (short
 Whether something is *specifically* an acronym is of architecturally significant semantic importance:
 A distinction that is perhaps not immediately obvious to non-native English speakers (and indeed some native ones)...
 at least, until you need to formalize exactly WHICH 2-4 letter names (in my case, elements) should be upper-cased in your application, 
-and more importantly, why those elements in particular and not others.
+and more importantly, why those names in particular, and not others.
 Not everyone is going to do what I did.
 
 This distinction matters enough that Instance.js (by accident as the most logical choice) maintains separate handling 
