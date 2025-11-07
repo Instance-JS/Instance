@@ -177,7 +177,7 @@ HTML5 redefined these presentational tags to give them distinct semantic meaning
 
 * **`<rb>` (Ruby Base)**: This element was intended to explicitly mark the base text within a `<ruby>` container. However, in the HTML Living Standard, the base text is **inferred** to be any text *not* wrapped in an `<rt>` or `<rtc>`. Therefore, `<rb>` is **no longer necessary** and is classified as **Discouraged/Obsolete** to simplify markup.
 
-### 🌀 The Infamous (`<marquee>`)
+### The Infamous IE Invention (`<marquee>`)
 
 * **`<marquee>`**: Introduced by Microsoft Internet Explorer, the `<marquee>` element allowed text or other inline content to scroll automatically across the screen — horizontally or vertically — without any scripting. While visually eye-catching, it quickly became emblematic of the chaotic, non-standardized design trends of the late 1990s web.
 
