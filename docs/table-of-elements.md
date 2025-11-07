@@ -198,25 +198,27 @@ Interestingly, `<marquee>` survived well into the modern era — remaining funct
 
 >*🎶 HEY! WAIT! I've got a new complaint. Forever in debt to your priceless advice...*
 
-The deprecation of `<acronym>` in favor of `<abbr>` represents a semantic conflation that this framework's documentation formally disavows.
+The deprecation of `<acronym>` in favor of `<abbr>` represents a semantic conflation that this framework's documentation explicitly disavows.
 Acronyms (multi-word 1-to-1 initialisms like SVG, HTML) and abbreviations (shortened single words like  "nav", "div") are two distinct concepts.
 Whether something is *specifically* an acronym is of architecturally significant semantic importance:
 A distinction that is perhaps not immediately obvious to non-native English speakers (and indeed some native ones)...
-until one must formalize exactly **HOW** arbitrary-length variable names should be mapped within a case-sensitive data application and vice versa...
-and, more importantly, maintain internal consistency as to **WHY** those specific names were chosen above others. 
+until one must formalize exactly **HOW** arbitrary-length variable names should be encoded within a case-sensitive data application (and vice versa)...
+and, just as importantly, maintain internal consistency as to **WHY** those specific names were chosen as acronyms (and thus capitalized) above others.
+
+Only then does it become clear that this deceptively difficult distinction is quite important: disparate systems cannot communicate with each other's internals
+without intrinsically knowing the other's case conventions. Thus it was chosen for Instance.js to maintain separate detection mechanisms
+for both element acronyms and element abbreviations, to align with its own internal model (see Case Modes documentation), even though HTML itself no longer does.
 Without a formally defined system with which to differentiate between acronyms and abbreviations / shorthand,
 one is essentially choosing 'naming conventions' at random.
 
-This distinction matters enough that Instance.js (systematically arriving at the most logical conclusion), maintains separate handling 
-for element acronyms vs element abbreviations, in its constructor naming conventions (see Case Modes documentation), even though HTML no longer does.
-
-Had `<acronym>` remained distinct from `<abbr>`, my 'case-convention.md' documentation file would likely have been unnecessary~
-the spec itself would encode the distinction, and each framework author (as well as adopter) could reference it directly. 
+Had `<acronym>` remained distinct from `<abbr>`, my 'case-convention.md' documentation file would likely have been unnecessary--
+as the spec itself would encode the distinction, and each framework author (as well as adopter) could reference the spec directly. 
 Instead of trudging through 'the docs' or brute-forcing it on their own.
 
-Good architecture is inclusive of its own documentation, but not everyone will—or should have to—write an extensive treatise to preemptively solve a problem that most would never consider; one the spec itself created.
+Good architecture is inclusive of its own documentation, but not everyone will-—or should have to—-write a mini-treatise on acronym formalization,
+in order to preemptively solve a problem that the spec itself allows, and that most would never consider.
 
-This note serves as a formal request that `<acronym>` be resurrected and brought back to the living spec.
+This note serves as a formal request that `<acronym>` be resurrected and brought back to the living spec, with clear documentation on expected standards.
 
 ---
 Sources:
