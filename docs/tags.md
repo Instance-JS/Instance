@@ -25,7 +25,7 @@ new Wbr() for <wbr>
 This naming convention applies default case (case #1), but with modifications to acronyms only.
 
 > Rule of thumb:
-> A tag is classified as an 'acronym' if it matches the semantic hierarchy of these 3 rules:
+> A tag is classified as an 'acronym' if it matches one of these 3 rules, in order of semantic hierarchy:
 >
 >1. **Formal Specificity:** Its letters correspond directly to its *formal specification* name when fully expanded. (`<LI>` -> 'List Item', `<SVG>` -> 'Scalable Vector Graphic')
 > 
