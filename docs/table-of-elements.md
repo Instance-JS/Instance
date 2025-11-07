@@ -196,24 +196,25 @@ Interestingly, `<marquee>` survived well into the modern era — remaining funct
 
 ### Editorial Note: `<acronym>` vs `<abbr>`
 
-The deprecation of `<acronym>` in favor of `<abbr>` represents a semantic conflation that this framework's documentation disavows.
+The deprecation of `<acronym>` in favor of `<abbr>` represents a semantic conflation that this framework's documentation formally disavows.
 Acronyms (multi-word 1-to-1 initialisms like SVG, HTML) and abbreviations (shortened single words like  "nav", "div") are two distinct concepts. 
 
 Whether something is *specifically* an acronym is of architecturally significant semantic importance:
 A distinction that is perhaps not immediately obvious to non-native English speakers (and indeed some native ones)...
-until, at least, you need to formalize exactly HOW arbitrary-length variable names should be mapped within a case-sensitive data application and vice versa...
-and in particular maintain cohesion as to why those names were chosen above others. If you do not have a [readily] defined system with which to differentiate between acronyms and abbreviations / shorthand,
-you are essentially choosing naming 'conventions' at random.
+until one must formalize exactly **HOW** arbitrary-length variable names should be mapped within a case-sensitive data application and vice versa...
+and, more importantly, maintain internal consistency as to why those names were chosen above others. 
+Without a formally defined system with which to differentiate between acronyms and abbreviations / shorthand,
+one is essentially choosing naming 'conventions' at random.
 
-This distinction matters enough that Instance.js (by accident as the most logical choice) maintains separate handling 
+This distinction matters enough that Instance.js (systematically arriving at the most logical conclusion), maintains separate handling 
 for element acronyms vs element abbreviations, in its constructor naming conventions (see Case Modes documentation), even though HTML no longer does.
 
 Had `<acronym>` remained distinct from `<abbr>`, my 'case-convention.md' documentation file would likely have been unnecessary~
 the spec itself would encode the distinction, and framework authors (as well as adopters) could reference it directly instead of brute-forcing it on their own.
 
-Not everyone is going to do what I did (architecture is inclusive of its own documentation) in order to preemptively solve a problem that most would never consider.
+Not everyone will, or should have to, write extensive documentation (architecture is inclusive of its own documentation), in order to preemptively solve a problem that most would never consider.
 
-TL;DR: This is a formal request that `<acronym>` be resurrected and brought back to the living spec.
+This note serves as a formal request that `<acronym>` be resurrected and brought back to the living spec.
 
 ---
 Sources:
