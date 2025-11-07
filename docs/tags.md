@@ -27,11 +27,11 @@ This naming convention applies default case (case #1), but with modifications to
 > Rule of thumb:
 > A tag is classified as an 'acronym' if it matches the semantic hierarchy of these 3 rules:
 >
->1. **Formal Specificity:** Its letters correspond directly to its *formal specification* name when fully expanded. (*`<li>`* -> 'List Item', *`<SVG>`* -> 'Scalable Vector Graphic')
+>1. **Formal Specificity:** Its letters correspond directly to its *formal specification* name when fully expanded. (`<li>` -> 'List Item', `<SVG>` -> 'Scalable Vector Graphic')
 > 
->2. **Orthographic Dominance**: The tag is 'unpronounceable' in natural language, forcing you to enunciate each letter: (*`<dfn>`*: 'D-F-N' [acronym]), (*`<del>`*: 'Del' [not an acronym])
+>2. **Orthographic Dominance**: The tag is 'unpronounceable' in natural language, forcing you to enunciate each letter: (`<dfn>`: 'D-F-N' [acronym]), (`<del>`: 'Del' [not an acronym])
 > 
->3. **The Exception Rule:**: *`<img>`* is *`Img`*. It’s almost always contextually understood as “image,” not 'I-M-G'.
+>3. **The Exception Rule:**: `<img>` is `Img`. It’s almost always contextually understood as “image,” not 'I-M-G'.
 
 | Tag       |   X-Acronym     | Full Meaning                          | Reasoning                                                                 |
 |-----------|----------------|---------------------------------------|---------------------------------------------------------------------------|
