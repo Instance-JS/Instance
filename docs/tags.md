@@ -1,6 +1,9 @@
 #
 
-## 1. Annotated Table for Instance.js when case `default` is specified.
+### 🧩 Case Modes
+Naming conventions are defined by case modifiers (e.g., `-acronym`) applied to element constructors in Instance.js.
+
+## 1. Default Case (`initial`): Annotated Table for Instance.js
 
 >It is unnecessary to even present a list of transformations here. The first letter of any element you may find is capitalized. That's it.
 >
@@ -24,11 +27,11 @@ This naming convention applies case #1, but with modifications to acronyms only.
 
 >Rule of thumb: A tag is classified as an 'acronym' if either:
 >
->1. Its letters tie directly to its formal spec name (LI: 'List Item', SVG: 'Scalable Vector Graphic')
+>1. **Formal Rule:** Its letters tie directly to its formal spec name (LI: 'List Item', SVG: 'Scalable Vector Graphic')
 > 
->2. The tag is 'unpronounceable' in natural language, forcing you to enunciate each letter: (DFN: 'D-F-N' [acronym]), (del: 'Del' [not an acronym])
+>2. **Phonetic Rule**: The tag is 'unpronounceable' in natural language, forcing you to enunciate each letter: (DFN: 'D-F-N' [acronym]), (del: 'Del' [not an acronym])
 > 
->3. Img is Img (almost always contextualized as 'image')
+>3. **Contextual Exception:**: Img is Img (almost always contextualized as 'image')
 
 | Tag       |   X-Acronym     | Full Meaning                          | Reasoning                                                                 |
 |-----------|----------------|---------------------------------------|---------------------------------------------------------------------------|
@@ -57,7 +60,15 @@ This naming convention applies case #1, but with modifications to acronyms only.
 | `<rtc>`  | `RTC`         | Ruby Text Container                  | Rule 1: Ties to 'Ruby Text Container'; Rule 2: 'R-T-C'.                   |
 | `<html>` | `HTML`        | HyperText Markup Language            | Rule 1: Ties to 'HyperText Markup Language'; Rule 2: 'H-T-M-L'.           |
 
-## Other Three-Letter Elements (Not Included as Acronyms)
+Usage:
+
+```javascript
+new LI()  // <li>
+new SVG() // <svg>
+new DFN() // <dfn>
+```
+
+## Excluded Three-Letter Elements (fails Acronym model)
 
 | Tag       | Full Meaning                          | Reason Not Included                                                                 |
 |-----------|---------------------------------------|-------------------------------------------------------------------------------------|
