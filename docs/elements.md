@@ -179,7 +179,7 @@ HTML5 redefined these presentational tags to give them distinct semantic meaning
 
 ### 🌀 The Infamous (`<marquee>`)
 
-The `<marquee>` element, introduced by Microsoft Internet Explorer, allowed text or other inline content to scroll automatically across the screen — horizontally or vertically — without any scripting. While visually eye-catching, it quickly became emblematic of the chaotic, non-standardized design trends of the late 1990s web.
+* **`<marquee>`**: The `<marquee>` element, introduced by Microsoft Internet Explorer, allowed text or other inline content to scroll automatically across the screen — horizontally or vertically — without any scripting. While visually eye-catching, it quickly became emblematic of the chaotic, non-standardized design trends of the late 1990s web.
 
 From an accessibility standpoint, `<marquee>` was deeply problematic: it provided no semantic meaning, no mechanism to pause or control motion, and frequently caused motion sensitivity or seizure risks for users. Its behavior also varied widely between browsers, with no formal specification ever defining its timing, direction, or animation model.
 
