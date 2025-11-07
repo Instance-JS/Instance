@@ -213,7 +213,7 @@ for element acronyms vs element abbreviations, in its constructor naming convent
 Had `<acronym>` remained distinct from `<abbr>`, my 'case-convention.md' documentation file would likely have been unnecessary~
 the spec itself would encode the distinction, and framework authors (as well as adopters) could reference it directly instead of brute-forcing it on their own.
 
-Not everyone will, or should have to, write extensive documentation (architecture is inclusive of its own documentation), in order to preemptively solve a problem that most would never consider.
+Good architecture is inclusive of its own documentation, but not everyone will—or should have to—write an extensive treatise to preemptively solve a problem that most would never consider; one the spec itself created.
 
 This note serves as a formal request that `<acronym>` be resurrected and brought back to the living spec.
 
