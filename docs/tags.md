@@ -22,7 +22,7 @@ new Wbr() for <wbr>
 
 ## 2. Annotated Table of Tags when case modifier `-acronym` is specified.
 
-This naming convention applies default case (case #1), but with modifications to acronyms only.
+This naming convention can be applied to both default case and pascal case, but with modifications to acronyms only.
 
 > Rule of thumb:
 > A tag is classified as an 'acronym' if it matches one of these 3 rules, in order of semantic hierarchy:
