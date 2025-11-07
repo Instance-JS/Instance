@@ -214,7 +214,7 @@ the spec itself would encode the distinction, and framework authors could refere
 
 Not everyone is going to do what I did (architecture is inclusive of its own documentation) in order to preemptively solve a problem that most would never consider.
 
-I would formally request that `<acronym>` element be resurrected and brought back to the living spec.
+TL;DR: This is a formal request that `<acronym>` be resurrected and brought back to the living spec.
 
 ---
 Sources:
