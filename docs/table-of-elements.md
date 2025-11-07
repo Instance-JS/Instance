@@ -1,3 +1,5 @@
+>I'm not Mendeleev — but I did bring my own periodic table.
+
 ## 🏛️ The HTML Element Encyclopedia (Updated)
 
 *A comprehensive, alphabetical guide to HTML tags, detailing their current status and semantic role in modern web development.*
