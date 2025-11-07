@@ -28,7 +28,8 @@ This naming convention can be applied to both default case and pascal case, but 
 > A tag is classified as an 'acronym' if it matches one of these 3 rules, in order of semantic hierarchy:
 >
 >1. **Formal Specificity:** Its individual letters map one-to-one with its fully expanded 'formal' name: (`<LI>` -> 'List Item', `<SVG>` -> 'Scalable Vector Graphic').
->   Tagnames that can be considered abbreviations or shorthand do not qualify.
+>Tagnames that can be considered abbreviations or shorthand do not qualify.
+>1.b: If Rule 1 is subjective, default to Rule 2.
 > 
 >3. **Orthographic Dominance:**: The tag is 'unpronounceable' in natural language (English), forcing you to enunciate each letter: (`<DFN>`: 'D-F-N' [acronym]), (`<del>`: `Del` [not an acronym])
 > 
@@ -36,9 +37,9 @@ This naming convention can be applied to both default case and pascal case, but 
 
 | Tag       |   X-Acronym     | Full Meaning                          | Reasoning                                                                 |
 |-----------|----------------|---------------------------------------|---------------------------------------------------------------------------|
-| `<li>`   | `LI`          | List Item                            | Rule 1: 1-to-1 acronym: 'List Item'; Rule 2: subjective. *sometimes* pronounced 'L-I' instead of `Li`. Hierarchic invariant 'Rule 1' overrides. |
-| `<ul>`   | `UL`          | Unordered List                       | Rule 1: 1-to-1 acronym: 'Unordered List'; Rule 2: subjective. *generally* enunciated as 'U-L'. Hierarchic invariant Rule 1 overrides.      |
-| `<ol>`   | `OL`          | Ordered List                         | Rule 1: 1-to-1 acronym: 'Ordered List'; Rule 2: subjective. *generally* enunciated as 'O-L'. Hierarchic invariant Rule 1 overrides.     |
+| `<li>`   | `LI`          | List Item                            | Rule 1: 1-to-1 acronym: 'List Item'; Rule 2: subjective. *sometimes* pronounced 'L-I' instead of `Li`. Non-subjective 'Rule 1' overrides. |
+| `<ul>`   | `UL`          | Unordered List                       | Rule 1: 1-to-1 acronym: 'Unordered List'; Rule 2: subjective. *generally* enunciated as 'U-L'. Non-subjective Rule 1 overrides.      |
+| `<ol>`   | `OL`          | Ordered List                         | Rule 1: 1-to-1 acronym: 'Ordered List'; Rule 2: subjective. *generally* enunciated as 'O-L'. Non-subjective Rule 1 overrides.     |
 | `<dl>`   | `DL`          | Description List                     | Rule 1: 1-to-1 acronym: 'Description List' (or Definition List); Rule 2: 'D-L'.   |
 | `<dt>`   | `DT`          | Description Term                     | Rule 1: 1-to-1 acronym: 'Description Term' (or Definition Term); Rule 2: 'D-T'.   |
 | `<dd>`   | `DD`          | Description Definition               | Rule 1: 1-to-1 acronym: 'Description Definition' (or Definition Description); Rule 2: 'D-D'. |
