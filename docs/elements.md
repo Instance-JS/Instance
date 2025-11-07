@@ -137,7 +137,7 @@
 ### 💥 Non-Conforming, Vendor-Specific Elements
 
 >
->> ⚠️ These elements were never formally defined by the official HTML specification (W3C or WHATWG), but gained significant de facto market share due to support from dominant browsers during the “Browser Wars.”  
+>> *⚠️ These elements were never formally defined by the official HTML specification (W3C or WHATWG), but gained significant de facto market share due to support from dominant browsers during the “Browser Wars.”*  
 >  
 > They are considered **Non-Conforming Anti-Patterns** in modern web development: embedding presentation logic directly in markup, violating the separation of structure, style, and behavior — a key reason for their obsolescence.  
 >  
