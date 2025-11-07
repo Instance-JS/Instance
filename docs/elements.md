@@ -154,9 +154,6 @@
 | `<nolayer>` | **Netscape** | Fallback content for browsers that didn't support `<layer>`. | **🔴 Non-Conforming** |
 | `<spacer>` | Netscape | Inserts fixed white space without semantic meaning. | **🔴 Non-Conforming & Obsolete** (Anti-pattern; replaced by CSS margins/padding) |
 
-
->🧩 Fun fact: The `<marquee>` element remained supported in Microsoft Edge until the Chromium engine switch in 2020 — making it one of the longest-surviving non-conforming tags in web history.
-
 ***
 
 ## 💬 Edge Case Clarifications
@@ -179,6 +176,18 @@ HTML5 redefined these presentational tags to give them distinct semantic meaning
 ### The Obsolete Annotation (`<rb>`)
 
 * **`<rb>` (Ruby Base)**: This element was intended to explicitly mark the base text within a `<ruby>` container. However, in the HTML Living Standard, the base text is **inferred** to be any text *not* wrapped in an `<rt>` or `<rtc>`. Therefore, `<rb>` is **no longer necessary** and is classified as **Discouraged/Obsolete** to simplify markup.
+
+### 🌀 The Infamous (`<marquee>`)
+
+The `<marquee>` element, introduced by Microsoft Internet Explorer, allowed text or other inline content to scroll automatically across the screen — horizontally or vertically — without any scripting. While visually eye-catching, it quickly became emblematic of the chaotic, non-standardized design trends of the late 1990s web.
+
+From an accessibility standpoint, `<marquee>` was deeply problematic: it provided no semantic meaning, no mechanism to pause or control motion, and frequently caused motion sensitivity or seizure risks for users. Its behavior also varied widely between browsers, with no formal specification ever defining its timing, direction, or animation model.
+
+Today, `<marquee>` is classified as **Dangerous, Non-Conforming & Obsolete**
+It violates the principle of separation between structure, style, and behavior, embedding presentational animation logic directly in markup — a textbook anti-pattern.
+Modern equivalents use native CSS3 animations, transitions, or JavaScript-based positioning, which provide precise control, accessibility hooks, and standards compliance.
+
+Interestingly, `<marquee>` survived well into the modern era — remaining functional in Microsoft Edge up until its transition to the Chromium engine in 2020: making it the longest-lived non-conforming element in web history.
 
 ### NOTE: The Non-Element `<xml>`
 
