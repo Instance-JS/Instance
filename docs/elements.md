@@ -179,12 +179,11 @@ HTML5 redefined these presentational tags to give them distinct semantic meaning
 
 ### 🌀 The Infamous (`<marquee>`)
 
-* **`<marquee>`**: The `<marquee>` element, introduced by Microsoft Internet Explorer, allowed text or other inline content to scroll automatically across the screen — horizontally or vertically — without any scripting. While visually eye-catching, it quickly became emblematic of the chaotic, non-standardized design trends of the late 1990s web.
+* **`<marquee>`**: Introduced by Microsoft Internet Explorer, the `<marquee>` element allowed text or other inline content to scroll automatically across the screen — horizontally or vertically — without any scripting. While visually eye-catching, it quickly became emblematic of the chaotic, non-standardized design trends of the late 1990s web.
 
 From an accessibility standpoint, `<marquee>` was deeply problematic: it provided no semantic meaning, no mechanism to pause or control motion, and frequently caused motion sensitivity or seizure risks for users. Its behavior also varied widely between browsers, with no formal specification ever defining its timing, direction, or animation model.
 
-Today, `<marquee>` is classified as **Dangerous, Non-Conforming & Obsolete**
-It violates the principle of separation between structure, style, and behavior, embedding presentational animation logic directly in markup — a textbook anti-pattern.
+Today, `<marquee>` is classified as **Dangerous, Non-Conforming & Obsolete**. It violates the principle of separation between structure, style, and behavior, embedding presentational animation logic directly in markup — a textbook anti-pattern.
 Modern equivalents use native CSS3 animations, transitions, or JavaScript-based positioning, which provide precise control, accessibility hooks, and standards compliance.
 
 Interestingly, `<marquee>` survived well into the modern era — remaining functional in Microsoft Edge up until its transition to the Chromium engine in 2020: making it the longest-lived non-conforming element in web history.
