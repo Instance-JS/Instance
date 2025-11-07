@@ -203,8 +203,8 @@ Acronyms (multi-word 1-to-1 initialisms like SVG, HTML) and abbreviations (short
 Whether something is *specifically* an acronym is of architecturally significant semantic importance:
 A distinction that is perhaps not immediately obvious to non-native English speakers (and indeed some native ones)...
 until, at least, you need to formalize exactly HOW 2-4 letter variable names should be mapped within a case-sensitive data application and vice versa...
-and in particular maintain cohesion as to why those names were chosen above others. If you do not have a [readily] defined system to differentiate between acronyms and abbreviations / shorthand,
-you are essentially choosing naming conventions at random.
+and in particular maintain cohesion as to why those names were chosen above others. If you do not have a [readily] defined system with which to differentiate between acronyms and abbreviations / shorthand,
+you are essentially choosing naming 'conventions' at random.
 
 This distinction matters enough that Instance.js (by accident as the most logical choice) maintains separate handling 
 for acronyms vs abbreviations in its constructor naming conventions (see Case Modes documentation), even though HTML no longer does.
