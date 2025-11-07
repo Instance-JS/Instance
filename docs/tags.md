@@ -4,7 +4,7 @@
 
 >It is unnecessary to even present a list of transformations here. The first letter of any element you may find is capitalized. That's it.
 >
->*For those who would like to peruse a (quite reasonably) comprehensive list of all elements, see master/docs/elements.md*
+>*For those who would like to peruse a (quite reasonably) comprehensive list of all elements, see master/docs/table-of-elements.md*
 
 ```javascript
 new A() for <a>
