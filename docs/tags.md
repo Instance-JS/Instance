@@ -75,4 +75,4 @@ new Wbr() for <wbr>
 | `<sub>`  | Subscript                            | Not an acronym; Rule 2: Pronounceable as "sub"; common word. common prefix.                     |
 | `<sup>`  | Superscript                          | Not an acronym; Rule 2: Pronounceable as "sup"; common word. common prefix.                     |
 | `<u>`    | Underline                            | Not an acronym; Moot: single letters in all 4 naming styles are uppercased.                        |
-| `<var>`  | Variable                             | Not an acronym; Rule 2: Pronounceable as "var"; common word.                       |
+| `<var>`  | Variable                             | Not an acronym; Rule 2: Pronounceable as "var"; ties to "variable"; common word.                       |
