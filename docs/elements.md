@@ -141,7 +141,7 @@
 >  
 > They are considered **Non-Conforming Anti-Patterns** in modern web development: embedding presentation logic directly in markup, violating the separation of structure, style, and behavior — a key reason for their obsolescence.
 >  
-> Below is a historical snapshot of the most notorious vendor-specific HTML tags that helped to shape — and ultimately break — early web interoperability.
+> Below is a historical snapshot of the most notorious vendor-specific HTML tags that helped shape — and ultimately break — early web interoperability.
 
 
 | Name | Browser of Origin | Purpose / Behavior | Current Status |
