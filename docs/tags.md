@@ -29,7 +29,7 @@ This naming convention applies default case (case #1), but with modifications to
 >
 >1. **Formal Specificity:** Its letters correspond directly to its *formal specification* name when fully expanded. (`<LI>` -> 'List Item', `<SVG>` -> 'Scalable Vector Graphic')
 > 
->2. **Phonetic Absurdity:**: The tag is 'unpronounceable' in natural language, forcing you to enunciate each letter: (`<DFN>`: 'D-F-N' [acronym]), (`<del>`: `Del` [not an acronym])
+>2. **Orthographic Dominance:**: The tag is 'unpronounceable' in natural language, forcing you to enunciate each letter: (`<DFN>`: 'D-F-N' [acronym]), (`<del>`: `Del` [not an acronym])
 > 
 >3. **The Exception Rule:**: `<img>` is `Img`. It’s almost always contextualized as “image,” not 'I-M-G'.
 
