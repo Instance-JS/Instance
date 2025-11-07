@@ -211,7 +211,8 @@ This distinction matters enough that Instance.js (systematically arriving at the
 for element acronyms vs element abbreviations, in its constructor naming conventions (see Case Modes documentation), even though HTML no longer does.
 
 Had `<acronym>` remained distinct from `<abbr>`, my 'case-convention.md' documentation file would likely have been unnecessary~
-the spec itself would encode the distinction, and framework authors (as well as adopters) could reference it directly, instead of trudging through 'the docs' or brute-forcing it on their own.
+the spec itself would encode the distinction, and each framework author (as well as adopter) could reference it directly. 
+Instead of trudging through 'the docs' or brute-forcing it on their own.
 
 Good architecture is inclusive of its own documentation, but not everyone will—or should have to—write an extensive treatise to preemptively solve a problem that most would never consider; one the spec itself created.
 
