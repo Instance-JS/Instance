@@ -36,9 +36,9 @@ This naming convention can be applied to both default case and pascal case, but 
 
 | Tag       |   X-Acronym     | Full Meaning                          | Reasoning                                                                 |
 |-----------|----------------|---------------------------------------|---------------------------------------------------------------------------|
-| `<li>`   | `LI`          | List Item                            | Rule 1: 1-to-1 acronym: 'List Item'; Rule 2: *sometimes* pronounced 'L-I' instead of `Li`. Hierarchic invariant 'Rule 1' overrides subjective interpretations of Rule 2. |
-| `<ul>`   | `UL`          | Unordered List                       | Rule 1: 1-to-1 acronym: 'Unordered List'; Rule 2: *generally* enunciated as 'U-L'. Hierarchic invariant Rule 1 overrides subjective interpretations of Rule 2.       |
-| `<ol>`   | `OL`          | Ordered List                         | Rule 1: 1-to-1 acronym: 'Ordered List'; Rule 2: *generally* enunciated as 'O-L'. Hierarchic invariant Rule 1 overrides subjective interpreations of Rule 2.      |
+| `<li>`   | `LI`          | List Item                            | Rule 1: 1-to-1 acronym: 'List Item'; Rule 2: subjective. *sometimes* pronounced 'L-I' instead of `Li`. Hierarchic invariant 'Rule 1' overrides. |
+| `<ul>`   | `UL`          | Unordered List                       | Rule 1: 1-to-1 acronym: 'Unordered List'; Rule 2: subjective. *generally* enunciated as 'U-L'. Hierarchic invariant Rule 1 overrides.      |
+| `<ol>`   | `OL`          | Ordered List                         | Rule 1: 1-to-1 acronym: 'Ordered List'; Rule 2: subjective. *generally* enunciated as 'O-L'. Hierarchic invariant Rule 1 overrides.     |
 | `<dl>`   | `DL`          | Description List                     | Rule 1: 1-to-1 acronym: 'Description List' (or Definition List); Rule 2: 'D-L'.   |
 | `<dt>`   | `DT`          | Description Term                     | Rule 1: 1-to-1 acronym: 'Description Term' (or Definition Term); Rule 2: 'D-T'.   |
 | `<dd>`   | `DD`          | Description Definition               | Rule 1: 1-to-1 acronym: 'Description Definition' (or Definition Description); Rule 2: 'D-D'. |
@@ -47,14 +47,14 @@ This naming convention can be applied to both default case and pascal case, but 
 | `<tr>`   | `TR`          | Table Row                            | Rule 1: 1-to-1 acronym: 'Table Row'; Rule 2: 'T-R'.                               |
 | `<tt>`   | `TT`          | Teletype Text                        | Rule 1: 1-to-1 acronym: 'Teletype Text'; Rule 2: 'T-T'.                           |
 | `<hr>`   | `HR`          | Horizontal Rule                      | Rule 1: 1-to-1 acronym: 'Horizontal Rule'; Rule 2: 'H-R'.                         |
-| `<br>`   | `BR`          | Break (Line Break)                   | Rule 1: 1-to-1 acronym: 'Break Rule' or 'Line Break'; Rule 2: 'B-R'.              |
+| `<br>`   | `BR`          | Break (Line Break)                   | Rule 1: 1-to-1 acronym: 'Break Rule' (Line Break)'; Rule 2: 'B-R'.              |
 | `<bdi>`  | `BDI`         | Bi-Directional Isolation             | Rule 1: 1-to-1 acronym: 'Bi-Directional Isolation'; Rule 2: 'B-D-I', unpronounceable as a word. |
 | `<bdo>`  | `BDO`         | Bi-Directional Override              | Rule 1: 1-to-1 acronym: 'Bi-Directional Override'; Rule 2: 'B-D-O'.               |
-| `<dfn>`  | `DFN`         | Definition                           | Rule 1: 1-to-1 acronym: 'Definition For Notation'; Rule 2: 'D-F-N', enunciated letters. |
-| `<kbd>`  | `KBD`         | Keyboard Input                       | Rule 1: Ties to 'Keyboard' or 'Key Board'; Rule 2: 'K-B-D'.                              |
+| `<dfn>`  | `DFN`         | Definition                           | Rule 1: subjective. Rule 2: 'D-F-N'. |
+| `<kbd>`  | `KBD`         | Keyboard Input                       | Rule 1: subjective. Rule 2: 'K-B-D'.                              |
 | `<svg>`  | `SVG`         | Scalable Vector Graphics             | Rule 1: 1-to-1 acronym: 'Scalable Vector Graphics'; Rule 2: 'S-V-G'.              |
-| `<xml>`  | `XML`         | Extensible Markup Language           | Rule 1: Ties to 'Extensible Markup Language'; Rule 2: 'X-M-L'.            |
-| `<wbr>`  | `WBR`         | Word Break Opportunity               | Rule 1: 1-to-1 acronym: 'Word Break Rule'; Rule 2: 'W-B-R'.                       |
+| `<xml>`  | `XML`         | Extensible Markup Language           | Rule 1: 1-to-1 acronym: '(E)xtensible Markup Language' (bite me); Rule 2: 'X-M-L'.            |
+| `<wbr>`  | `WBR`         | Word Break Opportunity               | Rule 1: subjective. Rule 2: 'W-B-R'.                       |
 | `<rb>`   | `RB`          | Ruby Base                            | Rule 1: 1-to-1 acronym: 'Ruby Base' from Ruby Annotation Spec; Rule 2: 'R-B'.     |
 | `<rp>`   | `RP`          | Ruby Parenthesis                     | Rule 1: 1-to-1 acronym: 'Ruby Parenthesis'; Rule 2: 'R-P'.                        |
 | `<rt>`   | `RT`          | Ruby Text                            | Rule 1: 1-to-1 acronym: 'Ruby Text'; Rule 2: 'R-T'.                               |
@@ -74,7 +74,7 @@ new DFN() // <dfn>
 | Tag       | Full Meaning                          | Reason Not Included                                                                 |
 |-----------|---------------------------------------|-------------------------------------------------------------------------------------|
 | `<big>`  | Big Text                             | Shorthand for 'big text'. Rule 2: Pronounceable as "big" (a single word); no spec tie to letters. |
-| `<col>`  | Column                               | Abbreviation of 'column' not acronym; Rule 2: Pronounceable as "coal" or "call"; |
+| `<col>`  | Column                               | Abbreviation of 'column'. Rule 2: Pronounceable as "coal" or "call"; |
 | `<del>`  | Deleted Text                         | Abbreviation, not acronym; Rule 2: Pronounceable as "dell"; "delete" is contextualized. |
 | `<dir>`  | Directory List                       | Abbreviation of 'directory'. Rule 2: Pronounceable as "deer".        |
 | `<div>`  | Division                             | Abbreviation of 'division' or 'divider'. Rule 2: Pronounceable as "div";                    |
