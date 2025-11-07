@@ -9,6 +9,25 @@
 | `<a>` | HTML2 onward | Anchor tag — creates hyperlinks. | **🟢 Essential** |
 | `<abbr>` | HTML4 onward | Defines an abbreviation or acronym. | **🟢 Semantic** |
 | `<acronym>` | HTML3 | Defines an acronym; superseded by `<abbr>`. | **🟠 Obsolete** |
+
+### Editorial Note
+The deprecation of `<acronym>` in favor of `<abbr>` represents a semantic conflation that this framework's documentation disavows.
+Acronyms (multi-word 1-to-1 initialisms like SVG, HTML) and abbreviations (shortened single words like  "nav", "div") are two distinct concepts. 
+
+Whether something is *specifically* an acronym is of architecturally significant semantic importance:
+A distinction that is perhaps not immediately obvious to non-native English speakers (and indeed some native ones)...
+at least, until you need to formalize exactly WHICH 2-4 letter elements should be upper-cased in your application, 
+and more importantly, why those elements in particular and not others.
+Not everyone is going to do what I did.
+
+This distinction matters enough that Instance.js (by accident as the most logical choice) maintains separate handling 
+for acronyms vs abbreviations in its constructor naming conventions (see Case Modes documentation), even though HTML no longer does.
+
+Had `<acronym>` remained distinct from `<abbr>`, this documentation would be unnecessary—
+the spec itself would encode the distinction, and framework authors could reference it directly.
+
+The `<acronym>` element should be resurrected and brought back to the living spec.
+
 | `<address>` | HTML4 onward | Contact information for the nearest `<article>` or `<body>`. | **🟢 Semantic** |
 | `<applet>` | HTML3 | Deprecated Java embedder-once ran mini-apps, now a relic. | **🔴 Dangerous & Obsolete** (critically flawed security model) |
 | `<area>` | HTML3 onward | Defines a clickable region inside an image map (`<map>`). | **🟢 Standard** |
