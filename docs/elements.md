@@ -137,11 +137,9 @@
 ### 💥 Non-Conforming, Vendor-Specific Elements
 
 >
->> *⚠️ These elements were never formally defined by the official HTML specification (W3C or WHATWG), but gained significant de facto market share due to support from dominant browsers during the “Browser Wars.”*  
+> *⚠️ These elements were never formally defined by the official HTML specification (W3C or WHATWG), but gained significant de facto market share due to support from dominant browsers during the “Browser Wars. They often relied on proprietary rendering engines like **Trident** (Internet Explorer) or **Gecko** (Netscape) and were never standardized in any formal DTD or schema.”*  
 >  
-> They are considered **Non-Conforming Anti-Patterns** in modern web development: embedding presentation logic directly in markup, violating the separation of structure, style, and behavior — a key reason for their obsolescence.  
->  
-> They often relied on proprietary rendering engines like **Trident** (Internet Explorer) or **Gecko** (Netscape) and were never standardized in any formal DTD or schema.  
+> They are considered **Non-Conforming Anti-Patterns** in modern web development: embedding presentation logic directly in markup, violating the separation of structure, style, and behavior — a key reason for their obsolescence.
 >  
 > Below is a historical snapshot of the most notorious vendor-specific HTML tags that shaped — and ultimately broke — early web interoperability.
 
