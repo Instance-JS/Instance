@@ -202,17 +202,19 @@ Acronyms (multi-word 1-to-1 initialisms like SVG, HTML) and abbreviations (short
 
 Whether something is *specifically* an acronym is of architecturally significant semantic importance:
 A distinction that is perhaps not immediately obvious to non-native English speakers (and indeed some native ones)...
-at least, until you need to formalize exactly WHICH 2-4 letter names (in my case, elements) should be upper-cased in your application, 
-and more importantly, why those names in particular, and not others.
-Not everyone is going to do what I did.
+until, at least, you need to formalize exactly HOW 2-4 letter variable names should be mapped within a case-sensitive data application and vice versa...
+and in particular maintain cohesion why you chose those names in particular, and not others. If you do not have a [readily] defined system to differentiate between acronyms and abbreviations / shorthand,
+you are essentially choosing naming conventions at random.
 
 This distinction matters enough that Instance.js (by accident as the most logical choice) maintains separate handling 
 for acronyms vs abbreviations in its constructor naming conventions (see Case Modes documentation), even though HTML no longer does.
 
-Had `<acronym>` remained distinct from `<abbr>`, this documentation would be unnecessary—
-the spec itself would encode the distinction, and framework authors could reference it directly.
+Had `<acronym>` remained distinct from `<abbr>`, this documentation would likely have been unnecessary—
+the spec itself would encode the distinction, and framework authors could reference it directly instead of figuring it out on their own.
 
-The `<acronym>` element should be resurrected and brought back to the living spec.
+Not everyone is going to do what I did (architecture is inclusive of its own documentation) in order to preemptively solve a problem that most would never consider.
+
+I would formally request that `<acronym>` element be resurrected and brought back to the living spec.
 
 ---
 Sources:
