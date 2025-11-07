@@ -196,9 +196,10 @@ Interestingly, `<marquee>` survived well into the modern era — remaining funct
 
 ### Editorial Note: `<acronym>` vs `<abbr>`
 
-The deprecation of `<acronym>` in favor of `<abbr>` represents a semantic conflation that this framework's documentation formally disavows.
-Acronyms (multi-word 1-to-1 initialisms like SVG, HTML) and abbreviations (shortened single words like  "nav", "div") are two distinct concepts. 
+>*🎶 HEY! WAIT! I've got a new complaint. Forever in debt to your priceles advice...*
 
+The deprecation of `<acronym>` in favor of `<abbr>` represents a semantic conflation that this framework's documentation formally disavows.
+Acronyms (multi-word 1-to-1 initialisms like SVG, HTML) and abbreviations (shortened single words like  "nav", "div") are two distinct concepts.
 Whether something is *specifically* an acronym is of architecturally significant semantic importance:
 A distinction that is perhaps not immediately obvious to non-native English speakers (and indeed some native ones)...
 until one must formalize exactly **HOW** arbitrary-length variable names should be mapped within a case-sensitive data application and vice versa...
