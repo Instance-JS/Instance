@@ -202,7 +202,7 @@ Acronyms (multi-word 1-to-1 initialisms like SVG, HTML) and abbreviations (short
 Whether something is *specifically* an acronym is of architecturally significant semantic importance:
 A distinction that is perhaps not immediately obvious to non-native English speakers (and indeed some native ones)...
 until one must formalize exactly **HOW** arbitrary-length variable names should be mapped within a case-sensitive data application and vice versa...
-and, more importantly, maintain internal consistency as to why those names were chosen above others. 
+and, more importantly, maintain internal consistency as to **WHY** those specific names were chosen above others. 
 Without a formally defined system with which to differentiate between acronyms and abbreviations / shorthand,
 one is essentially choosing naming 'conventions' at random.
 
