@@ -18,7 +18,7 @@ new H2() for <h2>
 new Wbr() for <wbr>
 ```
 
-## 2. Annotated Table of Tags when case `default-acronym` is specified.
+## 2. Annotated Table of Tags when case modifier `-acronym` is specified.
 
 This naming convention applies case #1, but with modifications to acronyms only.
 
@@ -30,7 +30,7 @@ This naming convention applies case #1, but with modifications to acronyms only.
 > 
 >3. Img is Img (almost always contextualized as 'image')
 
-| Tag       | Default-Acronym | Full Meaning                          | Reasoning                                                                 |
+| Tag       | X-Acronym | Full Meaning                          | Reasoning                                                                 |
 |-----------|----------------|---------------------------------------|---------------------------------------------------------------------------|
 | `<li>`   | `LI`          | List Item                            | Rule 1: Directly ties to formal spec name 'List Item'; Rule 2: Pronounced 'L-I' rather than as a word. |
 | `<ul>`   | `UL`          | Unordered List                       | Rule 1: Ties to 'Unordered List'; Rule 2: Enunciated as 'U-L'.            |
