@@ -55,7 +55,7 @@ This naming convention can be applied to both default case and pascal case, but 
 | `<kbd>`  | `KBD`         | Keyboard Input                       | Rule 1: subjective. Application of Rule 2 is non-subjective: 'K-B-D'. Overrides subjective Rule 1.  |
 | `<svg>`  | `SVG`         | Scalable Vector Graphics             | Rule 1: 1-to-1 acronym: 'Scalable Vector Graphics'; Rule 2: 'S-V-G'.              |
 | `<xml>`  | `XML`         | Extensible Markup Language           | Rule 1: 1-to-1 acronym: '(E)xtensible Markup Language' (bite me); Rule 2: 'X-M-L'.            |
-| `<wbr>`  | `WBR`         | Word Break Opportunity               | Rule 1: subjective. (Word Break [Rule | Opportunity]). Application of Rule 2 is non-subjective: 'W-B-R'. Overrides subjective Rule 1. |
+| `<wbr>`  | `WBR`         | Word Break Opportunity               | Rule 1: subjective. (Word Break (Rule / Opportunity)). Application of Rule 2 is non-subjective: 'W-B-R'. Overrides subjective Rule 1. |
 | `<rb>`   | `RB`          | Ruby Base                            | Rule 1: 1-to-1 acronym: 'Ruby Base' from Ruby Annotation Spec; Rule 2: 'R-B'.     |
 | `<rp>`   | `RP`          | Ruby Parenthesis                     | Rule 1: 1-to-1 acronym: 'Ruby Parenthesis'; Rule 2: 'R-P'.                        |
 | `<rt>`   | `RT`          | Ruby Text                            | Rule 1: 1-to-1 acronym: 'Ruby Text'; Rule 2: 'R-T'.                               |
