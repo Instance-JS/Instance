@@ -138,11 +138,15 @@
 
 *These elements were never formally defined by the official HTML specification (W3C or WHATWG), but gained significant de facto market share due to support from dominant browsers during the "Browser Wars." They are considered **Non-Conforming** in modern web development. They often relied on proprietary rendering engines like Trident (IE) or Gecko (Netscape) and were never standardized in any formal DTD or schema.*
 
+>⚠️ General Pattern:
+>All of these elements embedded **presentation logic directly in markup**, i.e. an anti-pattern: violating the separation of structure, style, and behavior — a key reason for their obsolescence.
+>Below is a historical snapshot of the most notorious vendor-specific HTML tags that shaped, and ultimately broke, early web interoperability.
+
 | Name | Browser of Origin | Purpose / Behavior | Current Status |
 | :---: | :---: | :--- | :--- |
 | `<blink>` | **Netscape** | Makes enclosed text flash on and off. | **🔴 Dangerous, Non-Conforming & Obsolete** (Anti-pattern; Seizure hazard, replaced by CSS) |
 | `<bgsound>` | **Microsoft IE** | Plays a sound file automatically in the background. | **🔴 Non-Conforming & Obsolete** (Anti-pattern; replaced by `<audio>`) |
-| `<ilayer>` | Netscape | Inline version of `<layer>`, for overlapping inline content. | **🔴 Non-Conforming** |
+| `<ilayer>` | **Netscap**e | Inline version of `<layer>`, for overlapping inline content. | **🔴 Non-Conforming** (Anti-pattern; replaced by CSS stacking contexts) |
 | `<layer>` | **Netscape** | Used for creating layers of content for absolute positioning. | **🔴 Non-Conforming & Obsolete** (Anti-pattern; replaced by CSS positioning) |
 | `<marquee>` | **Microsoft IE** | Scrolls text horizontally or vertically, but lacks an accessible stop / pause mechanism | **🔴 Dangerous, Non-Conforming & Obsolete** (Anti-pattern; Seizure hazard, use CSS/JS, or native browser controls) |
 | `<nolayer>` | **Netscape** | Fallback content for browsers that didn't support `<layer>`. | **🔴 Non-Conforming** |
