@@ -22,15 +22,15 @@ new Wbr() for <wbr>
 
 ## 2. Annotated Table of Tags when case modifier `-acronym` is specified.
 
-This naming convention applies case #1, but with modifications to acronyms only.
+This naming convention applies default case (case #1), but with modifications to acronyms only.
 
->Rule of thumb: A tag is classified as an 'acronym' if either:
+>Rule of thumb: A tag is classified as an 'acronym' if it matches one these 3 rules:
 >
->1. **Formal Rule:** Its letters tie directly to its formal spec name (LI: 'List Item', SVG: 'Scalable Vector Graphic')
+>1. **Formal specificity:** Its letters map directly to its formal spec name when not abbreviated: (LI: 'List Item', SVG: 'Scalable Vector Graphic')
 > 
->2. **Phonetic Rule**: The tag is 'unpronounceable' in natural language, forcing you to enunciate each letter: (DFN: 'D-F-N' [acronym]), (del: 'Del' [not an acronym])
+>2. **Phonetic absurdity**: The tag is 'unpronounceable' in natural language, forcing you to enunciate each letter: (DFN: 'D-F-N' [acronym]), (del: 'Del' [not an acronym])
 > 
->3. **Contextual Exception:**: Img is Img (almost always contextualized as 'image')
+>3. **No contextual exception:**: Img is Img (almost always contextualized as 'image')
 
 | Tag       |   X-Acronym     | Full Meaning                          | Reasoning                                                                 |
 |-----------|----------------|---------------------------------------|---------------------------------------------------------------------------|
