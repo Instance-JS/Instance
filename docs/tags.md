@@ -1,6 +1,6 @@
 #
 
-## Annotated Table for Instance.js when case `default` is specified.
+## 1. Annotated Table for Instance.js when case `default` is specified.
 
 >It is unnecessary to even present a list of transformations here. The first letter of any element you may find is capitalized. That's it.
 >
@@ -18,7 +18,9 @@ new H2() for <h2>
 new Wbr() for <wbr>
 ```
 
-## Annotated Table of Tags when case `default-acronym` is specified.
+## 2. Annotated Table of Tags when case `default-acronym` is specified.
+
+This naming convention applies case #1, but with modifications to acronyms only.
 
 >Rule of thumb: A tag is classified as an 'acronym' if either:
 >
