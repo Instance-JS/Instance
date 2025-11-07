@@ -209,6 +209,8 @@ Only then does it become clear that this deceptively difficult distinction is qu
 without intrinsically knowing the other's core abstraction: case conventions. Thus it was chosen for Instance.js to maintain separate detection mechanisms
 for both element acronyms and element abbreviations, to align with its own internal model (see Case Modes documentation), even though HTML itself no longer does.
 
+Case is metadata; it is meaning, not style.
+
 Without a formally defined system with which to differentiate between acronyms and abbreviations / shorthand,
 one is essentially choosing 'naming conventions' at random.
 
