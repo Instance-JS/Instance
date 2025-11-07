@@ -8,7 +8,7 @@
 | :---: | :---: | :--- | :--- |
 | `<a>` | HTML2 onward | Anchor tag — creates hyperlinks. | **🟢 Essential** |
 | `<abbr>` | HTML4 onward | Defines an abbreviation or acronym. | **🟢 Semantic** |
-| `<acronym>` | HTML3 | Defines an acronym; superseded by `<abbr>`. | **🟠 Obsolete** |
+| `<acronym>` | HTML3 | Defines an acronym; 'superseded' by `<abbr>`. | **🟠 Obsolete** |
 | `<address>` | HTML4 onward | Contact information for the nearest `<article>` or `<body>`. | **🟢 Semantic** |
 | `<applet>` | HTML3 | Deprecated Java embedder-once ran mini-apps, now a relic. | **🔴 Dangerous & Obsolete** (critically flawed security model) |
 | `<area>` | HTML3 onward | Defines a clickable region inside an image map (`<map>`). | **🟢 Standard** |
