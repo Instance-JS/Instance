@@ -2,12 +2,11 @@
 
 ### 🧩 Case Modes
 Naming conventions are defined by case modifiers (e.g., `-acronym`) applied to element constructors in Instance.js.
+>*For those who would like to peruse a (quite reasonably) comprehensive list of all elements, see master/docs/table-of-elements.md*
 
 ## 1. Default Case (`initial`): Annotated Table for Instance.js
 
 >It is unnecessary to even present a list of transformations here. The first letter of any element you may find is capitalized. That's it.
->
->*For those who would like to peruse a (quite reasonably) comprehensive list of all elements, see master/docs/table-of-elements.md*
 
 ```javascript
 new A() for <a>
