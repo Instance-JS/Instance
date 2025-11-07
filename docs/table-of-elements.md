@@ -217,7 +217,7 @@ as the spec itself would encode the distinction, and each framework author (as w
 Instead of trudging through 'the docs' or brute-forcing it on their own.
 
 Good architecture is inclusive of its own documentation, but not everyone will-—or should have to—-write a mini-treatise on acronym formalization,
-in order to preemptively solve a problem that the spec itself allows, and that most would never consider.
+in order to preemptively solve a problem that the spec itself allows.
 
 This note serves as a formal request that `<acronym>` be resurrected and brought back to the living spec, documented with clear, updated normalization patterns.
 
