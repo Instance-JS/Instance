@@ -1,9 +1,9 @@
 #
 
-## Annotated Table of Initial Tags
+## Annotated Table for Instance.js case convention default
 
 >It is unnecessary to even present a list of transformations here. The first letter of any element you may find is capitalized. That's it.
->However, for those who would like to peruse a (quite reasonably) comprehensive list of all elements, see master/docs/elements.md
+>For those who would like to peruse a (quite reasonably) comprehensive list of all elements, see master/docs/elements.md
 
 ```javascript
 new A() for <a>
