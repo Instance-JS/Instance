@@ -20,6 +20,14 @@ new Wbr() for <wbr>
 
 ## Annotated Table of Acronym Tags
 
+>Rule of thumb: A tag is classified as an 'acronym' if either:
+>
+>1. Its letters tie directly to its formal spec name (LI: 'List Item', SVG: 'Scalable Vector Graphic')
+> 
+>2. The tag is 'unpronounceable' in natural language, forcing you to enunciate each letter: (DFN: 'D-F-N' [acronym]), (del: 'Del' [not an acronym])
+> 
+>3. Img is Img (almost always contextualized as 'image')
+
 | Tag       | Uppercase Form | Full Meaning                          | Reasoning                                                                 |
 |-----------|----------------|---------------------------------------|---------------------------------------------------------------------------|
 | `<li>`   | `LI`          | List Item                            | Rule 1: Directly ties to formal spec name 'List Item'; Rule 2: Pronounced 'L-I' rather than as a word. |
