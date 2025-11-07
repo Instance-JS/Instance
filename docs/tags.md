@@ -24,13 +24,13 @@ new Wbr() for <wbr>
 
 This naming convention applies default case (case #1), but with modifications to acronyms only.
 
->Rule of thumb: A tag is classified as an 'acronym' if it matches one these 3 rules:
+>Rule of thumb: A tag is classified as an 'acronym' if it matches the semantic hierarchy of these 3 rules:
 >
 >1. **Formal specificity:** Its letters map directly to its formal spec name when not abbreviated: (LI: 'List Item', SVG: 'Scalable Vector Graphic')
 > 
 >2. **Phonetic absurdity**: The tag is 'unpronounceable' in natural language, forcing you to enunciate each letter: (DFN: 'D-F-N' [acronym]), (del: 'Del' [not an acronym])
 > 
->3. **No contextual exception:**: Img is Img (almost always contextualized as 'image')
+>3. **Not the exception:**: Img is Img (almost always contextualized as 'image')
 
 | Tag       |   X-Acronym     | Full Meaning                          | Reasoning                                                                 |
 |-----------|----------------|---------------------------------------|---------------------------------------------------------------------------|
