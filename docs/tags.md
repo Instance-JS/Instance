@@ -35,9 +35,9 @@ This naming convention can be applied to both default case and pascal case, but 
 
 | Tag       |   X-Acronym     | Full Meaning                          | Reasoning                                                                 |
 |-----------|----------------|---------------------------------------|---------------------------------------------------------------------------|
-| `<li>`   | `LI`          | List Item                            | Rule 1: Directly ties to formal spec name 'List Item'; Rule 2: *sometimes* pronounced 'L-I', instead of `Li`. Rule 1 wins. Rule 2 optional. |
-| `<ul>`   | `UL`          | Unordered List                       | Rule 1: Ties to 'Unordered List'; Rule 2: *generally* enunciated as 'U-L'. Rule 1 wins. Rule 2 optional.           |
-| `<ol>`   | `OL`          | Ordered List                         | Rule 1: Ties to 'Ordered List'; Rule 2: *generally* enunciated as 'O-L'. Rule 1 wins. Rule 2 optional.            |
+| `<li>`   | `LI`          | List Item                            | Rule 1: Directly ties to formal spec name 'List Item'; Rule 2: *sometimes* pronounced 'L-I' instead of `Li`. Rule 1 takes precedence, rule 2 optionally applicable. |
+| `<ul>`   | `UL`          | Unordered List                       | Rule 1: Ties to 'Unordered List'; Rule 2: *generally* enunciated as 'U-L'. Rule 1 takes precedence, rule 2 optionally applicable.        |
+| `<ol>`   | `OL`          | Ordered List                         | Rule 1: Ties to 'Ordered List'; Rule 2: *generally* enunciated as 'O-L'. Rule 1 takes precedence, rule 2 optionally applicable.        |
 | `<dl>`   | `DL`          | Description List                     | Rule 1: Ties to 'Description List' (or Definition List); Rule 2: 'D-L'.   |
 | `<dt>`   | `DT`          | Description Term                     | Rule 1: Ties to 'Description Term' (or Definition Term); Rule 2: 'D-T'.   |
 | `<dd>`   | `DD`          | Description Definition               | Rule 1: Ties to 'Description Definition' (or Definition Description); Rule 2: 'D-D'. |
