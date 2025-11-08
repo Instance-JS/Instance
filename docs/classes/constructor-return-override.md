@@ -69,6 +69,9 @@ class PrimitiveReturner {
     constructor() {
         this.status = 'initialized';
         return 42; // Primitive return value is IGNORED.
+    /// return; // -> equivalent to `return undefined` -> IGNORED
+    /// return true; // -> IGNORED
+    /// return null; // -> IGNORED
     }
 }
 
