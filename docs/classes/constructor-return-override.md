@@ -1,11 +1,14 @@
 
 # Using Constructor Return Override in JavaScript Classes
 
-In JavaScript, a class `constructor` is a special internal method that executes exactly once: when a new instance of that class is created (e.g., via `new Class()`).
+You can think of classes as Java (or Solidity) Interfaces, except they can also contain internal logic.
 
-Constructors are used to 'initialize' the default logic of a class, upon instantiation via `new`.
+Not to be confused with ES5 'constructor functions' (e.g., function Box() { this.a = 1; }): ES6 classes MUST be instantiated via the `new` keyword: calling a class without `new` throws a `TypeError`.
 
-It follows specific rules regarding its return value, which can be leveraged to implement patterns like factories or singletons.
+In JavaScript, a class `constructor` is a special internal method that executes exactly once: when a *new instance* of that class is created (via `new SomeClass()`).
+Constructors are responsible for handling the class’s default state or logic during initialization.
+
+They also automatically follow specific rules regarding their return value, which can be leveraged to implement custom patterns like factories or singletons.
 
 ## 1. The Standard: Implicit `return this`
 
