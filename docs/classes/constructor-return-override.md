@@ -5,7 +5,7 @@ In JavaScript, a class constructor follows specific rules regarding its return v
 
 ## 1. The Standard: Implicit `return this`
 
-By default, the constructor function is designed to initialize the new object instance. When a constructor finishes execution without an explicit `return` statement, it **implicitly returns the object referenced by `this`**.
+By default, a class `constructor` function is designed to initialize the new object instance. When a constructor finishes execution without an explicit `return`, it **implicitly returns the object referenced by `this`**.
 
 ```javascript
 class Standard {
@@ -72,7 +72,7 @@ console.log(instanceB);
 
 Since **DOM elements are (non-null) JavaScript objects** (See ADR-008), 
 this override rule allows a class constructor to be used as a convenient factory for creating and returning a ready-to-use DOM element, 
-rather than returning the class instance itself.
+rather than returning a direct instance of the class itself.
 
 ```javascript
 class MyCustomButton {
@@ -92,7 +92,7 @@ class MyCustomButton {
   }
 }
 
-// When creating a new instance:
+// Now, when creating a new instance:
 const saveButton = new MyCustomButton('Save Data');
 
 // The result is the actual HTML Button element, not the MyCustomButton class instance.
