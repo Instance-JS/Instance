@@ -2,7 +2,9 @@
 # Using Constructor Return Override in JavaScript Classes
 
 In JavaScript, a class `constructor` is a special internal method that executes exactly once: when a new instance of that class is created (e.g., via `new Class()`).
+
 Constructors are used to 'initialize' the default logic of a class, upon instantiation via `new`.
+
 It follows specific rules regarding its return value, which can be leveraged to implement patterns like factories or singletons.
 
 ## 1. The Standard: Implicit `return this`
