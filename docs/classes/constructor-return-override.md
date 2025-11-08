@@ -7,7 +7,7 @@ Not to be confused with ES5 'constructor functions' (ES5: `function Box() { this
 
 Calling a class without `new` throws a `TypeError`.
 
-In JavaScript, a class `constructor` is a special internal method that executes exactly once: when a *new instance* of that class is created (via `**new** SomeClass()`).
+In JavaScript, a class `constructor` is a special internal method that executes exactly once: when a *new instance* of that class is created (via `new SomeClass()`).
 Constructors are responsible for handling the class’s default state or logic during initialization.
 
 They also automatically follow specific rules regarding their return value, which can be leveraged to implement custom patterns like factories or singletons.
