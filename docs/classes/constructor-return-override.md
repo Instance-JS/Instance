@@ -62,7 +62,7 @@ A constructor **can** contain an explicit `return` statement, but its effect dep
 
 ### Rule A: Returning a Primitive Value
 
-If you explicitly return a **primitive value** (e.g., a number, string, boolean, `undefined`, or `null`), the return value is **ignored**. The constructor will still return the object referenced by `this`.
+If you explicitly (or implicitly) return a **primitive value** (e.g., a number, string, boolean, `undefined`, or `null`), the return value is **ignored**. The constructor will still return the object referenced by `this`.
 
 ```javascript
 class PrimitiveReturner {
