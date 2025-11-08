@@ -9,19 +9,19 @@ By default, the constructor function is designed to initialize the new object in
 
 ```javascript
 class Standard {
-  constructor(name) {
-    this.name = name;
-    // not needed: 'this' is implicitly returned:
- // return this;
-  }
+    constructor(name) {
+        this.name = name;
+        // not needed: 'return this' is implicit:
+     // return this;
+    }
 }
 
 const standardInstance = new Standard('Alice');
 console.log(standardInstance); // Output: { name: 'Alice' }
-
+```
 -----
 
-## 2\. The Override: Explicit Return Rules
+## 2. The Override: Explicit Return Rules
 
 A constructor **can** contain an explicit `return` statement, but its effect depends on the data type of the returned value:
 
@@ -31,10 +31,10 @@ If you explicitly return a **primitive value** (e.g., a number, string, boolean,
 
 ```javascript
 class PrimitiveReturner {
-  constructor() {
-    this.status = 'initialized';
-    return 42; // Primitive return value is IGNORED.
-  }
+    constructor() {
+        this.status = 'initialized';
+        return 42; // Primitive return value is IGNORED.
+    }
 }
 
 const instanceA = new PrimitiveReturner();
