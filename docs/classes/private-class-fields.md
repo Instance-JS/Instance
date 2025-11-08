@@ -73,15 +73,16 @@ Under the hood, JavaScript engines typically implement private fields using **Sy
 ```javascript
 // Conceptual representation (not actual syntax)
 class Example {
-    #private = 'value';
+    #private = 1;
 }
 
 // Roughly equivalent to:
-const hashtag_private = Symbol('Example.#private');
-
-class Example {
-    constructor() {
-        this[hashtag_private] = 'value';
+{
+    const HASHTAG_PRIVATE = Symbol('Example.#private');
+    class Example {
+        constructor() {
+            this[HASHTAG_PRIVATE] = 1;
+        }
     }
 }
 ```
