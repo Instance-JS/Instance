@@ -1,4 +1,4 @@
-````markdown
+
 # Constructor Return Value Override in JavaScript Classes
 
 In JavaScript, a class constructor follows specific rules regarding its return value, which can be leveraged to implement patterns like factories or singletons.
@@ -17,7 +17,6 @@ class Standard {
 
 const standardInstance = new Standard('Alice');
 console.log(standardInstance); // Output: { name: 'Alice' }
-````
 
 -----
 
