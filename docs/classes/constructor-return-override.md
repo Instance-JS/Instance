@@ -23,7 +23,7 @@ var counter = 0;
 
 class Example {
     constructor() {
-        console.log(counter++, 'instanceof this was initialized at: '+(+new Date());
+        console.log(counter++, 'instanceof this was initialized at: '+(+new Date()));
     }
     someMethod() { alert('Hello World!'); }
 }
