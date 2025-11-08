@@ -68,8 +68,8 @@ If you explicitly return a **primitive value** (e.g., a number, string, boolean,
 class PrimitiveReturner {
     constructor() {
         this.status = 'initialized';
-        return 42; // Primitive return value is IGNORED.
-    /// return; // -> equivalent to `return undefined` -> IGNORED
+        return 42;   // Primitive return value is IGNORED.
+    /// return;      // -> equivalent to `return undefined` -> IGNORED
     /// return true; // -> IGNORED
     /// return null; // -> IGNORED
     }
