@@ -11,7 +11,8 @@ By default, the constructor function is designed to initialize the new object in
 class Standard {
   constructor(name) {
     this.name = name;
-    // No 'return' statement. 'this' is implicitly returned.
+    // not needed: 'this' is implicitly returned:
+ // return this;
   }
 }
 
