@@ -3,10 +3,12 @@
 
 You can think of classes as Java (or Solidity) Interfaces, except they can also contain internal logic:
 
-```javacript
+```javascript
 class Example {
     someMethod() { alert('Hello World!'); }
 }
+let exp = new Example();
+exp.someMethod(); // alerts "Hello World!"
 ```
 
 Not to be confused with ES5 'constructor functions' (ES5: `function Box() { this.a = 1; }`): ES6 classes MUST be instantiated via the `new` keyword: `new Example()`.
