@@ -71,14 +71,14 @@ ex['#private'];                     // undefined (not a SyntaxError, just undefi
 Under the hood, JavaScript engines typically implement private fields using **Symbols** (or Symbol-like mechanisms). While the exact implementation is engine-specific, the conceptual model is:
 
 ```javascript
-// Conceptual representation (not actual syntax)
+
 class Example {
-    #private = 1;
+    #private_field = 1;
 }
 
-// Roughly equivalent to:
+// Conceptual representation (not actual syntax); roughly equivalent to:
 {
-    const HASHTAG_PRIVATE = Symbol('Example.#private');
+    const HASHTAG_PRIVATE = Symbol('Example.#private_field');
     class Example {
         constructor() {
             this[HASHTAG_PRIVATE] = 1;
