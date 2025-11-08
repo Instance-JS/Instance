@@ -7,6 +7,7 @@ You can think of classes as Java (or Solidity) Interfaces, except they can also 
 class Example {
     someMethod() { alert('Hello World!'); }
 }
+
 let exp = new Example();
 exp.someMethod(); // alerts "Hello World!"
 ```
@@ -15,7 +16,21 @@ Not to be confused with ES5 'constructor functions' (ES5: `function Box() { this
 
 Calling a class without `new` throws a `TypeError`.
 
-In JavaScript, a class `constructor` is a special internal method that executes exactly once: when a *new instance* of that class is created (upon `new Example()`).
+In JavaScript, a class `constructor` is a special internal method that auto-executes exactly once: when a *new instance* of that class is created (upon `new Example()`).
+
+```javascript
+var counter = 0;
+
+class Example {
+    constructor() {
+        console.log(counter++, 'instanceof this was initialized at: '+(+new Date());
+    }
+    someMethod() { alert('Hello World!'); }
+}
+
+let exp1 = new Example(); // (1, some date);
+let exp2 = new Example(); // (2, some date);
+```
 
 Constructors are responsible for handling the class’s default state or logic during initialization.
 
