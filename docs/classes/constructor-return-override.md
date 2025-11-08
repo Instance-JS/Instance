@@ -3,7 +3,7 @@
 
 In JavaScript, a class constructor follows specific rules regarding its return value, which can be leveraged to implement patterns like factories or singletons.
 
-## 1. The Standard: Implicit Return of `this`
+## 1. The Standard: Implicit `return this`
 
 By default, the constructor function is designed to initialize the new object instance. When a constructor finishes execution without an explicit `return` statement, it **implicitly returns the object referenced by `this`**.
 
