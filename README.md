@@ -24,7 +24,7 @@ new Div('hello', '@.container', handler);
 ```
 
 ```javascript
-new Div('Click me', '@.button-container', function(div) {
+new Div('Click me', '@.button-container', function(div) { // NEW DIV "'CLICK ME'" AT BUTTON-CONTAINER, FOR EACH DIV ADD CLASS 'READY'
   div.classList.add('ready');
 });
 ```
