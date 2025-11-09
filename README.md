@@ -3,7 +3,6 @@ See CHANGELOG.md for history.
 Usage (in future release after beta.6):
 ```javascript
 new Div('@.target')  // "NEW DIV AT TARGET"
-await (new $_('Tab'))('div') // AWAIT NEW TAB DIV
 ```
 
 ```javascript
@@ -22,12 +21,6 @@ ReactDOM.render(
 
 // Instance
 new Div('hello', '@.container', handler);
-```
-
-```javascript
-new Div('Click me', '@.button-container', function(div) { // NEW DIV "'CLICK ME'" AT BUTTON-CONTAINER, FOR EACH DIV ADD CLASS 'READY'
-  div.classList.add('ready');
-});
 ```
 
 
