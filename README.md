@@ -19,7 +19,7 @@ ReactDOM.render(
   document.querySelector('.container')
 );
 
-// Instance.js
+// Instance
 new Div('hello', '@.container', handler);
 ```
 
