@@ -30,6 +30,17 @@ new Div('Click me', '@.button-container', function(div) { // NEW DIV "'CLICK ME'
 });
 ```
 
+
+```javascript
+let tab = new Tab('#tab');
+tab.setColor('#000');        // Custom method
+tab.classlist.add('tabby');  // Native method
+document.body.appendChild(tab);  // It's a REAL DOM node
+console.log(tab instanceof HTMLElement);  // true
+console.log(tab instanceof Tab); // true
+```
+
+
 ```javascript
 // (Optional): Include jQuery in another file (for the jQuery checks)
 // See Instance-comprehensive-unit-test.html for the complete version
