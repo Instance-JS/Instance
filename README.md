@@ -24,6 +24,12 @@ new Div('hello', '@.container', handler);
 ```
 
 ```javascript
+new Div('Click me', '@.button-container', function(div) {
+  div.classList.add('ready');
+});
+```
+
+```javascript
 // (Optional): Include jQuery in another file (for the jQuery checks)
 // See Instance-comprehensive-unit-test.html for the complete version
 
