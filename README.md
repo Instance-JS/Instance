@@ -3,6 +3,7 @@ See CHANGELOG.md for history.
 Usage (in future release after beta.6):
 ```javascript
 new Div('@.target')  // "NEW DIV AT TARGET"
+await (new $_('Tab'))('div') // AWAIT NEW TAB DIV
 ```
 
 ```javascript
