@@ -6,6 +6,24 @@ new Div('@.target')  // "NEW DIV AT TARGET"
 ```
 
 ```javascript
+// jQuery
+$('.container').append(
+  $('<div>')
+    .text('hello')
+    .on('click', handler)
+);
+
+// React
+ReactDOM.render(
+  <div onClick={handler}>hello</div>,
+  document.querySelector('.container')
+);
+
+// Instance.js
+new Div('hello', '@.container', handler);
+```
+
+```javascript
 // (Optional): Include jQuery in another file (for the jQuery checks)
 // See Instance-comprehensive-unit-test.html for the complete version
 
