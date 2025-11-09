@@ -1,6 +1,9 @@
 See CHANGELOG.md for history.
 
-Usage:
+Usage (in future release after beta.6):
+```javascript
+new Div('@.target')  // "NEW DIV AT TARGET"
+```
 
 ```javascript
 // (Optional): Include jQuery in another file (for the jQuery checks)
