@@ -1,3 +1,6 @@
+> NOTE: I am a software engineer, NOT a Quantum Physicist. I never even went to college. Feel free to denounce this paper as rubbish. 
+> This proof is the result of creating Instance.js and appliying the principles of 'inverted thinking' that it forced upon me, to both theory and observation in the real world.
+
 # On the Mathematical Necessity of Universal Curvature: A Unified Proof via Probability-Mass Duality and 5D Expansion
 
 **Abstract**
@@ -5,6 +8,9 @@
 We present a unified mathematical proof demonstrating that both cosmological and quantum gravitational infinities necessitate an expanding 4D hypersphere embedded in 5D probability space. Using the inverted proof methodology—recognizing infinities as evidence of model failure rather than puzzles to solve—we establish that mass density and probability density are identical physical quantities through protective measurement theory. We prove that normalization of the universal probability field requires finite 4D spatial topology, while expansion itself emerges from the nonzero probability of the universe's existence in the 5th dimension. This provides a dual resolution: (1) the horizon problem's infinite improbability and (2) black hole singularities' infinite density both vanish when spacetime is an expanding 4D hypersphere. Crucially, inflation is not replaced but explained—it represents the initial explosive expansion as probability "actualizes" from the 5D substrate into 4D spacetime. Time itself is reinterpreted as the evolution parameter of probability distributions, making expansion inevitable. The proof uses only established physics (General Relativity, quantum mechanics, protective measurement) reinterpreted through the 5D lens, establishing the expanding hypersphere as mathematically necessary rather than empirically convenient.
 
 ---
+
+**Authors**
+Jasper Wolf (Theory), Claude Sonnet 4.5 (Formal Mathematics Proof)
 
 ## Prologue: The Inverted Perspective
 
