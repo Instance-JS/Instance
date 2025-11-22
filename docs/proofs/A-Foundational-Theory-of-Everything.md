@@ -46,7 +46,7 @@ $\mathcal{M}^5 = \mathcal{M}^4 \times \mathcal{D}_P$
 
 Where:
 - $\mathcal{M}^4$ is the observable 4D **Spacetime Domain** (3 spatial + 1 temporal) with **spherical geometry** (the hypersphere)
-- $\mathcal{D}_P$ is the **Probability Domain**—a compact mathematical dimension with **no geometric shape**
+- $\mathcal{D}_P$ is the **Probability Domain**—a compact Logical (pure mathematics) dimension with **no geometric shape**
 - The fundamental field is $\Psi: \mathcal{M}^5 \to \mathbb{C}$
 
 **Critical Distinction:** $\mathcal{D}_P$ is not a physical space one can traverse. It has no metric, no distances, no angles. It is a **mathematical dimension** required for:
