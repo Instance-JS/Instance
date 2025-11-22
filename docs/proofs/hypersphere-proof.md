@@ -1,6 +1,6 @@
 I don't have a way of reaching out to people, so I made Instance my delivery carrier.
 
-# The Universe is a 4D Hypersphere.
+# The Universe is a 4D Hypersphere. Mass IS Probability.
 
 ## On the Mathematical Necessity of Global Curvature: The Inverted Infinity Proof. 
 
