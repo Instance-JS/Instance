@@ -160,7 +160,7 @@ The term "ultraviolet catastrophe" was first used in 1911 by Paul Ehrenfest to d
 >
 > The 'peak' of the mountain is the "singularity" (the black hole's 'core', the area of highest Probability).
 > 
-> The 'event horizon' is the 'height' at which the Probability of 'reaching' the peak (from your localized perspective) becomes asymptotically 1. (100%)
+> The 'event horizon' is the 'height' at which the Probability of 'reaching' the peak (from your localized perspective) becomes asymptotically 1. (99.9999...%)
 > 
 > Notice I said asymptotically 1: if it was exactly 100%, that would mean infinite gravity, which black holes do not have.
 >  
