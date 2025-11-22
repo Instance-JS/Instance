@@ -8,7 +8,7 @@
 
 **Abstract**
 
-We present a unified mathematical proof demonstrating that both cosmological and quantum gravitational "Infinities" from standard physics, necessitate a new mathematical model: an expanding 4D hypersphere emerging from shapeless 5D Probability. Using the inverted proof methodology—recognizing infinities as evidence of model failure rather than puzzles to solve—we establish that mass density and Probability density are identical physical quantities through protective measurement theory. 
+We present a unified mathematical proof demonstrating that both cosmological and quantum gravitational "Infinities" from standard physics, necessitate a new mathematical model: an expanding 4D hypersphere emerging from shapeless 5D Logic (Probability). Using the inverted proof methodology—recognizing infinities as evidence of model failure rather than puzzles to solve—we establish that mass density and Probability density are identical physical quantities through protective measurement theory. 
 
 We prove that normalization of a universal probability field *requires* 4D-finite spatial topology, while the spherical geometry of the universe itself (from the size of the universe, down to the last atom) emerges as the minimum-energy configuration when shapeless Probability actualizes into spacetime. Expansion emerges from the nonzero probability of the universe's own existence—as time evolves, more Probability actualizes, requiring spatial growth.
 
