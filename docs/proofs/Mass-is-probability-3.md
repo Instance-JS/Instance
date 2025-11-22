@@ -156,7 +156,7 @@ The term "ultraviolet catastrophe" was first used in 1911 by Paul Ehrenfest to d
 > 
 > Black holes SHOULD BE a quantum system of gravitons (or some other kind of collapsed particle/wavefunction) forced into a Bose-Einstein condensate state.
 > 
-> Critically, this means they will behave like one giant quantum wave. (The amplitude of which is the 'mountain' of probability.)
+> Critically, this means they will behave like one giant quantum wave. (The amplitude of which is the 'mountain' of time (sitting on the 'surface' of the 4D hypersphere) 'extending' into 5D Probability).
 >  
 > See, I'm not TOTALLY out of my depth. Just mathematically out of it 😉
 
