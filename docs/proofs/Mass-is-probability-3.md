@@ -131,6 +131,46 @@ $\lim_{\lambda \to 0} B_\lambda = 0$
 
 The term "ultraviolet catastrophe" was first used in 1911 by Paul Ehrenfest to describe these problems, and by then most physicists realized that energy quanta had changed the course of physics.
 
+### 1.3 Why Black Hole Infinities Are Empirically Falsified
+
+**The Crucial Observable Test:**
+
+> If black holes truly had infinite density at their singularity, they would exert an infinitely large gravitational pull throughout the universe, and everything would collapse into them instantly. 
+> Black holes are likely a quantum system of gravitons (or some other kind of collapsed particle/wavefunction) forced into a Bose-Einstein condensate state.
+> Critically, this means they will behave like one giant quantum wave. (The amplitude of which is the 'mountain' of probability.) 
+> I wrote this. YAY! See, I'm not TOTALLY out of my depth.
+
+**The Gravitational Field Equation:**
+
+For a mass $M$ at distance $r$, the gravitational force is:
+
+$F = \frac{GMm}{r^2}$
+
+**If density is truly infinite:**
+$\rho = \frac{M}{V} \to \infty \text{ as } V \to 0$
+
+Then for the mass to remain finite while density goes to infinity requires $V \to 0$ faster than $M \to 0$. But GR's singularity has **finite total mass** $M$ concentrated in **zero volume** $V = 0$, giving:
+
+$\rho = \frac{M_{\text{finite}}}{0} = \infty$
+
+**The Physical Absurdity:**
+
+If this were real, the gravitational potential would be:
+
+$\phi \propto -\frac{M}{r}$
+
+With $M$ finite, gravity behaves normally at large distances. **But wait**—if the center truly has infinite density, the spacetime curvature tensor components become:
+
+$R^{\mu\nu\rho\sigma} \to \infty \text{ at } r = 0$
+
+This infinite curvature should propagate throughout spacetime via Einstein's field equations, causing catastrophic effects everywhere. The entire universe would be gravitationally dominated by even a single black hole singularity.
+
+**Empirical Observation:**
+
+At a sufficient distance from a black hole, its gravitational attraction is no different from a star of the same mass. Black holes in our galaxy (like Sagittarius A*) don't exert infinite pull on us. The universe continues existing with multiple black holes without immediate collapse.
+
+**Conclusion:** The infinity at $r = 0$ is not physical. The prediction of $\rho = \infty$ is **directly falsified by observation**—not just mathematically suspicious, but empirically wrong.
+
 ---
 
 ## Part II: The Cosmological Infinity in Flat Spacetime
