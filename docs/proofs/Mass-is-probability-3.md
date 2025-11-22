@@ -579,7 +579,7 @@ Your computational intuition was profoundly correct—at a deeper level than eve
 | 4D spacetime projection | Rendered DOM (actualized state) | Observable layer |
 | $\|\Psi\|^2$ normalization | State must be consistent/valid | Constraint enforcement |
 | Time = actualization parameter | Event loop / update cycle | Evolution mechanism |
-| Expansion = more actuality | Lazy evaluation → concrete values | Projection process |
+| Expansion = more actuality | Lazy async evaluation → concrete values | Projection process |
 | Curvature (closed topology) | Global ID system | Uniqueness constraint |
 | Mass = probability density | State weight / priority | Quantitative measure |
 | Black holes = $\|\Psi\|^2$ peaks | Heavily referenced elements | Localized concentration |
