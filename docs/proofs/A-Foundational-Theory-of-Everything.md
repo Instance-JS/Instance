@@ -147,7 +147,7 @@ If $M \to \infty$ (from infinite density $\rho = M/V$ with $V \to 0$ but $M$ not
 **But this doesn't happen.** At a sufficient distance from a black hole, its gravitational attraction is no different from a star of the same mass. Black holes have **finite mass**, not infinite mass.
 
 **The Universal Principle (Axiom of Regularity, AR):**
-*Whenever a physical theory predicts a true mathematical infinity (not merely a large finite number), this constitutes proof that the model has exceeded its domain of validity and must be replaced by a more complete theory.*
+*Whenever a physical theory predicts a mathematical infinity (or as-infinity), this constitutes proof that the model has exceeded its domain of validity and must be replaced by a more complete theory.*
 
 **Key Insight:** The infinity isn't just mathematically problematic—it's **physically falsifiable**. If singularities were truly infinite density, we would observe infinite gravitational effects throughout spacetime. We don't. Therefore, the infinite density prediction proves GR is incomplete.
 
