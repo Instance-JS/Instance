@@ -10,11 +10,11 @@
 
 We present a unified mathematical proof demonstrating that both cosmological and quantum gravitational infinities from standard physics, necessitate a new mathematical model: an expanding 4D hypersphere emerging from shapeless 5D Probability. Using the inverted proof methodology—recognizing infinities as evidence of model failure rather than puzzles to solve—we establish that mass density and Probability density are identical physical quantities through protective measurement theory. 
 
-We prove that normalization of a universal probability field *requires* 4D-finite spatial topology, while the spherical geometry of the universe itself (from the size of the universe, down to the last atom) emerges as the minimum-energy configuration when shapeless Probability actualizes into spacetime. Expansion emerges from the nonzero probability of the universe's existence—as time evolves, more Probability actualizes, requiring spatial growth.
+We prove that normalization of a universal probability field *requires* 4D-finite spatial topology, while the spherical geometry of the universe itself (from the size of the universe, down to the last atom) emerges as the minimum-energy configuration when shapeless Probability actualizes into spacetime. Expansion emerges from the nonzero probability of the universe's own existence—as time evolves, more Probability actualizes, requiring spatial growth.
 
-This provides a dual resolution: (1) the horizon problem's infinite improbability and (2) black hole singularities' infinite density both vanish when spacetime is an expanding 4D hypersphere. Crucially, inflation is not replaced but explained—it represents the initial explosive expansion as Probability itself "actualizes" from the shapeless 5D substrate into geometric 4D spacetime.
+This provides a dual resolution: (1) the horizon problem's infinite improbability and (2) black hole singularities' infinite density both vanish when spacetime is an expanding 4D hypersphere. Crucially, inflation is not replaced but explained—it represents the initial explosive expansion as Probability itself "actualizes" from 5D "Logic" into geometric 4D spacetime.
 
-The 5D probability Field is ALMOST entirely logically uniform (regarding matter vs antimatter), however it has a (very slight) Logical Bias due to its OWN Probability (of self-existence) being nonzero.
+The Logic of Probability is ALMOST entirely uniform (regarding matter vs antimatter), however it has a (very slight) Logical Bias due to its OWN Probability (of self-existence) being nonzero.
 
 The proof uses only established physics (General Relativity, quantum mechanics, protective measurement) reinterpreted through the lens of pre-geometric probability ontology, establishing the expanding hypersphere as mathematically necessary rather than empirically convenient.
 
