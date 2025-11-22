@@ -223,7 +223,7 @@ The inverse probability is:
 $$\frac{1}{P} = 10^{62} \to \infty$$
 
 **Theorem 1 (Fine-Tuning Infinity):**
-*Flat FLRW cosmology requires initial conditions with measure-zero probability ($P \sim 10^{-62}$), violating AR.*
+*Flat FLRW cosmology requires initial conditions with measure-zero probability ( $P \sim 10^{-62}$ ), violating AR.*
 
 ### 2.2 The Horizon Problem Infinity
 
