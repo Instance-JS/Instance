@@ -1,4 +1,5 @@
-> NOTE: I am a software engineer, NOT a Quantum Physicist. I never even went to college. Feel free to denounce this paper as rubbish. 
+> NOTE: I am a software engineer, NOT a Theoretical Physicist. I never even went to college. Feel free to denounce this paper as rubbish.
+> 
 > This proof is the result of creating Instance.js and appliying the principles of 'inverted thinking' that it forced upon me, to both theory and observation in the real world.
 
 # On the Mathematical Necessity of Universal Curvature: A Unified Proof via Probability-Mass Duality and 5D Expansion
