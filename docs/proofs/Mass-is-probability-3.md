@@ -141,7 +141,7 @@ The term "ultraviolet catastrophe" was first used in 1911 by Paul Ehrenfest to d
 > 
 > Critically, this means they will behave like one giant quantum wave. (The amplitude of which is the 'mountain' of probability.)
 >  
-> I wrote this. Me. YAY! See, I'm not TOTALLY out of my depth. Just mostly out of it ;-)
+> I wrote this. Me. YAY! See, I'm not TOTALLY out of my depth. Just mathematically out of it 😉
 
 **The Gravitational Field Equation:**
 
