@@ -157,6 +157,12 @@ The term "ultraviolet catastrophe" was first used in 1911 by Paul Ehrenfest to d
 > Black holes SHOULD BE a quantum system of gravitons (or some other kind of collapsed particle/wavefunction) forced into a Bose-Einstein condensate state.
 > 
 > Critically, this means they will behave like one giant quantum wave. (The amplitude of which is the 'mountain' of time (sitting on the 'surface' of the 4D hypersphere) 'extending' into 5D Probability).
+>
+> The 'peak' of the mountain is the "singularity" (the black hole's 'core', the area of highest Probability).
+> 
+> The 'event horizon' is the 'height' at which the Probability of 'reaching' the peak (from your localized perspective) becomes asymptotically 1. (100%)
+> 
+> Notice I said asymptotically 1: if it was exactly 100%, that would mean infinite gravity, which black holes do not have.
 >  
 > See, I'm not TOTALLY out of my depth. Just mathematically out of it 😉
 
