@@ -640,11 +640,7 @@ This clarifies that **Mass is Probability**, while $\mathbf{E=Mc^2}$ simply defi
 
 Here is the formalization of the concept: **"The Universe's Probability of existing was nonzero in the first place, that means Probability itself has structural bias."**
 
-> Built within WHAT, you may ask? The *sixth* dimension, obviously. But we're not getting into that right now. Cause I don't think you're ready, if it's what I think it is.
-> 
-> Hint: If mass IS Probability, and your body is made of matter, then what exactly does that say, when the body you inhabit, is Conscious of its own existence? 😉
->
-> ...
+> Built within WHAT, you may ask? The *sixth* dimension, obviously. If this paper is even remotely close to right, you are NOT ready for that answer.
 
 ***
 
