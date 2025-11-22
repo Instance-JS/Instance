@@ -1,10 +1,10 @@
-(Check the timestamps.) I don't like Plagiarism.
+(Check the timestamps.) I don't like plagiarism.
 
 
 21/11/25
 
 
-# The Unified Proof: Mass is Probability, regularized by an expanding 4D Hypersphere.
+# The Unified Proof: Mass IS Probability, regularized by an expanding 4D Hypersphere.
 
 ## Abstract
 
