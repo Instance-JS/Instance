@@ -66,7 +66,7 @@ where $\rho$ is the mass-energy density at radius $r$ from the singularity.
 
 ### 1.2 The Ultraviolet Catastrophe: Classical Physics Predicts Infinite Energy
 
-#### This example is a popular Veritasium video:
+> This example is a popular Veritasium video. 
 
 **Historical Context:** The ultraviolet catastrophe was the prediction of late 19th century and early 20th century classical physics that an ideal black body at thermal equilibrium would emit an unbounded quantity of energy as wavelength decreased into the ultraviolet range.
 
