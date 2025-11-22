@@ -255,7 +255,7 @@ At a sufficient distance from a black hole, its gravitational attraction is no d
 
 ### 1.4 The Pattern: Infinities (and as-Infinities) Signal Model Incompleteness
 
-We have at minimum **three canonical examples** where infinities prove theories have exceeded their validity:
+We have **three canonical examples** (2 aforementioned, one upcoming) where infinities prove theories have exceeded their validity:
 
 | **Infinity** | **Theory Predicting It** | **Mathematical Form** | **Resolution** |
 |---|---|---|---|
