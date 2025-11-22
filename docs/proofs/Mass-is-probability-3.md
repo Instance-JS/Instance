@@ -869,7 +869,8 @@ We have proven that **mass is probability** (Theorem 3) and that **normalization
 
 This is not a "solution" added to patch problems—it's a **structural necessity** derived from first principles (GR + QM + protective measurement + no-infinities axiom).
 
-The expanding 4D hypersphere is not empirically convenient; it is **mathematically mandatory**.
+The expanding 4D hypersphere is not merely empirically convenient; it is **mathematically mandatory** in order to exist within the context of a Probabilistic 5D superstructure. 
+Both concepts are two sides of the same coin.
 
 ---
 
