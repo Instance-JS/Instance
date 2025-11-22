@@ -64,6 +64,71 @@ where $\rho$ is the mass-energy density at radius $r$ from the singularity.
 
 **Corollary:** Infinities are unphysical markers of model breakdown, analogous to division-by-zero errors in computation.
 
+### 1.2 The Ultraviolet Catastrophe: Classical Physics Predicts Infinite Energy
+
+**Historical Context:** (A popular Veritasium video): The ultraviolet catastrophe was the prediction of late 19th century and early 20th century classical physics that an ideal black body at thermal equilibrium would emit an unbounded quantity of energy as wavelength decreased into the ultraviolet range.
+
+**The Classical Prediction (Rayleigh-Jeans Law):**
+
+Using classical statistical mechanics and the equipartition theorem, physicists derived an equation for blackbody radiation:
+
+$B_\lambda(\lambda, T) = \frac{2ck_BT}{\lambda^4}$
+
+where:
+- $B_\lambda$ is the spectral radiance (power emitted per unit area per unit wavelength)
+- $c$ is the speed of light
+- $k_B$ is Boltzmann's constant
+- $T$ is temperature
+- $\lambda$ is wavelength
+
+**The Infinity Appears:**
+
+As wavelength approaches zero (high-frequency ultraviolet light), the intensity of radiation approaches infinity:
+
+$\lim_{\lambda \to 0} B_\lambda = \lim_{\lambda \to 0} \frac{2ck_BT}{\lambda^4} = \infty$
+
+**Even worse—the total radiated energy:**
+
+$E_{\text{total}} = \int_0^\infty B_\lambda \, d\lambda = \int_0^\infty \frac{2ck_BT}{\lambda^4} \, d\lambda = \infty$
+
+The integral of the Rayleigh-Jeans equation over all wavelengths yielded an infinite value, indicating an infinitely large total radiated intensity.
+
+**Physical Absurdity:**
+
+This predicts that every hot object—a toaster, a light bulb, a human body—should emit **infinite energy**, predominantly in ultraviolet and X-ray wavelengths. Obviously, this doesn't happen. Your coffee mug doesn't spontaneously explode with infinite radiation.
+
+**The Model Has Broken Down:**
+
+Classical physics predicted that the intensity of radiation emitted by a black body would skyrocket to infinity as the frequency increased, which clashed with actual experimental observations. The infinity is proof that classical electromagnetism and statistical mechanics are **incomplete** at atomic scales.
+
+**Planck's Solution (1900):**
+
+Max Planck solved the ultraviolet catastrophe by assuming that energy was not continuously divisible as expected, but rather comes in discrete 'packets' or quanta:
+
+$E = nhf$
+
+where $n$ is an integer, $h$ is Planck's constant, and $f$ is frequency.
+
+**Planck's Law (No Infinity):**
+
+$B_\lambda(\lambda, T) = \frac{2hc^2}{\lambda^5} \cdot \frac{1}{e^{hc/\lambda k_B T} - 1}$
+
+**Why the infinity vanishes:**
+
+As $\lambda \to 0$, the exponential term dominates:
+
+$e^{hc/\lambda k_B T} \to \infty$
+
+This compensates for the $\lambda^{-5}$ term in the numerator, causing:
+
+$\lim_{\lambda \to 0} B_\lambda = 0$
+
+**No infinity!** The intensity actually **drops to zero** at very short wavelengths.
+
+**The Recognition:**
+
+The term "ultraviolet catastrophe" was first used in 1911 by Paul Ehrenfest to describe these problems, and by then most physicists realized that energy quanta had changed the course of physics.
+
 ---
 
 ## Part II: The Cosmological Infinity in Flat Spacetime
