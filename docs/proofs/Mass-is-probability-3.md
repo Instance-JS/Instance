@@ -154,11 +154,11 @@ The term "ultraviolet catastrophe" was first used in 1911 by Paul Ehrenfest to d
 
 > If black holes truly had infinite density at their singularity, they would exert an infinitely large gravitational pull, and everything in the universe would collapse into them instantly.
 > 
-> Black holes are most likely a quantum system of gravitons (or some other kind of collapsed particle/wavefunction) forced into a Bose-Einstein condensate state.
+> Black holes SHOULD BE a quantum system of gravitons (or some other kind of collapsed particle/wavefunction) forced into a Bose-Einstein condensate state.
 > 
 > Critically, this means they will behave like one giant quantum wave. (The amplitude of which is the 'mountain' of probability.)
 >  
-> I wrote this. Me. YAY! See, I'm not TOTALLY out of my depth. Just mathematically out of it 😉
+> See, I'm not TOTALLY out of my depth. Just mathematically out of it 😉
 
 **The Gravitational Field Equation:**
 
