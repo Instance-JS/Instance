@@ -14,7 +14,7 @@ We prove that normalization of the universal probability field requires finite 4
 
 Crucially, inflation is not replaced but explained—it represents the initial explosive expansion as Probability itself "actualizes" from the 5D substrate into 4D spacetime. Time itself is reinterpreted as the evolution parameter of probability distributions, making expansion inevitable. 
 
-Probability also solves the Matter-vs-Antimatter debate. The 5D Probability field is ALMOST entirely uniform, however it has a (very slight) structural bias due to its OWN Probability (of self-existence) being nonzero.
+The 5D Probability field is ALMOST entirely uniform (regarding matter vs antimatter), however it has a (very slight) structural bias due to its OWN Probability (of self-existence) being nonzero.
 
 The proof uses only established physics (General Relativity, quantum mechanics, protective measurement) reinterpreted through the 5D lens, establishing the expanding hypersphere as mathematically necessary rather than empirically convenient.
 
