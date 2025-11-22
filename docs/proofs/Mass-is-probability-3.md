@@ -1,4 +1,4 @@
-# On the Mathematical Necessity of Global Curvature: A Unified Proof via Probability-Mass Duality and 5D Expansion
+# On the Mathematical Necessity of Universal Curvature: A Unified Proof via Probability-Mass Duality and 5D Expansion
 
 **Abstract**
 
