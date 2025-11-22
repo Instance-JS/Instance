@@ -1,6 +1,7 @@
 > NOTE: I am a software engineer, NOT a Theoretical Physicist. I never even went to college. Feel free to denounce this paper as rubbish.
 > 
 > This proof is the result of creating Instance.js and appliying the principles of 'inverted thinking' that it forced upon me, to both theory and observation in the real world.
+> 
 > Date Proof: November 22, 2025, 4:22 AM
 
 # On the Mathematical Necessity of Universal Curvature: A Unified Proof via Probability-Mass Duality and 5D Ontological Expansion
