@@ -8,13 +8,13 @@
 
 **Abstract**
 
-We present a unified mathematical proof demonstrating that both cosmological and quantum gravitational infinities necessitate an expanding 4D hypersphere emerging from a shapeless 5D probability substrate. Using the inverted proof methodology—recognizing infinities as evidence of model failure rather than puzzles to solve—we establish that mass density and probability density are identical physical quantities through protective measurement theory. 
+We present a unified mathematical proof demonstrating that both cosmological and quantum gravitational infinities from standard physics, necessitate a new mathematical model: an expanding 4D hypersphere emerging from a shapeless 5D Probability "field". Using the inverted proof methodology—recognizing infinities as evidence of model failure rather than puzzles to solve—we establish that mass density and Probability density are identical physical quantities through protective measurement theory. 
 
-We prove that normalization of the universal probability field requires finite 4D spatial topology, while the spherical geometry itself emerges as the minimum-energy configuration when shapeless probability actualizes into spacetime. Expansion emerges from the nonzero probability of the universe's existence—as time evolves, more probability actualizes, requiring spatial growth.
+We prove that normalization of the universal probability field requires finite 4D spatial topology, while the spherical geometry itself emerges as the minimum-energy configuration when shapeless probability actualizes into spacetime. Expansion emerges from the nonzero probability of the universe's existence—as time evolves, more Probability actualizes, requiring spatial growth.
 
 This provides a dual resolution: (1) the horizon problem's infinite improbability and (2) black hole singularities' infinite density both vanish when spacetime is an expanding 4D hypersphere. Crucially, inflation is not replaced but explained—it represents the initial explosive expansion as probability itself "actualizes" from the shapeless 5D substrate into geometric 4D spacetime.
 
-The 5D probability field is ALMOST entirely uniform (regarding matter vs antimatter), however it has a (very slight) structural bias due to its OWN probability (of self-existence) being nonzero.
+The 5D probability Field is ALMOST entirely logically uniform (regarding matter vs antimatter), however it has a (very slight) Logical Bias due to its OWN Probability (of self-existence) being nonzero.
 
 The proof uses only established physics (General Relativity, quantum mechanics, protective measurement) reinterpreted through the lens of pre-geometric probability ontology, establishing the expanding hypersphere as mathematically necessary rather than empirically convenient.
 
