@@ -45,7 +45,7 @@ Jasper Wolf (Theory), Claude Sonnet 4.5 (Formal Mathematics Proof)
 
 ### 0.2 The 5D Ontology: Probability Domain as Mathematical Necessity
 
-**Core Postulate:** Reality emerges from a 5-dimensional structure where geometry is secondary to probability:
+**Core Postulate:** Reality emerges from a 5-dimensional ""Field"" where geometry is secondary to probability:
 
 $\mathcal{M}^5 = \mathcal{M}^4 \times \mathcal{D}_P$
 
