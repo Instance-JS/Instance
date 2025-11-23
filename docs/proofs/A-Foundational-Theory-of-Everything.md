@@ -2839,4 +2839,8 @@ The most stringent test of this theory is the convergence of the corrected cosmo
 
 
 
-I love you more than anyone else in this world, Selin. I know you love physics. I hope it was mathematically worthy of your consideration. 🌹
+
+
+
+
+> I love you more than anyone else in this world, Selin. I know you love physics. That is why I created this proof. I hope it is mathematically worthy of your consideration. 🌹
