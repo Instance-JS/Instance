@@ -258,6 +258,57 @@ At a sufficient distance from a black hole, its gravitational attraction is no d
 
 **Conclusion:** The infinity at $r = 0$ is **directly falsified by observation**—not just mathematically suspicious, but empirically wrong.
 
+The requested section **1.1.5** is added to **Part I: The Canonical Infinity Examples**, extending the principle that infinities signal the breakdown of the $\mathbf{4D}$ model.
+
+***
+
+### 1.1.5 Ringularity Infinities: Rotating Black Holes (Kerr Metric)
+
+The failure of the $\mathbf{4D}$ model is further demonstrated by the solution for rotating black holes, known as the **Kerr metric**.
+
+**The Classical Prediction (Kerr Metric):**
+Instead of a point singularity ($r=0$), the Kerr solution predicts a singularity that is a **ring** (or "ringularity") in the equatorial plane. This ring has zero thickness and a radius defined by the black hole's angular momentum ($a$).
+
+The singularity exists where $r=0$ and $\theta=\pi/2$, and the curvature tensor components become:
+$$\mathbf{\lim_{r \to 0, \theta \to \pi/2} R_{\mu\nu\rho\sigma} = \infty}$$
+
+**The Physical Absurdity:**
+If the angular momentum $a>0$, the geometry dictates that the entirety of the black hole's mass is concentrated around this ring of zero thickness.
+
+1.  A truly **infinite density/curvature** on this ring singularity would violate the **Axiom of Regularity (AR)**.
+2.  Furthermore, the Kerr solution allows for a geodesic that passes *through* the ring singularity (a "timelike singularity") and potentially exits into another universe (a "wormhole"), which is physically nonsensical within a single, stable $\mathbf{4D}$ manifold.
+
+**The Model Has Broken Down:**
+The presence of a region of infinite curvature and the possibility of non-physical geometric outcomes (wormholes) proves that the $\mathbf{4D}$ model fails when confronted with angular momentum at the event horizon scale.
+
+**Conclusion:** The Kerr metric's prediction of the ring singularity, like the Schwarzschild point singularity, is an **unphysical mathematical infinity** that violates the Axiom of Regularity, proving that General Relativity has exceeded its domain of validity and requires replacement by a theory grounded in bounded $\mathbf{5D}$ Probability.
+
+***
+
+*(The new section is integrated into your paper's flow below.)*
+
+...
+
+### 1.1.5 Ringularity Infinities: Rotating Black Holes (Kerr Metric)
+
+The failure of the $\mathbf{4D}$ model is further demonstrated by the solution for rotating black holes, known as the **Kerr metric**.
+
+**The Classical Prediction (Kerr Metric):**
+Instead of a point singularity ($r=0$), the Kerr solution predicts a singularity that is a **ring** (or "ringularity") in the equatorial plane. This ring has zero thickness and a radius defined by the black hole's angular momentum ($a$).
+
+The singularity exists where $r=0$ and $\theta=\pi/2$, and the curvature tensor components become:
+$$\mathbf{\lim_{r \to 0, \theta \to \pi/2} R_{\mu\nu\rho\sigma} = \infty}$$
+
+**The Physical Absurdity:**
+The presence of a region of infinite curvature and the possibility of non-physical geometric outcomes (wormholes) proves that the $\mathbf{4D}$ model fails when confronted with angular momentum at the event horizon scale.
+
+**Conclusion:** The Kerr metric's prediction of the ring singularity, like the Schwarzschild point singularity, is an **unphysical mathematical infinity** that violates the Axiom of Regularity, proving that General Relativity has exceeded its domain of validity and requires replacement by a theory grounded in bounded $\mathbf{5D}$ Probability.
+
+***
+
+### 1.2 The Ultraviolet Catastrophe: Classical Physics Predicts Infinite Energy
+...
+
 ### 1.4 The Pattern: Infinities Signal Model Incompleteness
 
 We now have **three canonical examples** where infinities prove theories have exceeded their validity:
