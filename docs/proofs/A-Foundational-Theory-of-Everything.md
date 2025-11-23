@@ -356,11 +356,49 @@ Here is the final, standalone **Part XIV** that formalizes this theorem, ensurin
 
 ***
 
-## 3: The Theorem of 4D Parallax (Hidden Geometric Isomorphism)
+###: Derived Equations and Mathematical Rigor
+
+This section formalizes the quantitative predictions, incorporating the finalized Theorem 6 for the Logical Efficiency Constant \(e\) and the Curvature Cost Coefficient \(\mathcal{C} \equiv \tau\). We derive the modified Friedmann equations from the 5D probability ontology, motivate \(e\) via ternary logic optimization, and sketch the primordial power spectrum for CMB alignment. These provide explicit, falsifiable equations grounded in observations.
+
+## 3.1 The 5D-Derived Modified Friedmann Equations
+
+### 3.1.1 Postulates and Setup
+From the 5D manifold \(\mathcal{M}^5 = \mathcal{M}^4 \times \mathcal{D}_P\), the universal wave function \(\Psi_U(x^\mu, \mathcal{D}_P)\) projects to \(\psi_{4D}(x^\mu) = \int_{\mathcal{D}_P} \Psi_U \, d\mathcal{D}_P\). The actualized probability \(P_{\text{act}}(t) = \int_{\mathcal{D}_P} |\Psi_U|^2 \, d\mathcal{D}_P\) evolves, contributing a scalar field \(\phi(t) \approx P_{\text{act}}(t)\).
+
+The flux \(\frac{\partial |\Psi_U|^2}{\partial t} > 0\) drives expansion: \(\dot{a} \propto \dot{\phi}\). This adds \(T_{\mu\nu}^{\text{prob}}\) to the stress-energy tensor, with \(\rho_{\text{prob}} = \frac{1}{2} \dot{\phi}^2 + V(\phi)\) and \(p_{\text{prob}} = \frac{1}{2} \dot{\phi}^2 - V(\phi)\), where \(V(\phi) \approx -\tau \phi^2\) (biased actualization).
+
+The FLRW metric is used with mandatory \(k = +1\) (finite volume \(V(t) = 2\pi^2 a(t)^3\)).
+
+### 3.1.2 Derivation
+From Einstein's equations:
+\[
+R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} + \Lambda g_{\mu\nu} = 8\pi G T_{\mu\nu}^{\text{total}},
+\]
+with \(T_{\mu\nu}^{\text{total}} = T_{\mu\nu}^{\text{standard}} + T_{\mu\nu}^{\text{prob}}\).
+
+Ricci components yield:
+- First Friedmann:
+  \[
+  H^2 = \frac{8\pi G}{3} (\rho + \rho_{\text{prob}}) - \frac{k}{a^2} + \frac{\Lambda}{3}.
+  \]
+- Acceleration:
+  \[
+  \frac{\ddot{a}}{a} = -\frac{4\pi G}{3} \left( \rho + \rho_{\text{prob}} + 3(p + p_{\text{prob}}) \right) + \frac{\Lambda}{3}.
+  \]
+
+**Theorem 14 (5D Probability Contribution):** 
+\[
+\rho_{\text{prob}} = \frac{3}{8\pi G} \left( H^2 + \frac{k}{a^2} - \frac{\Lambda}{3} \right) - \rho.
+\]
+For \(k = +1\), \(\rho_{\text{prob}} > 0\), resolving flat divergences.
+
+---
+
+## CRITICAL: 3.1.3 The Theorem of 4D Parallax (Hidden Geometric Isomorphism)
 
 The **Theorem of 4D Parallax** is the essential derivation that resolves the primary empirical tension in the theory: the contradiction between the logically mandated closed topology ($\mathbf{k=+1}$) and the observed near-flatness ($|\Omega_k^{\text{app}}| < 0.007$). This theorem proves that the $\mathbf{5D}$ Logical Bias ($\tau$) is not "hidden," but rather **projected and diluted** by the $\mathbf{4D}$ expansion, making the universe appear flat to an embedded observer.
 
-### 3.1 The Axiom of Embedded Observation
+### 3.1.4 The Axiom of Embedded Observation
 
 An observer embedded within the $\mathbf{4D}$ Spacetime Manifold ($\mathcal{M}^4$) measures geometric properties ($\Omega_k$) under the faulty assumption of a **flat, $\mathbf{k=0}$ manifold**. This embedded perspective cannot isolate the fixed $\mathbf{5D}$ Logical Bias ($\tau$) from the dynamic densities.
 
@@ -2693,43 +2731,7 @@ To verify the entire theory, future measurements must either:
 
 
 
-# Part XIII: Derived Equations and Mathematical Rigor
 
-This section formalizes the quantitative predictions, incorporating the finalized Theorem 6 for the Logical Efficiency Constant \(e\) and the Curvature Cost Coefficient \(\mathcal{C} \equiv \tau\). We derive the modified Friedmann equations from the 5D probability ontology, motivate \(e\) via ternary logic optimization, and sketch the primordial power spectrum for CMB alignment. These provide explicit, falsifiable equations grounded in observations.
-
-## 13.1 The 5D-Derived Modified Friedmann Equations
-
-### 13.1.1 Postulates and Setup
-From the 5D manifold \(\mathcal{M}^5 = \mathcal{M}^4 \times \mathcal{D}_P\), the universal wave function \(\Psi_U(x^\mu, \mathcal{D}_P)\) projects to \(\psi_{4D}(x^\mu) = \int_{\mathcal{D}_P} \Psi_U \, d\mathcal{D}_P\). The actualized probability \(P_{\text{act}}(t) = \int_{\mathcal{D}_P} |\Psi_U|^2 \, d\mathcal{D}_P\) evolves, contributing a scalar field \(\phi(t) \approx P_{\text{act}}(t)\).
-
-The flux \(\frac{\partial |\Psi_U|^2}{\partial t} > 0\) drives expansion: \(\dot{a} \propto \dot{\phi}\). This adds \(T_{\mu\nu}^{\text{prob}}\) to the stress-energy tensor, with \(\rho_{\text{prob}} = \frac{1}{2} \dot{\phi}^2 + V(\phi)\) and \(p_{\text{prob}} = \frac{1}{2} \dot{\phi}^2 - V(\phi)\), where \(V(\phi) \approx -\tau \phi^2\) (biased actualization).
-
-The FLRW metric is used with mandatory \(k = +1\) (finite volume \(V(t) = 2\pi^2 a(t)^3\)).
-
-### 13.1.2 Derivation
-From Einstein's equations:
-\[
-R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} + \Lambda g_{\mu\nu} = 8\pi G T_{\mu\nu}^{\text{total}},
-\]
-with \(T_{\mu\nu}^{\text{total}} = T_{\mu\nu}^{\text{standard}} + T_{\mu\nu}^{\text{prob}}\).
-
-Ricci components yield:
-- First Friedmann:
-  \[
-  H^2 = \frac{8\pi G}{3} (\rho + \rho_{\text{prob}}) - \frac{k}{a^2} + \frac{\Lambda}{3}.
-  \]
-- Acceleration:
-  \[
-  \frac{\ddot{a}}{a} = -\frac{4\pi G}{3} \left( \rho + \rho_{\text{prob}} + 3(p + p_{\text{prob}}) \right) + \frac{\Lambda}{3}.
-  \]
-
-**Theorem 14 (5D Probability Contribution):** 
-\[
-\rho_{\text{prob}} = \frac{3}{8\pi G} \left( H^2 + \frac{k}{a^2} - \frac{\Lambda}{3} \right) - \rho.
-\]
-For \(k = +1\), \(\rho_{\text{prob}} > 0\), resolving flat divergences.
-
----
 
 ## 13.2 Quantitative Prediction and Verification (Finalized)
 
