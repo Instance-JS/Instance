@@ -101,7 +101,7 @@ $\int_{\mathcal{M}^4} \left[ \int_{\mathcal{D}_P} |\Psi|^2 \, d\mathcal{D}_P \ri
 
 The integral over $\mathcal{D}_P$ must be finite for normalization. This is achieved through **mathematical compactness** (field closure), not geometric compactness (being a bounded shape).
 
-**In programming terms:** 
+**In Javascript programming terms:** 
 - $\mathcal{M}^4$ = The rendered DOM (has position, size, structure)
 - $\mathcal{D}_P$ = The state space / memory allocation (no spatial structure, just capacity constraints)
 
