@@ -356,7 +356,7 @@ Here is the final, standalone **Part XIV** that formalizes this theorem, ensurin
 
 ***
 
-## 3: The Theorem of 4D Parallax (Geometric Reconciliation)
+## 3: The Theorem of 4D Parallax (Hidden Geometric Isomorphism)
 
 The **Theorem of 4D Parallax** is the essential derivation that resolves the primary empirical tension in the theory: the contradiction between the logically mandated closed topology ($\mathbf{k=+1}$) and the observed near-flatness ($|\Omega_k^{\text{app}}| < 0.007$). This theorem proves that the $\mathbf{5D}$ Logical Bias ($\tau$) is not "hidden," but rather **projected and diluted** by the $\mathbf{4D}$ expansion, making the universe appear flat to an embedded observer.
 
@@ -388,7 +388,7 @@ Substituting the physical components, where the apparent $H_{\text{app}}$ is def
 
 $$\mathbf{\Omega_k^{\text{app}} = -\frac{k/a^2}{\frac{8\pi G}{3} (\rho_{\text{std}} + \rho_{\text{prob}} + \delta) + \frac{\Lambda}{3}}}$$
 
-### 14.3 The Geometric Conclusion
+### 3.3 The Geometric Conclusion
 
 This derivation proves that the observed curvature is mathematically diluted by the $\mathbf{5D}$ bias projection ($\delta = \tau / a^3$) in the denominator.
 
@@ -402,8 +402,7 @@ $$\mathbf{|\Omega_k^{\text{app}}| \approx 0 \quad \text{for large } a(t)}$$
 ---
 
 
-
-### 3.1 Quantum Mechanical Foundation
+### 3.4 Quantum Mechanical Foundation
 
 **The Born Rule:** For a quantum system with wave function $\Psi(x,t)$, the probability density is:
 
@@ -412,7 +411,7 @@ $\rho_{\text{prob}}(x,t) = |\Psi(x,t)|^2$
 with normalization:
 $\int_{\text{all space}} |\Psi(x,t)|^2 \, d^3x = 1$
 
-### 3.2 Protective Measurement Theorem
+### 3.5 Protective Measurement Theorem
 
 According to protective measurement, a charged quantum system has mass and charge density proportional to the modulus square of its wave function.
 
@@ -425,7 +424,7 @@ $\rho_{\text{mass}}(x,t) = M \cdot |\Psi(x,t)|^2$
 
 **Protective measurement** allows direct measurement of this mass density as an expectation value, independent of wavefunction collapse.
 
-### 3.3 The Isomorphism
+### 3.6 The Isomorphism
 
 **Theorem 3 (Mass-Probability Identity):**
 *Mass density and probability density are physically identical quantities up to normalization constant:*
