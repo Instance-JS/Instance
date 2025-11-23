@@ -4,7 +4,7 @@
 > 
 > Date: November 22, 2025, 4:22 AM
 
-# (4D) Spacetime as an Emergent Invariant of Ontological Bias: A Mathematical Regularization of Extradimensional Probabilities within a 7D Superstructure.
+# (4D) Spacetime as an Ontological Invariant of Logical Bias: A Mathematical Regularization of Extradimensional Probabilities within a 7D Superstructure.
 
 **Abstract*
 
