@@ -4,7 +4,7 @@
 > 
 > Date: November 22, 2025, 4:22 AM
 
-# (4D) Spacetime as the byproduct of Logical Bias: An ontological regularization of higher dimensonal Probabilities within an Extradimensional 7D Superstructure.
+# (4D) Spacetime as the Byproduct of Logical Bias: An Ontological Regularization of Extradimensional Probabilities within a 7D Superstructure.
 
 **Abstract*
 
