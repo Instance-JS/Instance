@@ -394,7 +394,7 @@ For \(k = +1\), \(\rho_{\text{prob}} > 0\), resolving flat divergences.
 
 ---
 
-## CRITICAL: 3.1.3 The Theorem of 4D Parallax (Hidden Geometric Isomorphism)
+## 3.1.3 [CRITICAL]: The Theorem of 4D Parallax (Hidden Geometric Isomorphism)
 
 The **Theorem of 4D Parallax** is the essential derivation that resolves the primary empirical tension in the theory: the contradiction between the logically mandated closed topology ($\mathbf{k=+1}$) and the observed near-flatness ($|\Omega_k^{\text{app}}| < 0.007$). This theorem proves that the $\mathbf{5D}$ Logical Bias ($\tau$) is not "hidden," but rather **projected and diluted** by the $\mathbf{4D}$ expansion, making the universe appear flat to an embedded observer.
 
