@@ -156,7 +156,7 @@ If $M \to \infty$ (from infinite density $\rho = M/V$ with $V \to 0$ but $M$ not
 
 **Key Insight:** The infinity isn't just mathematically problematic—it's **physically falsifiable**. If singularities were truly infinite density, we would observe infinite gravitational effects throughout spacetime. We don't. Therefore, the infinite density prediction proves GR is incomplete.
 
-**Corollary:** Infinities are unphysical markers of model breakdown, analogous to division-by-zero errors in computation.
+**Corollary:** "Infinities" are unphysical, mathematical markers of model breakdown, analogous to division-by-zero errors in computation.
 
 ### 1.2 The Ultraviolet Catastrophe: Classical Physics Predicts Infinite Energy
 
