@@ -12,7 +12,7 @@ We present a unified mathematical proof demonstrating that both cosmological and
 
 We prove that normalization of a universal Probability field *requires* 4D-finite spatial topology, while the spherical geometry of the universe itself (from the size of the universe, down to the last "fundamental" particle) emerges as the minimum-energy configuration when shapeless Probability actualizes into spacetime. Expansion emerges from the nonzero probability of the universe's own existence—as time evolves, more Probability actualizes, requiring spatial growth.
 
-This provides a dual resolution: (1) the horizon problem's infinite improbability and (2) black hole singularities' infinite density both vanish when spacetime is an expanding 4D hypersphere. Crucially, inflation is not replaced but explained—it represents the initial explosive expansion as Probability itself "actualizes" from 5D "Logic" into geometric 4D spacetime.
+This provides a dual resolution: (1) the "Cosmologically Uniform 'Horizon Problem'" predicting measure-zero improbability and (2) black hole singularities' infinite density both vanish when spacetime is an expanding 4D hypersphere. Crucially, inflation is not replaced but explained—it represents the initial explosive expansion as Probability itself "actualizes" from 5D "Logic" into geometric 4D spacetime. Critically, the theorem of 4D Parallax explains why the universe appears 'flat' from the perspective of a 4D Observer.
 
 The Logic of Probability is ALMOST entirely uniform (regarding matter vs antimatter), however it has a (very slight) Logical Bias due to its OWN Probability (of self-existence) being nonzero.
 
