@@ -1,4 +1,4 @@
-# Spacetime as an Ontological Invariant of Logical Bias: A Mathematical Regularization of Extradimensional Probabilities within a 7D Superstructure
+# Spacetime as an Ontological Invariant of Logical Bias: A Mathematical Regularization of Extradimensional Probabilities within a 7D Logical Superstructure
 
 **Parts I-IV: Foundational Framework and Probability-Geometry Emergence**
 
