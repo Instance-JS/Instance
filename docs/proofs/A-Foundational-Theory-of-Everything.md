@@ -4,7 +4,7 @@
 > 
 > Date: November 22, 2025, 4:22 AM
 
-# The Observable Universe is an Ontological Regularization of a Countably Infinite, Parameterized 5D Probability Distribution of an Extradimensional 7D Superstructure
+# (4D) Spacetime as an Ontological Regularization of a Countably Infinite, Parameterized 5D Probability Distribution of an Extradimensional 7D Superstructure
 
 **Abstract**
 
