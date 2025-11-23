@@ -618,7 +618,7 @@ We have identified **four distinct infinities** in flat spacetime models:
 | **Infinity** | **Mathematical Expression** | **Physical Domain** |
 |---|---|---|
 | 1. Fine-tuning | $P_{\text{IC}} \sim 10^{-62}$ | Initial conditions (cosmology) |
-| 2. Horizon | $P_{\text{homog}} \sim 10^{-10^{16}}$ | Causal structure (cosmology) |
+| 2. Horizon | $P_{\text{homogeneous}} \sim 10^{-10^{16}}$ | Causal structure (cosmology) |
 | 3. Normalization | $\int |\Psi|^2 = \infty$ | Probability theory (QM) |
 | 4. Singularity | $\rho_{\text{BH}} = \infty$ | Black holes (GR) |
 
