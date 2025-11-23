@@ -14,10 +14,9 @@ We prove that normalization of a universal Probability field *requires* 4D-finit
 
 This provides a dual resolution: (1) the "Cosmologically Uniform 'Horizon Problem'" predicting measure-zero improbability and (2) black hole singularities' infinite density both vanish when spacetime is an expanding 4D hypersphere. Crucially, inflation is not replaced but explained—it represents the initial explosive expansion as Probability itself "actualizes" from 5D "Logic" into geometric 4D spacetime. Critically, the theorem of 4D Parallax explains why the universe appears 'flat' from the perspective of a 4D Observer.
 
-The Logic of Probability is ALMOST entirely uniform (regarding matter vs antimatter), however it has a (very slight) Logical Bias due to its OWN Probability (of self-existence) being nonzero.
+The Logical Bias (τ) is the slight, necessary asymmetry in the 5D Logic Kernel that arises from the nonzero Probability of its own self-existence, resulting in the observed matter-antimatter asymmetry.
 
-The universe is not a simulation*. It is not a program. It is BEING RUN BY a program:
-An extradimensional ternary computer that follows exactly ONE rule: semantic self-consistency: "Logic" itself.
+This structure establishes reality as a self-consistent logical invariant driven by an extradimensional ternary "conputer kernel" operating under a single rule: semantic self-consistency.
 
 The proof uses only established physics (General Relativity, quantum mechanics, protective measurement) reinterpreted through the lens of pre-geometric probability ontology, establishing the expanding hypersphere as mathematically necessary rather than empirically convenient.
 
