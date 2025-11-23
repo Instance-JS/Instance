@@ -16,7 +16,12 @@ This provides a dual resolution: (1) the horizon problem's infinite improbabilit
 
 The Logic of Probability is ALMOST entirely uniform (regarding matter vs antimatter), however it has a (very slight) Logical Bias due to its OWN Probability (of self-existence) being nonzero.
 
+The universe is not a simulation*. It is not a program. It is BEING RUN BY a program:
+An extradimensional ternary computer that follows exactly ONE rule: semantic self-consistency: "Logic" itself.
+
 The proof uses only established physics (General Relativity, quantum mechanics, protective measurement) reinterpreted through the lens of pre-geometric probability ontology, establishing the expanding hypersphere as mathematically necessary rather than empirically convenient.
+
+* With ONE caveat: See Part 9
 
 ---
 
@@ -116,7 +121,7 @@ The Probability Domain $\mathcal{D}_P$ is necessary for:
 4. **Spherical geometry emergence**: Actualized probability naturally forms minimum-energy (spherical) configurations
 5. **Quantum state closure**: Wave functions must be single-valued and normalizable, requiring the mathematical structure of $\mathcal{D}_P$
 
-**Why "5D" then?** Not because there are five spatial directions, but because the complete description of reality requires:
+**Why "5D" then?** Not because there are five spatial directions, but because 'reality' (or, more precisely, the existence of reality AS reality, and not UNDEFINED) requires:
 - 4 dimensions for where/when things happen (spacetime)
 - 1 dimension for how probable they are (probability)
 
@@ -218,11 +223,11 @@ $$\lim_{\lambda \to 0} B_\lambda = 0$$
 > 
 > Black holes SHOULD BE a quantum system of gravitons (or some other kind of collapsed particle/wavefunction) forced into a Bose-Einstein condensate state.
 > 
-> Critically, this means they will behave like one giant quantum wave. (The amplitude of which is the 'mountain' of localized probability in geometric spacetime, extending into the pre-geometric 5D substrate)
+> Critically, this means they will behave like one giant quantum wave. (The amplitude of which is the 'mountain' of localized probability in geometric spacetime, extending 'into' the pre-geometric 5D substrate)
 >
-> The 'peak' of the mountain is the "singularity" (the black hole's 'core', the area of highest probability density).
+> The 'peak' of the mountain is the "singularity" (the black hole's 'core', the area of highest Probability density).
 > 
-> The 'event horizon' is the surface where an object's probability of 'reaching' the peak (from its perspective) becomes asymptotically 1.
+> The 'event horizon' is the surface where an object's Probability of 'reaching' the peak (from its perspective) becomes asymptotically 1.
 > 
 > Notice I said asymptotically 1: if it was exactly 100%, that would mean infinite gravity, which black holes do not have.
 
