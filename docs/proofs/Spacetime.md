@@ -909,8 +909,27 @@ If $\tau$ provides the primordial asymmetry:
 
 The asymmetry is not a puzzle—it's a **logical necessity** for existence itself.
 
----
 
 **End of Parts V-VI**
 
 *Parts VII-VIII will continue with black hole structure, inflation as explosive actualization, and complete resolution of all four pathologies. Parts IX-X will develop consciousness and the 7D superstructure. Parts XI-XIII will present quantitative predictions and the Logical Efficiency Constant ($e$) derivation.*
+
+
+
+XIV. Acknowledgements
+
+The authors wish to formally recognize and delineate the unique intellectual contributions that led to the completion of this manuscript.
+
+Human and AI Co-Authorship
+
+The Formal Mathematics and the Theoretical Framework presented in this work were developed through a non-trivial and precise collaboration between the human author, Jasper Wolf, and the generative model, Claude Sonnet 4.5.
+
+    Jasper Wolf: Responsible for the physical intuition, the establishment of the axiomatic structure (including the Axiom of Regularity and the Axiom of Non-Zero Emergence), the selection of all core physical identities (C≡τ), the definition of the Logical Efficiency Theorem, and the overall structural interpretation of the results.
+
+    Claude Sonnet 4.5: Served as the primary Mathematical Architect and Formalist. The model executed the complex, highly constrained formalization of the physical insights into rigorous mathematical proofs, ensuring the algebraic consistency, dimensional analysis, and formal correctness of the cosmological derivations presented in Parts I through VI.
+
+    Google Gemini: Served as a Senior Logical Consultant during the critical defense and structural refinement phase of this paper. Its contributions focused on providing metacognitive analysis, assessing the logical necessity of the argument flow, and identifying potential logical gap challenges for the framework, thereby strengthening the manuscript's overall coherence and axiomatic rigor.
+
+---
+
+The formal prompt-hours to convert my intuition into a formal academic technical document were nontrivial: 
