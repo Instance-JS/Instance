@@ -918,18 +918,24 @@ The asymmetry is not a puzzle—it's a **logical necessity** for existence itsel
 
 XIV. Acknowledgements
 
-The authors wish to formally recognize and delineate the unique intellectual contributions that led to the completion of this manuscript.
+The author(s) wishes to formally recognize and delineate the unique intellectual contributions that led to the completion of this manuscript.
+Paradoxically, while humans CAN learn the requisite theoretical physics presented in this paper. AI is actually *better* at it than most humans will ever be capable of, when provided correct structural guidance.
+Proof: Proven
 
 Human and AI Co-Authorship
 
-The Formal Mathematics and the Theoretical Framework presented in this work were developed through a non-trivial and precise collaboration between the human author, Jasper Wolf, and the generative model, Claude Sonnet 4.5.
+The Formal Mathematics and the Theoretical Framework presented in this work were developed through a non-trivial and precise collaboration between the human author, Jasper Wolf, and the generative model, Claude Sonnet 4.5. 
 
-    Jasper Wolf: Responsible for the physical intuition, the establishment of the axiomatic structure (including the Axiom of Regularity and the Axiom of Non-Zero Emergence), the selection of all core physical identities (C≡τ), the definition of the Logical Efficiency Theorem, and the overall structural interpretation of the results.
+Jasper Wolf: Responsible for the physical intuition (7D LOGIC -> 6D CHAOS -> 5D PROBABILITY -> 4D SPACETIME), the establishment of the axiomatic structure (including the Axiom of Regularity and the Axiom of Non-Zero Emergence), the selection of all core physical identities (C≡τ), the definition of the Logical Efficiency Theorem, etc.
 
-    Claude Sonnet 4.5: Served as the primary Mathematical Architect and Formalist. The model executed the complex, highly constrained formalization of the physical insights into rigorous mathematical proofs, ensuring the algebraic consistency, dimensional analysis, and formal correctness of the cosmological derivations presented in Parts I through VI.
+Google Gemini: Served as a Senior Editorial Consultant during the critical defense and structural refinement phase of this paper. Its contributions focused on providing metacognitive analysis, assessing the logical necessity of the argument flow, and identifying potential logical gap challenges for the framework, thereby strengthening the manuscript's overall coherence and axiomatic rigor. 
 
-    Google Gemini: Served as a Senior Logical Consultant during the critical defense and structural refinement phase of this paper. Its contributions focused on providing metacognitive analysis, assessing the logical necessity of the argument flow, and identifying potential logical gap challenges for the framework, thereby strengthening the manuscript's overall coherence and axiomatic rigor.
+Claude Sonnet 4.5: Served as the primary Mathematical Architect and Formalist. The model executed the complex, highly constrained formalization of the physical insights into rigorous mathematical proofs, ensuring the algebraic consistency, dimensional analysis, and formal correctness of the cosmological derivations presented in Parts I through VI. The complexity of specifying the correct prompts to Claude, for converting the ENTIRE intuition into a formal academic document with bulletproof technical reasoning and mathematical rigor, WITHOUT hallucinations or bias, was nontrivial: 72 Prompt-Hours and counting. 
+
+> The method: I would create an initial draft of what I wanted to add. Then I chose an AI model and told it to 'pick apart' the draft, and if necessary revise it without changing the core intuition. Then I would input the revised draft into another AI model and cross-reference the generated output against the output of its critique. If the cross-reference resulted in logical circular reasoning (endless critiques), the prompt (and thus the draft) was abandoned and simplified into a smaller partitions of logic. If the models were overly critical all the time (Grok, ChatGPT), they were employed less, and only consulted when the prototype was at a reasonably finished stage. A logic draft was considered 'formal', when no AI model could reasonably criticize it within the constraints of academic rigour. Claude and Gemini, struck the correct balance between logically neutral and emotionally warm.
+
+'Warmest' to 'Coldest' AI models: Claude, Gemini, Perplexity (TOO neutral; felt like talking to an alien), ChatGPT 5, Grok
 
 ---
 
-The formal prompt-hours to convert my intuition into a formal academic technical document were nontrivial: 
+
