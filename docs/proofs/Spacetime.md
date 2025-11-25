@@ -1,4 +1,4 @@
-# The Axiomatic Logically Intrinsic Extradimensional Null State (ENS)
+# The Axiomatic Logically Intrinsic Extradimensional Null State
 
 **Authors:**  
 
