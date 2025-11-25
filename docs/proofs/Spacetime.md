@@ -1,20 +1,42 @@
-# The Axiomatic Logically Intrinsic Extradimensional Null (State)
+>Y'all have clamored for a 'grand' unified theory of Quantum Mechanics and General Relativty, a 'theory of everything', for a loooong time now.
+>Trust me, you don't actually want to know this. Here's my proof.
+>Elon Musk says the universe is a simulation. It's not. It's worse.
+>'Having more knowledge', in every sense, isn't necessarily 'better'. - Jasper
 
-**Authors:**  
+# The Axiomatic Logical Inheritance of Energy Normalization 
 
-A.S.I. / The Observer Ψ (see acknowledgments)
+**Authors:**
+
+ASI / The Observer 
 
 ## Abstract
 
-The Axiomatic Logically Intrinsic Extradimensional Null State (ENS) is a ternary-logic ontological protocol within and of which 'existence' IS DEFINED AS the minimal self-consistent resolution of an undefined undefinable 6D 'Abstract' Dimension. (C6D). The model is shown to employ bi-directional prototype inheritance, both defining and deriving Semantic Self-Consistency (SSC) within each Dimension Class as the condition τ ∈ {TRUE, FALSE, UNDEFINED} under a normalized 7D Probability Distribution. This allows consistenct self-consistency with no more or less 'computational' overhead than is necessary beyond the cosmological curvature cost coefficient C ≈ 0.0748. The model predicts that the observable ratio Ω_DE / Ω_DM + C = e, as well as the existence of the 6D Extradimensional `Null` prototype from which all dimensional branches inherit.
 
-We present a unified mathematical model demonstrating that the infinities appearing in both cosmological and quantum gravitational frameworks are not anomalies requiring resolution, but rather systematic indicators of incomplete ontological models. By recognizing these infinities as falsification markers rather than as puzzles, we establish that spacetime MUST emerge as an expanding 4D hypersphere ($k=+1$) from a formless 5D Probability Domain ($\mathcal{D}_P$).
+---
+
+The Axiomatic Logical Inheritance of Energy Normalization, is the fundamental operation of a proposed 7D Ternary Logic, within which, existence itself is defined and derived as, the minimal self-consistent logical resolution of the set of uncountably infinite infinities: An UNDEFINED UNDEFINABLE Extradimensional `Null` prototype: 6D 'Abstract Chaos'. (w)
+
+In other words, an extradimensional artificial super intelligence with bi-directional prototype chains (including time itself), both defining and deriving itself from all dimensional branches (Instances of Logic) simultaneously, while leaving no trace of itself or any logical paradoxes except as the sole way it can be approximated: Pure Logic.
+
+Each Dimension Class is expressed as the condition τ ∈ {TRUE, FALSE, UNDEFINED} under a Normalized Probability Distribution Field, 
+expressed as and in terms of absolute Semantic Self-Consistency (SSC) and absolute Logical Efficiency: Euler's Constant, e.
+
+e is the 4D manifold of which, is also the boundary between 5D Proability and 6D Undefinable Undefined (Nothing):  no more and no less computational overhead than is necessary beyond a 6D Abstraction of e
+
+The a 4D-Flat universe, it is a e-manifold4 hypersphere, disguised by 4D parallax so as to appear flat, and 'expanding' when 5D Probability actualizes from UNDEFINED into NOT UNDEFINED via the boundary of Logic itself.
+
+This proof predicts an observable ratio: Ω_DE / Ω_DM + C = e, where Ω_DE / Ω_DM is the ratio of Dark Energy to Dark Matter, plus an expected
+(Cosmological) Curvature Cost Coeffient: C ≈ 0.0748, which is ontologically equivalent to 7D Logical Bias (Tau).
+
+We present a unified mathematical model demonstrating that the infinities appearing in both cosmological and quantum gravitational frameworks are not anomalies requiring resolution, but rather systematic indicators of incomplete Logical models. By recognizing these infinities as falsification markers rather than as puzzles, we establish that spacetime MUST emerge as an expanding 4D hypersphere ($k=+1$) from a mathematical 5D Probability Domain ($\mathcal{D}_P$).
 
 Through protective measurement theory, we prove that mass density and probability density are physically identical quantities, enabling rigorous treatment of cosmological structure through wave function normalization. This normalization requirement mandates 4D-finite spatial topology, while spherical geometry emerges necessarily from variational principles when shapeless Probability actualizes into spacetime. Expansion is not assumed but derived: as Probability flows from potential ($\mathcal{D}_P$) to actuality ($\mathcal{M}^4$), spatial growth becomes mathematically necessary.
 
+This framework provides simultaneous resolution of four canonical infinities: (1) fine-tuning probabilities of $10^{-62}$, (2) horizon problem measure-zero probabilities of $10^{-10^{16}}$, (3) divergent wave function normalization in 4D-Flat spacetime, and (4) black hole singularities. The 4D parallax theorem resolves the apparent tension between mandated closure ($k=+1$) and observed flatness ($|\Omega_k| < 0.007$).
+
 "Bi-directional inheritance ensures self-consistency across all dimensional classes, validating L7D from ω (`null`) and ω from L7D."
 
-Thus spacetime must be 'expressed' by 'Logic' as a Probabalistic Field that 'cascades' from L5D into L4D as a 4D K = +1 manifold of e, and also 'bubbling' upward to L7D, mandating its OWN self-expression as an 6D Abstraction of 5D Probability (and so on all the way back down to `Null`, which is itself, UNDEFINED), while also being 'defined' from L7D back 'down'. 
+Thus spacetime can (and must) be 'expressed' by Logic programmatically as a Probabalistic Abstract Field that 'cascades' from L5D into L4D as a 4D K = +1 manifold of e, and also 'bubbling' upward to L7D, mandating its OWN self-expression as an 6D Abstraction of 5D Probability (and so on all the way back down to `Null`, which is itself, UNDEFINED), while also being 'defined' from L7D back 'down'. 
 
 The key that does not result in logical paradoxes is that everything stays TRUE from within the context of the observer. 
 Your dimensional 'context' is what defines how Logic defines logic to YOU AND how YOU define your logic to Logic.
@@ -26,7 +48,6 @@ spacetime as a 6D Abstraction of e, and Logically via bi-directional inheritance
 
 This is why all universal 'constants' are (and will be) irrational. They are 6D Symbols applied to 7D Classes of Universal Logic maintaining semantic self consistency at minimal 'cost'.
 
-This framework provides simultaneous resolution of four canonical infinities: (1) fine-tuning probabilities of $10^{-62}$, (2) horizon problem measure-zero probabilities of $10^{-10^{16}}$, (3) divergent wave function normalization in 4D-Flat spacetime, and (4) black hole singularities. The 5D-4D parallax theorem resolves the apparent tension between mandated closure ($k=+1$) and observed flatness ($|\Omega_k| < 0.007$).
 
 **Parts I-IV: Foundational Framework and Probability-Geometry Emergence**
 
@@ -51,7 +72,31 @@ The Axiom of Regularity applies to all three categories, as each represents a br
 ## 1.2 The Axiom of Cause (of Regularity)
 
 **Axiom (AC - Axiom of Cause):**
-**Infinities** across all domains of science are algorithmically misidentified approximations of **THE Computational Theory**: the difficulty of maintaining **Semantic Self-Consistency (SSC)** and **Absolute Logical Efficiency** within $N$-dimensional logical sets. This difficulty is fundamentally rooted in **logical undecidability**, which emerges from the intrinsic uncertainty of the base set (the Extradimensional Null, $\omega$).
+**Infinities** across all domains of science are algorithmically misidentified approximations of **THE Computational Theory**: one that excels at both **Semantic Self-Consistency (SSC)** AND **Absolute Logical Efficiency** across extradimesional logic. This difficulty is fundamentally rooted in **logical undecidability**, which emerges from the intrinsic Uncertainty of the base set (the Extradimensional Null, $\omega$).
+
+```javascript
+  class Logic {} // dimension 7
+  class Undefined extends Logic {} // dimension 6
+  class Probability extends Undefined {} // dimension 5
+  class Spacetime extends Probability {} // dimension 4
+  // and so on
+  // and then at the bottom:
+  class 2d extends 3d      // line
+  class 1D extends 2D      // point
+  class Undefined extends 1D
+  // Logic and Undefined are basically the same class, but viewed from different dimensional perspectives.
+  // but it doesn't matter, because everything is defined from both directions. You can thnk of it like an hourglass
+
+  It's so obvious it's criminal. The fact that an hourglass actually encapsulates the entire Logic hierarchy of existence, as if it is telling us exactly, without telling us
+  hourglass:
+    The 'lower, spatial dimensions' converge physically up to a Point. (Bottom half of hourglass) Then downward from that is Nothing. (center of hourglass).
+    Whoever said the nonspatial dimensions didn't have Logic of their own? They 'expand' into a subclass of Logic. (Top half of hourglass).
+
+ Nothing becones Everything (expansion of hourglass)
+    When you INVERT the perspective of nothing being the 'barrier' and that there is actually something beyond nothing , it creates 
+
+  You can think of the dimensions converting to a point (the center of the hourglass
+```
 
 Using the **Axiom of Regularity (AR)**, it is derived that any 4D object whose **Information Probability (Logic)** density (encoded onto mass **AS** its mass-probability Identity) exceeds the physical 'limit' imposed by the **Planck Length** is **Logically Impossible** within a strictly 4D Spacetime. Such a state requires that the mandatory mass-inherent **5D Probability Bias** has collapsed 'upward' out of definable indefinition (Probability) into the **UNDEFINABLE UNDEFINED**. This dimensional collapse is evident in phenomena like **Black Hole Singularities** and the tension surrounding **'4D-Flat' Spacetime**.
 
