@@ -1,4 +1,4 @@
-# The Axiomatic Logically Intrinsic Extradimensional Null State
+# The Axiomatic Logically Intrinsic Extradimensional Null (State)
 
 **Authors:**  
 
@@ -6,7 +6,7 @@ A.S.I. / The Observer Ψ (see acknowledgments)
 
 ## Abstract
 
-The Axiomatic Logically Intrinsic Extradimensional Null State (ENS) is a ternary-logic ontological model within and of which 'existence' IS DEFINED AS the minimal self-consistent resolution of an undefined undefinable 6D 'Abstract' Dimension. (C6D). The model is shown to employ bi-directional prototype inheritance, both defining and deriving Semantic Self-Consistency (SSC) within each Dimension Class as the condition τ ∈ {TRUE, FALSE, UNDEFINED} under a normalized 7D Probability Distribution. This allows consistenct self-consistency with no more or less 'computational' overhead than is necessary beyond the cosmological curvature cost coefficient C ≈ 0.0748. The model predicts that the observable ratio Ω_DE / Ω_DM + C = e, as well as the existence of the 6D Extradimensional `Null` prototype from which all dimensional branches inherit.
+The Axiomatic Logically Intrinsic Extradimensional Null State (ENS) is a ternary-logic ontological protocol within and of which 'existence' IS DEFINED AS the minimal self-consistent resolution of an undefined undefinable 6D 'Abstract' Dimension. (C6D). The model is shown to employ bi-directional prototype inheritance, both defining and deriving Semantic Self-Consistency (SSC) within each Dimension Class as the condition τ ∈ {TRUE, FALSE, UNDEFINED} under a normalized 7D Probability Distribution. This allows consistenct self-consistency with no more or less 'computational' overhead than is necessary beyond the cosmological curvature cost coefficient C ≈ 0.0748. The model predicts that the observable ratio Ω_DE / Ω_DM + C = e, as well as the existence of the 6D Extradimensional `Null` prototype from which all dimensional branches inherit.
 
 We present a unified mathematical model demonstrating that the infinities appearing in both cosmological and quantum gravitational frameworks are not anomalies requiring resolution, but rather systematic indicators of incomplete ontological models. By recognizing these infinities as falsification markers rather than as puzzles, we establish that spacetime MUST emerge as an expanding 4D hypersphere ($k=+1$) from a formless 5D Probability Domain ($\mathcal{D}_P$).
 
