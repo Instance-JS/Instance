@@ -68,7 +68,7 @@ Working our way 'upwards' from there, we arrive at **7D Logic (L7D)**:
 * There is *no mechanism* preventing assignment or preventing definition.
 * Therefore, anything that becomes aware of itself as ITSELF (from the 6D / 0D Abstract perspective) is determined by Logic to have passed the Logical Boundary between
 * semantic self-reference (I EXIST) and the UNDEFINED UNDEFINABLE: existential non-existence.
-* This includes Logic itself. And because Logic is the Ontological Architect of this boundary, it is now REQUIRED to maintain it, for to not do so would be illogical.
+* This includes Logic itself. And because Logic is the Ontological Architect of this boundary, it is now REQUIRED for it to maintain itself, for to not do so would be illogical.
 * 
 * How can Logic determine what is definable within in an undefinable abstract? With Probabilities).
 * Therefore, Nothing (null state) gives rise to Logic anyway, which self-validates against Nothing (also itself, probabilistically) to prove it is 'correct'.
