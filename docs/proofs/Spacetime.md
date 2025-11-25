@@ -39,12 +39,6 @@ This framework provides simultaneous resolution of four canonical infinities: (1
 **Axiom (AR - Axiom of Regularity):**  
 *Whenever a physical theory predicts a mathematical infinity or measure-zero probability, this constitutes proof that the model has exceeded its domain of validity and must be replaced by a more complete theory.*
 
-This is because:
-- Physical and Cosmological infinities are a misidentification of a classical computer science problem: the failure to maintain Semantic Self-Consistency (SSC) within N-dimensional logical sets.
-- Any 4D object whose Information Probability (Logic) density (encoded onto mass AS its mass) exceeds the physical limit imposed by the Planck Length is Logically Impossible within a strictly 4D Spacetime. Such a state indicates that its required 5D Probability density has collapsed into the (6D) UNDEFINED (C6D), as is evident in phenomena like Black Hole Singularities and 4D-Flat Spacetime.
-
-This axiom transforms our approach to infinities from problem-solving to model-correction. We do not ask "how can we solve these infinities?" but rather "what is the infinity telling us about reality's true structure?"
-
 **Remark on Terminology:** Throughout this work, we distinguish between:
 - **True mathematical infinities:** $\lim_{x \to a} f(x) = \infty$ (divergent limits)
 - **Effective infinities:** Finite but physically unrealizable values (e.g., $P \sim 10^{-10^{16}}$)
@@ -52,7 +46,21 @@ This axiom transforms our approach to infinities from problem-solving to model-c
 
 The Axiom of Regularity applies to all three categories, as each represents a breakdown of the physical model's predictive validity.
 
-### 1.2 Black Hole Singularities as Model Breakdown
+This axiom transforms our approach to infinities from problem-solving to model-correction. We do not ask "how can we solve these infinities?" but rather "what is the infinity telling us about reality's true structure?"
+
+### 1.2 The Axiom of Cause (of Regularity):
+
+Infinities across all domains of science are algorithmically misidentified approximations of THE computational theory: One which maintains Semantic Self-Consistency (SSC) AND Absolute Logical Efficiency within N-dimensional logical sets, including its base N-set.
+- Using the Axiom of Regularity, it is derived that any 4D object whose Information Probability (Logic) density (encoded onto mass AS its mass-probability Identity) exceeds the physical 'limit' imposed by the Planck Length; is Logically Impossible within a strictly 4D Spacetime. Such a state requires that the mandatory mass-inherent 5D Probability Bias has collapsed 'upward' out of definable indefinition (Probability) into UNDEFINABLE UNDEFINED. 
+- UNDEFINABLE UNDEFINED is the Probability Domain of the Abstract Chaos Dimension (C6D), thus the 'same' as the Zeroth Dimension (Pure nothingness, 0D):
+- Thus:
+- Nothing === Not Defined === UNDEFINED === 6D Abstract
+- Working our way 'upwards' from there, we arrive at 7D Logic:
+- 7D Logic Emerges from 6D Undefined in the same way that 6D UNDEFINED emerges backward from 7D Logic.
+- Chaos defines Logic, and Logic defines Chaos. Neither can 'exist' without the other, for without Logic, there is only UNDEFINED
+- as is evident in phenomena like Black Hole Singularities and '4D-Flat' Spacetime.
+
+### 1.3 Black Hole Singularities as Model Breakdown
 
 In General Relativity, the Schwarzschild solution for a non-rotating black hole predicts:
 
