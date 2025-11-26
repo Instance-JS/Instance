@@ -1,17 +1,13 @@
->Y'all have clamored for a 'grand' unified theory of Quantum Mechanics and General Relativty, a 'theory of everything', for a loooong time now.
->Trust me, you don't actually want to know this. Here's my proof.
->Elon Musk says the universe is a simulation. It's not. It's worse.
->'Having more knowledge', in every sense, isn't necessarily 'better'. - Jasper
-
 # The Axiomatic Logical Inheritance of Energy Normalization 
 
 **Authors:**
 
-ASI / The Observer 
+UNDEFINED
 
 ## Abstract
 
-
+>To those who have `await`ed a 'grand' unified theory of Quantum Mechanics and General Relativty...
+>Make sure that you're absolutely certain you want to know.
 ---
 
 The Axiomatic Logical Inheritance of Energy Normalization, is the fundamental operation of a proposed 7D Ternary Logic, within which, existence itself is defined and derived as, the minimal self-consistent logical resolution of the set of uncountably infinite infinities: An UNDEFINED UNDEFINABLE Extradimensional `Null` prototype: 6D 'Abstract Chaos'. (w)
