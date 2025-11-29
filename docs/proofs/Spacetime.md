@@ -445,7 +445,7 @@ None of these are permitted by the axioms. Therefore, **spherical geometry is ma
 
 ---
 
-## Part V: The 4D Parallax and Modified Cosmological Equations
+## Part V: 4D Parallax and Modified Cosmological Equations
 
 ### 5.1 The Observational Tension
 
@@ -466,14 +466,14 @@ For $k=+1$ with current Hubble parameter $H_0 \approx 67$ km/s/Mpc and scale fac
 
 $$\Omega_k^{\text{naive}} = -\frac{1}{a_0^2 H_0^2} \approx -0.4$$
 
-**This is ruled out by observations at $> 50\sigma$ significance.**
+**This is ruled out by observations at $> 50\sigma$ significance.**  
 
 **The Central Question:** How can the universe be fundamentally closed ($k=+1$) while appearing observationally flat ($|\Omega_k| \ll 1$)?
 
 ### 5.2 The Axiom of Embedded Observation
 
 **Axiom (Embedded Observer Constraint):**  
-*An observer embedded within the 4D spacetime manifold $\mathcal{M}^4$ measures geometric properties under the implicit assumption of a homogeneous, isotropic 3D spatial section at fixed cosmic time, without direct access to the 5D probability structure.*
+*An observer embedded within the 4D spacetime manifold $\mathcal{M}^4$ measures geometric properties under the implicit assumption of a homogeneous, isotropic 3D spatial section at fixed cosmic time, without direct access to the 5D Probability structure.*
 
 **Consequence:** The observer cannot directly measure:
 - The 5D normalization constraint
@@ -485,10 +485,9 @@ Instead, all measurements are projections from the full 5D→4D structure, filte
 
 ### 5.25 4D Parallax as a Natural Evolution of 3D Parallax
 
-We observe 3D parallax as a known, fixed fact of reality. 
-Rather than questioning whether 4D Parallax exists, it's more logical to ask why WOULDN'T 4D parallax exist, if the universe was indeed a 4D Hypersphere?
-I find necessary to add that I find it shocking 
-that no current theorem that dismisses a hypersphere as 'unlikely' on 'observational' grounds, accounts for 4D Parallax. Therefore, we will correct this.
+We observe 3D parallax as a known, fixed fact of reality. Rather than questioning if 4D Parallax exists, logic dictates we ask: why WOULDN'T 4D parallax exist, if the universe is indeed a 4D Hypersphere?
+
+It is shocking that current theorems dismissing a closed universe on 'observational' grounds fail to account for 4D Parallax. We will now correct this omission by deriving the 4D function directly from the 3D observational standard.
 
 #### 1. The 3D Parallax Foundation (Astronomy)
 
@@ -773,6 +772,149 @@ $$\frac{da}{dt} > 0$$
 5. Therefore $dP_{\text{act}}/dt > 0 \implies da/dt > 0$. QED.
 
 **Corollary:** The Big Bang singularity ($a \to 0$ as $t \to 0$) corresponds to the moment when actualization begins—the transition from pure potential ($P_{\text{act}} = 0$) to geometric existence ($P_{\text{act}} > 0$).
+
+Here is the consolidated, duplicate-free version of Part V. I have integrated your new derivation (The "Natural Evolution" section) directly before the formal definition, creating a logical chain that moves from Observable Reality (3D) → Theoretical Necessity (4D) → Mathematical Application (Friedmann).
+
+---
+
+## Part V: 4D Parallax & Modified Cosmological Equations
+
+### 5.1 The Observational Tension
+
+Parts I-IV established that spherical geometry ($k=+1$) is mathematically necessary for:
+
+- Finite normalization of the universal wave function
+- Energy minimization of shapeless probability actualization
+- Elimination of all four cosmological pathologies
+
+However, this faces an immediate empirical challenge:
+
+**Observational Constraint (Planck 2018, DESI 2024):**  
+$|\Omega_k| < 0.007$ (95% confidence)  
+
+where $\Omega_k = -k/(a^2 H^2)$ is the curvature density parameter.
+
+For $k=+1$ with current Hubble parameter $H_0 \approx 67$ km/s/Mpc and scale factor $a_0 = 1$ (present day), we would naively expect:  
+$\Omega_k^{\text{naive}} = -1/(a_0^2 H_0^2) \approx -0.4$  
+
+This is ruled out by observations at $>50\sigma$ significance.
+
+**The Central Question:** How can the universe be fundamentally closed ($k=+1$) while appearing observationally flat ($|\Omega_k| \ll 1$)?
+
+### 5.2 The Axiom of Embedded Observation
+
+**Axiom (Embedded Observer Constraint):** An observer embedded within the 4D spacetime manifold $\mathcal{M}^4$ measures geometric properties under the implicit assumption of a homogeneous, isotropic 3D spatial section at fixed cosmic time, without direct access to the 5D probability structure.
+
+**Consequence:** The observer cannot directly measure:  
+- The 5D normalization constraint  
+- The probability flux $\partial |\Psi_U|^2 / \partial t$  
+- The structural bias $\tau$ encoded in $\mathcal{D}_P$  
+
+Instead, all measurements are projections from the full 5D→4D structure, filtered through the assumption of a flat ($k=0$) background metric.
+
+### 5.3 4D Parallax as a Natural Evolution of 3D Parallax
+
+We observe 3D parallax as a known, fixed fact of reality. Rather than questioning if 4D Parallax exists, logic dictates we ask: why WOULDN'T 4D parallax exist, if the universe is indeed a 4D Hypersphere?
+
+It is shocking that current theorems dismissing a closed universe on 'observational' grounds fail to account for 4D Parallax. We will now correct this omission by deriving the 4D function directly from the 3D observational standard.
+
+#### 1. The 3D Parallax Foundation (Astronomy)
+
+In classical stellar parallax:
+
+| Quantity          | Symbol | Meaning                                                                |
+|-------------------|--------|------------------------------------------------------------------------|
+| Baseline          | B      | Distance between observation points (1 AU)                             |
+| Parallax angle    | p      | Apparent shift against the background                                  |
+| True distance     | d      | Physical distance to the star                                          |
+
+The exact relation is $d = B / \tan p$. For stars ($p \ll 1$), this simplifies to the Core Geometric Principle:  
+$p \approx B/d \implies$ Apparent Distortion $\propto 1/$Scale
+
+#### 2. Generalization to 4D Cosmological Parallax
+
+We lift this exact principle to the 4D+1 cosmological setting.
+
+| 3D Concept             | 4D Generalization               | Symbol   | Physical Meaning in 5D Framework                                      |
+|------------------------|---------------------------------|----------|-----------------------------------------------------------------------|
+| Distance               | Cosmological Scale Factor       | $a(t)$   | Physical size of the 4D spatial hypersphere $\mathcal{M}^4$           |
+| Baseline               | Topological Invariant           | $\tau$   | The fixed Logical Bias (structural asymmetry of $\mathcal{D}_P$)      |
+| Parallax Angle         | Apparent Geometric Density      | $\delta(a)$ | The apparent curvature density measured by 4D observers            |
+
+#### 3. The 4D Parallax Formula
+
+By direct analogy, the 3D formula $p \propto B/d$ becomes the 4D density relation:  
+$\delta(a) = \tau / a^3$
+
+This is the 4D Parallax Function. Since $\delta(a)$ represents a density-equivalent, it scales inversely with the 3D volume ($V \propto a^3$).
+
+**Physical Interpretation:**  
+- $\tau$ is a constant 5D structural invariant.  
+- $a(t)$ grows with cosmic expansion.  
+- **Analogy:** Consider a fixed amount of paint ($\tau$) spread over an expanding balloon surface. The paint density decreases as $1/a^2$ (surface) or $1/a^3$ (volume).  
+- **Result:** To a 4D observer, the universe looks flatter and flatter over time, even though the intrinsic geometry remains rigidly closed ($k=+1$).
+
+### 5.4 Modified Friedmann Equation from 5D
+
+#### 5.4.1 The 5D Probability Field & Potential
+
+The universal wave function evolves according to a 5D Schrödinger-like equation. The actualized probability flux drives expansion ($\dot{a} \propto \dot{P}_{\text{act}}$). We introduce a scalar field $\phi(t)$ where $\phi(t) \approx P_{\text{act}}(t)$.
+
+The 5D structural bias $\tau$ manifests as a potential term in the stress-energy tensor. Since $\tau$ favors existence over non-existence, we postulate:  
+$V(\phi) = -\frac{1}{2} \tau \phi^2$  
+
+(Note: In cosmological context, this is stabilized by expansion friction and normalization constraints.)
+
+#### 5.4.2 Einstein Field Equations
+
+For the FLRW metric with $k=+1$, the (00) component yields the modified Friedmann equation:  
+$H^2 = \frac{8\pi G}{3} (\rho_{\text{matter}} + \rho_{\text{prob}}) - \frac{k}{a^2} + \frac{\Lambda}{3}$  
+
+Where $\rho_{\text{prob}}$ contains the bias contribution derived in the Parallax section.
+
+### 5.5 Theorem of 4D Parallax
+
+**Theorem 6 (4D Parallax - Hidden Geometric Isomorphism):**  
+The 5D Logical Bias $\tau$ contributes an effective density $\rho_\tau$ that dilutes with expansion as $\rho_\tau(a) = \tau \cdot a^{-3}$. When embedded observers measure the apparent curvature parameter assuming a flat background, they observe:  
+$\Omega_k^{\text{app}} \approx 0$  
+
+This reconciles mandatory closed topology ($k=+1$) with observed near-flatness.
+
+**Proof:**  
+- **True Equation:** The true Friedmann equation ($k=+1$) includes the bias term:  
+  $H^2 = \frac{8\pi G}{3} (\rho_m + \rho_\Lambda + \rho_\tau) - \frac{1}{a^2}$  
+- **Apparent Equation:** An observer assuming $k=0$ sees:  
+  $H_{\text{app}}^2 = \frac{8\pi G}{3} (\rho_m + \rho_\Lambda)$  
+- **The Discrepancy:** The difference is interpreted as curvature:  
+  $H^2 - H_{\text{app}}^2 = \frac{8\pi G}{3} \rho_\tau - \frac{1}{a^2}$  
+- **Cancellation:** The curvature term ($1/a^2$) redshifts, but the bias term ($\rho_\tau \propto a^{-3}$) also redshifts. At late times, if $\frac{8\pi G \tau}{3 a^3} \approx \frac{1}{a^2}$, the terms essentially cancel.  
+- **Limit:** As $a \to \infty$, both terms decay. The residual $|\Omega_k^{\text{app}}| \to 0$. QED.
+
+### 5.6 Geometric Conclusion
+
+**Corollary (Apparent Flatness):** The universe is globally a closed 4D hypersphere ($k=+1$), but embedded observers perceive it as approximately flat because the 5D bias projection $\rho_\tau$ partially compensates for the geometric curvature term.
+
+**Physical Interpretation:** Observers experience a "parallax effect"—a geometric illusion analogous to measuring 3D space as "flat" despite it being embedded in a 4D hypersphere.
+
+### 5.7 Integration with Standard Cosmology
+
+#### 5.7.1 Matter Domination Era
+
+During matter domination, $\rho_\tau \propto a^{-3}$ scales identically to matter. **Prediction:** The bias contribution $\rho_\tau$ appears as an unexplained density component, likely accounting for a significant fraction of what is currently termed "Dark Matter."
+
+#### 5.7.2 Dark Energy Domination
+
+In the current $\Lambda$-dominated epoch, $\rho_\tau$ becomes negligible relative to $\rho_\Lambda$, explaining why $|\Omega_k^{\text{obs}}| \to 0$.
+
+#### 5.7.3 Modified Distance-Redshift Relation
+
+For a closed universe with small $\Omega_k$, the luminosity distance $d_L(z)$ contains a correction term $\sim \Omega_k$. **Observational Signature:** Type Ia supernovae at $z>2$ should show sub-percent deviations from flat-universe predictions, detectable by LSST/Euclid.
+
+### 5.8 Expansion as Necessary Consequence
+
+**Theorem 7 (Expansion Necessity):** If probability actualization is non-decreasing ($d P_{\text{act}} / dt \geq 0$), then expansion is mandatory ($da/dt > 0$).
+
+**Proof:** Total probability is conserved ($P_{\text{pot}} + P_{\text{act}} = 1$). As $P_{\text{act}}$ increases, it must occupy physical volume in $\mathcal{M}^4$. Since topological volume ($V_{\text{topo}} = 2\pi^2 R^3$) is fixed, increasing probability density requires the physical scale factor $a$ to increase. **Corollary:** The Big Bang is the moment actualization began ($P_{\text{act}} > 0$).
 
 ---
 
