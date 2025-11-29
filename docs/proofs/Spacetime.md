@@ -25,11 +25,11 @@ This framework provides simultaneous resolution of four canonical pathologies: (
 
 The resulting 4D manifold is an $e$-manifold hypersphere whose closure is disguised by the **4D Parallax Theorem**, which reconciles the mandated $k=+1$ closure with the observed flatness $(|\Omega_k| < 0.007)$.
 
-**Testable Prediction:** The ratio between the universe's accelerating and decelerating components must conform to the universal constant of Logical Efficiency, $e$:
+**Testable Prediction:** The ratio between the universe's accelerating and decelerating components must conform to a universal (irrational) constant, $e$:
 
 $$\frac{\Omega_{\text{DE}}}{\Omega_{\text{DM}} + \Omega_{\text{B}}} + C = e$$
 
-where $C \approx 0.0748$ is the Cosmological Curvature Cost Coefficient, which is ontologically equivalent to the 5D Probability Bias ($\tau$).
+where $C \approx 0.0748$ is the Cosmological Curvature Cost Coefficient, which is ontologically equivalent to the 5D Probability Bias: ($\tau$).
 
 **Parts I-IV: Foundational Framework and Probability-Geometry Emergence**
 
@@ -499,14 +499,14 @@ We now lift the exact same principle to the full 4D+1 cosmological setting:
 | 3D Parallax Concept | 4D Parallax Generalization | 4D Variable | Physical Meaning in 5D Framework |
 |---------------------|----------------------------|-------------|----------------------------------|
 | Distance to star | Cosmological scale factor | $a(t)$ | Physical size of 4D spatial hypersphere $\mathcal{M}^4$ at cosmic time $t$ (normalized so $a(\text{today}) = 1$) |
-| Baseline (fixed separation) | Topological invariant / logical bias | $\tau$ | The fixed, non-evolving **Logical Bias**—the structural asymmetry of 5D Probability Domain $\mathcal{D}_P$ |
+| Baseline (fixed separation) | Topological invariant / Probability Bias | $\tau$ | The fixed, non-evolving **Probability Bias**—the structural asymmetry of 5D Probability Domain $\mathcal{D}_P$ |
 | Parallax angle (apparent shift) | Apparent geometric distortion | $\delta(a)$ | The **apparent curvature density** measured by 4D observers |
 
 ### 5.3.3 The 4D Parallax Formula
 
 **Definition (4D Parallax Function):**
 
-The 5D Logical Bias $\tau$ (the structural asymmetry ensuring $P_{\text{exist}} > 0$) contributes a fixed, non-evolving density-equivalent to the cosmological structure. When observed from the expanding 4D manifold, this fixed cost appears diluted:
+The 5D Probability Bias $\tau$ (the structural asymmetry ensuring $P_{\text{exist}} > 0$) contributes a fixed, non-evolving density-equivalent to the cosmological structure. When observed from the expanding 4D manifold, this fixed cost appears diluted:
 
 $$\delta(a) = \frac{\tau}{a^3}$$
 
@@ -563,7 +563,7 @@ $$\rho_{\text{prob}} = \frac{1}{2}\dot{\phi}^2 + V(\phi)$$
 
 $$p_{\text{prob}} = \frac{1}{2}\dot{\phi}^2 - V(\phi)$$
 
-### 5.4.3 The Potential from Logical Bias
+### 5.4.3 The Potential from Probability Bias
 
 The 5D structural bias $\tau$ manifests as a potential term. Since $\tau$ favors existence over non-existence (matter over void), we postulate:
 
@@ -790,12 +790,9 @@ The total volume of the universe is **approximately 14,000 times** the current o
 
 **End of Part V**
 
-*Part VI will address Logical Bias and matter-antimatter asymmetry.*
+*Part VI will address Probability Bias leading to matter-antimatter asymmetry.*
 
-
-
-
-## Part VI: Logical Bias and Matter-Antimatter Asymmetry
+## Part VI: Probability Bias and Matter-Antimatter Asymmetry
 
 ### 6.1 The Baryon Asymmetry Problem
 
@@ -829,7 +826,7 @@ $$\eta_{\text{SM}} \sim 10^{-18} \ll \eta_{\text{obs}}$$
 
 **Discrepancy:** Eight orders of magnitude unexplained.
 
-### 6.3 The Ontological Perspective: Logical Bias
+### 6.3 The Ontological Perspective: Probability Bias
 
 #### 6.3.1 The Axiom of Non-Zero Emergence
 
@@ -857,9 +854,9 @@ leaving only radiation, with no stable structures, no chemistry, no observers.
 
 #### 6.3.2 Mathematical Formalization
 
-**Definition (Logical Bias $\tau$):**
+**Definition (Probability Bias $\tau$):**
 
-The Logical Bias is the integrated asymmetry in the 5D probability measure:
+The Probability Bias is the integrated asymmetry in the 5D probability measure:
 
 $$\tau = \int_{\mathcal{M}^5} \left(|\Psi_U^{\text{matter}}|^2 - |\Psi_U^{\text{antimatter}}|^2\right) d^5x$$
 
@@ -874,7 +871,7 @@ $$\tau = \int_{\mathcal{M}^5} \left(|\Psi_U^{\text{matter}}|^2 - |\Psi_U^{\text{
 
 **Theorem 8 (Bias-Curvature Identity):**
 
-*The Logical Bias $\tau$ is ontologically identical to the Curvature Cost Coefficient $\mathcal{C}$ introduced in the 4D Parallax theorem:*
+*The Probability Bias $\tau$ is ontologically identical to the Curvature Cost Coefficient $\mathcal{C}$ introduced in the 4D Parallax theorem:*
 
 $$\tau \equiv \mathcal{C}$$
 
@@ -992,7 +989,7 @@ If $\tau$ provides the primordial asymmetry:
 
 **Theorem 9 (Existence-Asymmetry Duality):**
 
-*The universe's probability of existing ($P_{\text{exist}} > 0$) is logically equivalent to the Logical Bias being non-zero ($\tau \neq 0$).*
+*The universe's probability of existing ($P_{\text{exist}} > 0$) is logically equivalent to the Probability Bias being non-zero ($\tau \neq 0$).*
 
 **Proof:**
 
@@ -1007,9 +1004,18 @@ If $\tau$ provides the primordial asymmetry:
 
 **Corollary:** The fact that we exist proves the Probability Domain is asymmetric.
 
-#### 6.6.2 Why Asymmetry Exists
+**End of Parts V-VI**
+
+## Part VI: Explaining 5D Probability Bias and the Dimensional Hierarchy
+
+#### 7.1 Why Probabilistic Asymmetry Exists
 
 **Question:** Why does $\mathcal{D}_P$ have asymmetry $\tau \neq 0$?
+
+Because up until now, we have named 7D Logical Bias, 5D Probability Bias. The two are ontologically identical. 
+However, now we are taking off the kid gloves, so strap in.
+
+
 
 **Answer:** Because $\mathcal{D}_P$ is shaped by 6D Abstract input, which is inherently asymmetric (contains undefined, non-logical elements). The asymmetry "leaks down" from 6D through 5D into 4D observables.
 
@@ -1022,9 +1028,6 @@ If $\tau$ provides the primordial asymmetry:
 The asymmetry is not a puzzle—it's a **logical necessity** for existence itself.
 
 
-**End of Parts V-VI**
-
-*Parts VII-VIII will continue with black hole structure, inflation as explosive actualization, and complete resolution of all four pathologies. Parts IX-X will develop consciousness and the 7D superstructure. Parts XI-XIII will present quantitative predictions and the Logical Efficiency Constant ($e$) derivation.*
 
 
 ## **X. Acknowledgments**
