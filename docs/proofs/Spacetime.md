@@ -675,6 +675,14 @@ because both terms decay, but their ratio approaches constant. QED.
 - Measuring spacetime as "flat" in weak-field limit despite gravitational curvature
 - Perceiving 3D space as "flat" despite embedding in 4D hypersphere
 
+A 'flat' universe also makes zero logical sense within Occam's Razor, 'the math' notwithstanding: if the smallest particle, to the largest black hole, is 'spherical' (or an ellipsoid, at minimum), why WOULDN'T the universe be spherical...?
+
+We dismiss any and all pedanticism relating to the comparison between the geometric closure of a spacetime manifold and the spherical symmetry of a quantum probability distribution's field shape.
+
+To privilege algebraic formalism over basic geometric intuition in this context is to shoehorn in unnessary complexity where the semantics do not require it.
+
+It is like a teacher marking the correct answer ‘wrong’ because the student did not solve it ‘their’ way.
+
 ---
 
 ## 5.7 Integration with Standard Cosmology
