@@ -829,13 +829,13 @@ $$\Delta R = 0.375 \times 225 \text{ Gly} \approx 84 \text{ Gly}$$
 
 Therefore:
 
-$$\boxed{R_{\text{curv}} = 225 \pm 84 \text{ Gly} \quad (68\% \text{ CL})}$$
+$${\boxed{R_{\text{curv}} = 225 \pm 84 \text{ Gly} \quad (68\% \text{ CL})}$$
 
 At 95% confidence (approximately 2σ):
 
-$$\boxed{R_{\text{curv}} = 225 \pm 168 \text{ Gly} \quad (95\% \text{ CL})}$$
+$${\boxed{R_{\text{curv}} = 225 \pm 168 \text{ Gly} \quad (95\% \text{ CL})}$$
 
-which spans from approximately 57 Gly to 393 Gly, consistent with our bounds.
+which spans from approximately 57 Gly to 393 Gly, consistent with observational bounds.
 
 #### Summary Table
 
