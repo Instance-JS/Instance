@@ -795,7 +795,7 @@ This represents the **minimum possible radius** consistent with current observat
 
 #### Lower Bound (Maximum Universe Radius)
 
-The lower bound on $|\Omega_k|$ is less constrained, but we can establish a practical limit from the requirement that curvature be detectable with next-generation surveys (LSST, Euclid). These instruments are projected to achieve precision:
+The lower bound on $|\Omega_k|$ is less constrained, but we can establish a practical limit from the expectation that curvature be detectable with next-generation surveys (LSST, Euclid). These instruments are projected to achieve precision:
 
 $$|\Omega_k| > 0.001 \quad \text{(detection threshold)}$$
 
