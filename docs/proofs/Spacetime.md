@@ -422,7 +422,9 @@ None of these are permitted by the axioms. Therefore, **spherical geometry is ma
 
 **End of Parts I-IV**
 
-**Parts V-VIII: 4D Parallax, Modified Field Equations, and Probability Bias fully explained.**
+---
+
+**Parts V-VIII: will explore 4D Parallax, Modified Field Equations, and Probability Bias derived further.**
 
 ---
 # Part V: 4D Parallax and Modified Cosmological Equations
