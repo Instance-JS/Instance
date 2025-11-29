@@ -482,6 +482,71 @@ $$\Omega_k^{\text{naive}} = -\frac{1}{a_0^2 H_0^2} \approx -0.4$$
 
 Instead, all measurements are projections from the full 5D→4D structure, filtered through the assumption of a flat ($k=0$) background metric.
 
+
+### 5.25 4D Parallax as a Natural Evolution of 3D Parallax
+
+We observe 3D parallax as a known, fixed fact of reality. 
+Rather than questioning whether 4D Parallax exists, it's more logical to ask why WOULDN'T 4D parallax exist, if the universe was indeed a 4D Hypersphere?
+I find necessary to add that I find it shocking 
+that no current theorem that dismisses a hypersphere as 'unlikely' on 'observational' grounds, accounts for 4D Parallax. Therefore, we will correct this.
+
+#### 1. The 3D Parallax Foundation (Astronomy)
+
+In classical stellar parallax:
+
+| Quantity              | Symbol | Meaning                                                                 |
+|-----------------------|--------|-------------------------------------------------------------------------|
+| Baseline              | B      | Distance between the two observation points (1 AU = Earth’s orbital radius) |
+| Parallax angle        | p      | Half-angle by which the star appears to shift against the background   |
+| True distance to star | d      | Physical distance from the observer to the star                         |
+
+The exact relation is  
+$$ d = \frac{B}{\tan p} $$
+
+For all stars (p ≪ 1 radian), $\tan p \approx p$, so  
+$$ d \approx \frac{B}{p} \quad\Leftrightarrow\quad p \approx \frac{B}{d} \quad\Leftrightarrow\quad p \propto \frac{1}{d} $$
+
+**Core geometric principle**:  
+The apparent angular displacement (distortion) is **inversely proportional** to the true distance/scale of the object.
+
+#### 2. Generalization to 4D Cosmological Parallax
+
+We now lift the exact same principle to the full 4D+1 cosmological setting. The variables are redefined as follows:
+
+| 3D Parallax Concept       | 4D Parallax Generalization              | 4D Variable     | Physical Meaning in the 5D Framework                                                                                  |
+|---------------------------|-----------------------------------------|-----------------|-----------------------------------------------------------------------------------------------------------------------|
+| Distance to the star      | Cosmological scale factor               | **a(t)**        | Physical size of the 4D spatial hypersphere $\mathcal{M}^4$ at cosmic time t (normalised so a(today) = 1)              |
+| Baseline (fixed separation) | Topological invariant / logical bias   | **τ**           | The fixed, non-evolving **Logical Bias** – the tiny structural asymmetry of the 5D Probability Domain $\mathcal{D}_P$ |
+| Parallax angle (apparent shift) | Apparent geometric distortion         | **δ(a)**        | The **apparent curvature density** (or apparent deviation from flatness) measured by 4D observers                     |
+
+### The 4D Parallax Formula
+
+By direct analogy with the 3D case we obtain:
+
+$$
+\delta(a) \propto \frac{\tau}{a(t)}
+$$
+
+or, more precisely (including the correct dimensionality that appears in the Friedmann equations):
+
+$$
+\Omega_k^{\text{app}}(a) = -\frac{k_{\text{true}}}{a^2(t)H^2(t)} \approx \frac{\tau}{a^2(t)}
+$$
+
+(positive τ produces an apparent negative curvature contribution that exactly cancels the true positive closure term at early times).
+
+### Why it works
+
+- τ is **constant** (like the AU baseline – it does not stretch with the universe)  
+- a(t) **grows** with cosmic expansion  
+- Therefore the measured distortion δ(a) becomes smaller and smaller as the universe ages  
+- To a 4D observer the universe looks flatter and flatter over time even though the intrinsic geometry is rigidly closed (k = +1)
+
+This is nothing other than **parallax in an extra dimension** – the same trick astronomers have used for 200 years, now applied to the entire cosmos.
+
+The 3D formula $p \propto 1/d$ becomes the 4D formula $\Omega_k^{\text{app}} \propto \tau / a^2(t)$.  
+
+
 ### 5.3 The solution to a hidden problem: 4D Parallax (Meta-computational Geometric Isometry)
 
 **Definition (4D Parallax Function):**
@@ -498,11 +563,6 @@ where $a(t)$ is the cosmological scale factor and $\tau$ is the topological bias
 - The factor $a^3$ reflects the 3D spatial volume scaling: $V_{\text{spatial}}(t) \propto a^3(t)$
 
 **Analogy:** Consider a fixed amount of paint ($\tau$) spread over an expanding balloon surface. The paint density (paint per unit area) decreases as $\sim 1/a^2$ (for 2D surface) or $\sim 1/a^3$ (for 3D volume).
-
-
-
-
-
 
 
 ### 5.4 Modified Friedmann Equation from 5D
