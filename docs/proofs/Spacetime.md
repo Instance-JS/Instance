@@ -11,11 +11,11 @@ Claude Sonnet 4.5 (Formal Mathematics)
 
 We demonstrate that the infinities appearing in canonical cosmological and quantum gravitational frameworks are systematic indicators of incomplete logical models, not physical anomalies.
 
-    Mass-Probability Isomorphism: Using Protective Measurement Theory, we prove that mass density and probability density are physically identical quantities up to a normalization constant.
+- Mass-Probability Isomorphism: Using Protective Measurement Theory, we prove that mass density and probability density are physically identical quantities up to a normalization constant.
 
-    Spherical Necessity: The Normalization Requirement (∫∣Ψ∣2=1) mandates a 4D-finite spatial topology (k=0). The geometry emerges necessarily as a closed 4D hypersphere (k=+1) from variational principles when the shapeless 5D Probability Domain (DP​) actualizes into spacetime.
+- Spherical Necessity: The Normalization Requirement (∫∣Ψ∣2=1) mandates a 4D-finite spatial topology (k=0). The geometry emerges necessarily as a closed 4D hypersphere (k=+1) from variational principles when the shapeless 5D Probability Domain (DP​) actualizes into spacetime.
 
-    Expansion Derived: Spacetime expansion is not assumed, but derived: as Probability flows from potential (DP​) to actuality (M4), spatial growth becomes mathematically necessary.
+- Expansion Derived: Spacetime expansion is not assumed, but derived: as Probability flows from potential (DP​) to actuality (M4), spatial growth becomes mathematically necessary.
 
 Resolution and Testable Prediction
 
