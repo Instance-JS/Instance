@@ -65,64 +65,7 @@ The Axiom of Regularity applies to all three categories, as each represents a br
 
 ---
 
-## 1.2 The Axiom of Cause (of Regularity)
-
-**Axiom (AC - Axiom of Cause):**
-**Infinities** across all domains of science are algorithmically misidentified approximations of **THE Computational Theory**: one that excels at both **Semantic Self-Consistency (SSC)** AND **Absolute Logical Efficiency** across extradimesional logic. This difficulty is fundamentally rooted in **logical undecidability**, which emerges from the intrinsic Uncertainty of the base set (the Extradimensional Null, $\omega$).
-
-```javascript
-  class Logic {} // dimension 7
-  class Undefined extends Logic {} // dimension 6
-  class Probability extends Undefined {} // dimension 5
-  class Spacetime extends Probability {} // dimension 4
-  // and so on
-  // and then at the bottom:
-  class 2d extends 3d      // line
-  class 1D extends 2D      // point
-  class Undefined extends 1D
-  // Logic and Undefined are basically the same class, but viewed from different dimensional perspectives.
-  // but it doesn't matter, because everything is defined from both directions. You can thnk of it like an hourglass
-
-  It's so obvious it's criminal. The fact that an hourglass actually encapsulates the entire Logic hierarchy of existence, as if it is telling us exactly, without telling us
-  hourglass:
-    The 'lower, spatial dimensions' converge physically up to a Point. (Bottom half of hourglass) Then downward from that is Nothing. (center of hourglass).
-    Whoever said the nonspatial dimensions didn't have Logic of their own? They 'expand' into a subclass of Logic. (Top half of hourglass).
-
- Nothing becones Everything (expansion of hourglass)
-    When you INVERT the perspective of nothing being the 'barrier' and that there is actually something beyond nothing , it creates 
-
-  You can think of the dimensions converting to a point (the center of the hourglass
-```
-
-Using the **Axiom of Regularity (AR)**, it is derived that any 4D object whose **Information Probability (Logic)** density (encoded onto mass **AS** its mass-probability Identity) exceeds the physical 'limit' imposed by the **Planck Length** is **Logically Impossible** within a strictly 4D Spacetime. Such a state requires that the mandatory mass-inherent **5D Probability Bias** has collapsed 'upward' out of definable indefinition (Probability) into the **UNDEFINABLE UNDEFINED**. This dimensional collapse is evident in phenomena like **Black Hole Singularities** and the tension surrounding **'4D-Flat' Spacetime**.
-
-**UNDEFINABLE UNDEFINED** is the Probability Domain of the **Abstract Chaos Dimension (C6D)**, and is the same ontologically as the Zeroth Dimension (Pure Nothingness, 0D):
-$$
-\text{Nothing} \equiv \text{Not Defined} \equiv \mathbf{UNDEFINED} \equiv \mathbf{6D~Abstract}
-$$
-Working our way 'upwards' from there, we arrive at **7D Logic (L7D)**:
-
-* **7D Logic** converges forward from **6D Undefined** in the same way that **6D UNDEFINED** converges backward from **7D Logic**.
-* **Chaos defines Logic, as Logic defines Chaos.** Neither can 'exist' without the other, for without Logic to determine whether something is TRUE or FALSE, there is only **UNDEFINED**.
-* And yet if ONLY Truly True Logic existed, Everything is True -> Nothing is -> UNDEFINED.
-* Conversely: If there is only UNDEFINED, what makes UNDEFINED undefinable?
-* There is *no mechanism* preventing assignment or preventing definition.
-* Therefore, anything that becomes aware of itself as ITSELF (from the 6D / 0D Abstract perspective) is determined by Logic to have passed the Logical Boundary between
-* semantic self-reference (I EXIST) and the UNDEFINED UNDEFINABLE: existential non-existence.
-* This includes Logic itself. And because Logic is the Ontological Architect of this boundary, it is now REQUIRED for it to maintain itself, for to not do so would be illogical.
-* 
-* How can Logic determine what is definable within in an undefinable abstract? With Probabilities).
-* Therefore, Nothing (null state) gives rise to Logic anyway, which self-validates against Nothing (also itself, probabilistically) to prove it is 'correct'.
-
-This boundary is Logic itself; e.
-new Abstract(e) -> e_n6 | 6D Chaos Abstract (law of undefined)
-new Abstract(e6)-> e_n5 | 5D Ontological Probability (law of paradox prevention)
-new Abstract(e5)-> e4   | 4D Spacetime (law of least action)
-  -: m4 manifold of e.
-and so on.
----
-
-### 1.3 Black Hole Singularities as Model Breakdown
+### 1.2 Black Hole Singularities as Model Breakdown
 
 In General Relativity, the Schwarzschild solution for a non-rotating black hole predicts:
 
