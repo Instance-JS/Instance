@@ -487,7 +487,7 @@ Instead, all measurements are projections from the full 5D→4D structure, filte
 
 We observe 3D parallax as a known, fixed fact of reality. Rather than questioning if 4D Parallax exists, logic dictates we ask: why WOULDN'T 4D parallax exist, if the universe is indeed a 4D Hypersphere?
 
-It is shocking that current theorems dismissing a closed universe on 'observational' grounds fail to account for 4D Parallax. We will now correct this omission by deriving the 4D function directly from the 3D observational standard.
+It is quite frankly shocking that the possibility of a higher-dimensional parallax effect—directly analogous to the familiar 3D stellar parallax—has not, to our knowledge, been previously considered as a resolution to the apparent flatness of a fundamentally closed universe. We will now correct this omission by deriving the 4D function directly from the 3D observational standard.
 
 #### 1. The 3D Parallax Foundation (Astronomy)
 
