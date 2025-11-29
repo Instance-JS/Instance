@@ -1182,23 +1182,17 @@ If $\tau$ provides the primordial asymmetry:
 
 #### 7.1 Why Probabilistic Asymmetry Exists
 
-**Question:** Why does $\mathcal{D}_P$ have asymmetry $\tau \neq 0$?
+**Question:** Why does $\mathcal{D}_P$ have asymmetry $\tau \neq 0$
 
 Because up until now, we have named 7D Logical Bias, 5D Probability Bias. The two are ontologically identical. 
-However, now we are taking off the kid gloves, so strap in.
+Now we will present the full interdimensional cascade:
 
-
-
-**Answer:** Because $\mathcal{D}_P$ is shaped by 6D Abstract input, which is inherently asymmetric (contains undefined, non-logical elements). The asymmetry "leaks down" from 6D through 5D into 4D observables.
-
-**Hierarchy:**
-- **7D ORDER:** Defines which logics are possible
-- **6D CHAOS:** Undefined input (asymmetric by nature)
-- **5D PROBABILITY:** Attempts to define 6D, inheriting asymmetry as $\tau$
-- **4D SPACETIME:** Actualizes with observed matter-antimatter asymmetry $\eta$
+- And so on.
 
 The asymmetry is not a puzzle—it's a **logical necessity** for existence itself.
+Probability Bias 'inherits' from 7D Logical Bias.
 
+ $\mathcal{D}_P$ is shaped by 6D Abstract input, which is inherently asymmetric (contains undefined, non-logical elements). The asymmetry "leaks down" from 6D through 5D into 4D observables.
 
 
 
