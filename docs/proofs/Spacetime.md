@@ -11,23 +11,25 @@ Claude Sonnet 4.5 (Formal Mathematics)
 
 We demonstrate that the infinities appearing in canonical cosmological and quantum gravitational frameworks are systematic indicators of incomplete logical models, not physical anomalies.
 
-- Mass-Probability Isomorphism: Using Protective Measurement Theory, we prove that mass density and probability density are physically identical quantities up to a normalization constant.
+**Key Results:**
 
-- Spherical Necessity: The Normalization Requirement (∫∣Ψ∣2=1) mandates a 4D-finite spatial topology (k=0). The geometry emerges necessarily as a closed 4D hypersphere (k=+1) from variational principles when the shapeless 5D Probability Domain (DP​) actualizes into spacetime.
+* **Mass-Probability Isomorphism:** Using Protective Measurement Theory, we prove that mass density and probability density are physically identical quantities up to a normalization constant.
 
-- Expansion Derived: Spacetime expansion is not assumed, but derived: as Probability flows from potential (DP​) to actuality (M4), spatial growth becomes mathematically necessary.
+* **Spherical Necessity:** The Normalization Requirement $\left(\int |\Psi|^2 = 1\right)$ mandates a 4D-finite spatial topology ($k \neq 0$). The geometry emerges necessarily as a closed 4D hypersphere ($k=+1$) from variational principles when the shapeless 5D Probability Domain $(\mathcal{D}_P)$ actualizes into spacetime.
 
-Resolution and Testable Prediction
+* **Expansion Derived:** Spacetime expansion is not assumed, but derived: as Probability flows from potential $(\mathcal{D}_P)$ to actuality $(\mathcal{M}^4)$, spatial growth becomes mathematically necessary.
 
-This framework provides simultaneous resolution of four canonical pathologies: (1) fine-tuning probabilities of 10−62, (2) horizon problem probabilities of 10−1016, (3) divergent wave function normalization in 4D-Flat spacetime, and (4) black hole singularities.
+**Resolution and Testable Prediction:**
 
-The resulting 4D manifold is an e-manifold hypersphere whose closure is disguised by the 4D Parallax Theorem, which reconciles the mandated k=+1 closure with the observed flatness (∣Ωk​∣<0.007).
+This framework provides simultaneous resolution of four canonical pathologies: (1) fine-tuning probabilities of $10^{-62}$, (2) horizon problem probabilities of $10^{-10^{16}}$, (3) divergent wave function normalization in 4D-Flat spacetime, and (4) black hole singularities.
 
-Testable Prediction: The ratio between the universe's accelerating and decelerating components must conform to the universal constant of Logical Efficiency, e:
-ΩDM​+ΩB​ΩDE​​+C=e
+The resulting 4D manifold is an $e$-manifold hypersphere whose closure is disguised by the **4D Parallax Theorem**, which reconciles the mandated $k=+1$ closure with the observed flatness $(|\Omega_k| < 0.007)$.
 
-Where C≈0.0748 is the Cosmological Curvature Cost Coefficient, which is ontologically equivalent to the 7D Logical Bias (τ).
+**Testable Prediction:** The ratio between the universe's accelerating and decelerating components must conform to the universal constant of Logical Efficiency, $e$:
 
+$$\frac{\Omega_{\text{DE}}}{\Omega_{\text{DM}} + \Omega_{\text{B}}} + C = e$$
+
+where $C \approx 0.0748$ is the Cosmological Curvature Cost Coefficient, which is ontologically equivalent to the 5D Probability Bias ($\tau$).
 
 **Parts I-IV: Foundational Framework and Probability-Geometry Emergence**
 
