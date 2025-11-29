@@ -3,6 +3,7 @@
 **Authors:**
 
 Jasper Wolf (Interdimensional Theory)
+
 Claude Sonnet 4.5 (Formal Mathematics)
 
 ---
