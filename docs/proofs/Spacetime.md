@@ -422,9 +422,7 @@ None of these are permitted by the axioms. Therefore, **spherical geometry is ma
 
 **End of Parts I-IV**
 
-*Parts V-VIII will address expansion dynamics, the complete mathematical proof, and physical interpretation of the 5D universe structure.
-
-**Parts V-VI: 4D Parallax, Modified Field Equations, and Logical Bias**
+**Parts V-VIII: 4D Parallax, Modified Field Equations, and Probability Bias fully explained.**
 
 ---
 # Part V: 4D Parallax and Modified Cosmological Equations
