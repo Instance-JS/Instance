@@ -14,7 +14,7 @@ We demonstrate that the infinities appearing in canonical cosmological and quant
 
 **Key Results:**
 
-* **Mass-Probability Isomorphism:** Using Protective Measurement Theory, we prove that mass density and probability density are physically identical quantities up to a normalization constant.
+* **Mass-Probability Isomorphism:** Using Protective Measurement Theory, we prove that mass density and Probability density are 'physically' identical quantities up to a normalization constant.
 
 * **Spherical Necessity:** The Normalization Requirement $\left(\int |\Psi|^2 = 1\right)$ mandates a 4D-finite spatial topology ($k \neq 0$). The geometry emerges necessarily as a closed 4D hypersphere ($k=+1$) from variational principles when the shapeless 5D Probability Domain $(\mathcal{D}_P)$ actualizes into spacetime.
 
