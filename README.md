@@ -3,6 +3,10 @@ Direct DOM Architecture with ES6 Class Syntax.
 
 ```javascript
 
+/*
+ *  Ph’nglui mglw’nafh Cthulhu R’lyeh wgah’nagl fhtagn.
+ */
+
 (async function summonElderGod() {
   const eldritchDiv = await new Div('Whispers from the deep...')
     .init(ritualSetup)                 // Bind the sigils (sync)
