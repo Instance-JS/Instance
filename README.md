@@ -3,18 +3,17 @@ Direct DOM Architecture with ES6 Class Syntax.
 
 ```javascript
 
-(async function summonTheBeast() {
-  const eldritchDiv = await new Div('Enter the void...')
+(async function summonElderGod() {
+  const eldritchDiv = await new Div('Whispers from the deep...')
     .init(ritualSetup)                 // Bind the sigils (sync)
     .async(                            // Unleash the parallel demons
-      async () => await summonUser('/user'),   // Fetch soul 1
-      async () => await summonStats('/stats'), // Fetch soul 2
-      new Delay(666, () => console.log('The end is nigh'))  // Infernal timeout
+      async () => await fetchDreams('/user'),        // descent
+      async () => await fetchNightmares('/stats'),   // madness
+      new Delay(3636, () => console.log('Iä! Iä! Cthulhu Fhtagn!'))  // Infernal Awakening
     )
     .defer(finalIncantation)            // Seal the pact (post-async)
     .appendTo('body');                 // Manifest in the mortal realm
                                        // .append('@body');
-
   console.log('It lives:', eldritchDiv);
 })();
 
