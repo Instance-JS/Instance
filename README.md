@@ -54,7 +54,7 @@ You're funded by 'venture-capital' exceeding $500,000, adjusted for inflation, i
 
 Your company makes over 1 million USD per year and / or has 15 or more employees - ❌ Obviously not
 
-You're an 'individual' that's essentially a mega-corporation (Mr Beast) - ❌ I wasn't born yesterday
+You're an 'individual' that's essentially a de-facto mega-corporation (Mr Beast) - ❌ I wasn't born yesterday
 
 'Competing' frameworks wanting to 'outsource me' like "Denis Pushkarev 2.0" - ❌ No thanks. I'm watching y'all, best believe it. ;)
 
