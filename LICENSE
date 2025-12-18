@@ -1,56 +1,133 @@
 # Instance.js License
 
-Instance.js is licensed under the GNU Affero General Public License v3.0 or later (AGPL-3.0-or-later),
-with the following additional terms (permitted under AGPL Section 7):
+Instance.js is licensed under the **GNU Affero General Public License v3.0 or later** (“AGPL-3.0-or-later”), **subject to the additional terms below**, which are imposed pursuant to **Section 7 of the AGPL** (“Additional Permissions and Conditions”).
 
-## Additional Terms
+By copying, modifying, distributing, or using Instance.js, you agree to be bound by both the AGPL-3.0-or-later and the following Additional Terms.
 
-1. **Framework Integration Restriction**  
+---
 
-    Integration of Instance.js (or any derivative work) into a competing general-purpose JavaScript UI framework, library, meta-library, or meta-framework (including but not limited to React, Vue, Angular, Svelte, Solid, Preact, Lit, Qwik, Nuxt, Remix, Astro, etc.) requires a separate written commercial agreement.
-1. **Framework Integration Restriction**  
-   The use or incorporation of Instance.js source code, or any portion or modification thereof, into a competing general-purpose JavaScript UI framework, library, meta-library, or meta-framework (including but not limited to React, Vue, Angular, Svelte, Solid, Preact, Lit, Qwik, Nuxt, Remix, Astro, etc.) requires a separate written commercial agreement.
+## 1. Definitions
 
-2. **Large Organization Use**  
-   Organizations with more than $1 million USD in annual revenue or more than 15 employees must obtain a commercial license for:  
-   - Use in proprietary closed-source applications distributed to third parties  
-   - Use in SaaS or hosted services (beyond AGPL’s normal network disclosure requirement)  
-   - White-labeling or rebranding
+For the purposes of this license:
 
-3. **Educational and Content Creation Exception**  
-   Notwithstanding the restrictions in Sections 1–3 above, the following uses are explicitly permitted, even when the creator or organization receives payment or generates revenue:  
-   - Creating and distributing educational content about Instance.js, including but not limited to:  
-     - Video tutorials, courses, or reaction videos / livestreams (e.g., on YouTube, Udemy, Twitch, TikTok, MDN)  
-     - Live streaming educational sessions or coding demonstrations  
-     - Blog posts, articles, books, or written guides  
-     - Free or paid online courses, workshops, or training materials
-     - Educational websites or tools that demonstrate or teach Instance.js  
-   - Using Instance.js (including modified versions) in such educational content or demonstrations  
+* **“Instance.js”** means the software authored by Jasper Wolf (Ashraile), including all source code, object code, documentation, examples, and any derivative works thereof.
+* **“Competing Framework”** means any general-purpose JavaScript UI framework, library, meta-library, meta-framework, or application framework intended for third-party application development, whether open-source or proprietary, including but not limited to React, Vue, Angular, Svelte, Solid, Preact, Lit, Qwik, Nuxt, Remix, Astro, or functionally similar systems.
+* **“Organization”** means any legal entity, including but not limited to corporations, partnerships, LLCs, foundations, non-profits, government entities, or unincorporated groups.
+* **“Commercial Use”** means use primarily intended for, or reasonably expected to result in, direct or indirect commercial advantage or monetary compensation.
+* **“Educational Use”** means use whose primary purpose is instruction, explanation, demonstration, or analysis, rather than the delivery of a commercial product or service.
 
-   This exception applies only when the primary purpose of the use is to teach, explain, demonstrate, or promote the understanding of Instance.js or related programming concepts.  
+---
 
-   This exception does **not** apply to:  
-   - Integration of Instance.js into a competing general-purpose JavaScript UI framework  
-   - Use in proprietary closed-source applications distributed to third parties  
-   - Use in commercial SaaS platforms or hosted services (beyond AGPL network disclosure)  
-   - White-labeling or rebranding Instance.js as part of a different product  
-   - Any use where Instance.js is bundled as a core component of a non-educational commercial offering  
+## 2. Framework Integration Restriction
 
-   Educational uses must retain all copyright notices and attribution in the Source code as required by AGPL-3.0-or-later.  
-   Source code disclosure under AGPL-3.0-or-later is only required if you modify Instance.js and make the modified version available to users over a network (e.g., in a hosted web application). Purely demonstrative or local use (e.g., in videos, static demos, or local examples) does not trigger source disclosure obligations.
+Notwithstanding any permissions otherwise granted under the AGPL:
 
-4. **Commercial Licenses**  
-   Commercial licenses that remove the above restrictions are available exclusively via cryptocurrency payment (SOL preferred, BTC/ETH/USDT/ accepted). 
-   Contact: [TBD]
-   Pricing and payment details: [TBD - crypto-only]
+> **You may not use, incorporate, adapt, extract, re-implement, or embed Instance.js source code, in whole or in part, into a Competing Framework without first obtaining a separate written commercial license from the author.**
 
-5. **Application to All Versions**  
-   These additional terms apply to all versions of Instance.js released by the author, now and in the future, unless explicitly stated otherwise in a future release.
+This restriction applies regardless of whether the Competing Framework is:
 
-6. **Reservation of Rights**
-   The author reserves the right to refuse any commercial license offers or requests, at any price and for any reason, without explanation.
+* Open-source or proprietary
+* Distributed free of charge or commercially
+* Directly or indirectly monetized
 
-All other usage is governed solely by the AGPL-3.0-or-later.  
-Full license text: https://www.gnu.org/licenses/agpl-3.0.html
+This restriction applies to:
 
-Copyright (c) 2025 Jasper Wolf (Ashraile)
+* Direct code inclusion
+* Substantial code derivation
+* Reimplementation based on Instance.js internals
+* Architectural cloning intended to provide equivalent framework-level functionality
+
+---
+
+## 3. Large Organization Commercial Use Requirement
+
+Organizations that **(a)** have **annual gross revenue exceeding USD $1,000,000**, **or (b)** employ **more than fifteen (15) individuals**, **must obtain a commercial license** prior to engaging in any of the following:
+
+* Use of Instance.js in **proprietary or closed-source software** distributed to third parties
+* Use of Instance.js in **Software-as-a-Service (SaaS), hosted services, or cloud platforms**, beyond the standard AGPL network source-disclosure requirement
+* **White-labeling, rebranding, or sublicensing** Instance.js or software substantially based upon it
+
+### Startup and Small Team Grace
+
+Organizations **below both thresholds** may use Instance.js under the standard AGPL-3.0-or-later **without a commercial license**.
+
+If an organization later exceeds either threshold, continued use beyond that point requires contacting the author to obtain a commercial license. Preferential terms may be offered to early adopters.
+
+---
+
+## 4. Educational and Content Creation Exception
+
+Notwithstanding Sections 2 and 3 above, the following uses are **explicitly permitted**, even when the creator or organization receives payment or generates revenue:
+
+* Creation and distribution of educational content concerning Instance.js, including but not limited to:
+
+  * Video tutorials, walkthroughs, courses, reaction videos, or livestreams
+  * Blog posts, articles, books, documentation, or written guides
+  * Free or paid workshops, training programs, or instructional materials
+  * Educational websites or tools whose primary purpose is teaching or demonstrating Instance.js
+
+* Use of Instance.js, including modified versions, **solely within such educational materials or demonstrations**
+
+This exception applies **only where the primary purpose** of the use is educational.
+
+### Explicit Exclusions
+
+This exception **does not permit**:
+
+* Incorporation of Instance.js into a Competing Framework
+* Use in proprietary or closed-source applications distributed to third parties
+* Use as a core component of a commercial SaaS, platform, or hosted service
+* White-labeling, rebranding, or presenting Instance.js as part of another product
+* Bundling Instance.js as a functional dependency of a non-educational commercial offering
+
+All educational uses must retain all required copyright notices and attribution as required by the AGPL-3.0-or-later.
+
+AGPL source disclosure obligations are triggered **only** where Instance.js is modified and made available to users over a network. Purely demonstrative use (e.g., videos, slides, static examples, local demonstrations) does not independently trigger disclosure obligations.
+
+---
+
+## 5. Commercial Licensing and Author Rights
+
+Commercial licenses removing or modifying the above restrictions are available **exclusively** from the author and are payable **only via cryptocurrency**, with **USDT preferred** (SOL, BTC, and ETH also accepted).
+The author welcomes inquiries from independent developers, startups, and enterprises alike, and generally aims to offer reasonable and flexible terms to supporters of the project.
+
+The author:
+
+* Retains sole discretion to approve or deny commercial license requests
+* May evaluate requests based on intended use, scope, company, and distribution.
+* Is under no obligation to grant a commercial license, particularly if presented with so-called 'bad-faith' propositions.
+
+Contact details and pricing terms will be provided [TBD]. 
+No rights are granted unless explicitly confirmed in writing.
+
+---
+
+## 6. Non-Transferability
+
+Any commercial license granted:
+
+* Is **non-transferable**
+* Is limited solely to the purchasing legal entity
+* Does **not** extend to parent companies, subsidiaries, affiliates, successors, or related entities unless explicitly agreed in writing
+
+In the event of merger, acquisition, or change of control, continued use may require a new commercial license.
+
+---
+
+## 7. Application to All Versions
+
+These Additional Terms apply to **all current and future versions** of Instance.js released by the author, unless a future release explicitly states otherwise in writing.
+
+---
+
+## 8. Governing License
+
+Except as expressly modified by these Additional Terms, all use of Instance.js is governed exclusively by the **GNU Affero General Public License v3.0 or later**.
+Full license text: [https://www.gnu.org/licenses/agpl-3.0.html](https://www.gnu.org/licenses/agpl-3.0.html)
+
+---
+
+**Copyright © 2025 Jasper Wolf (Ashraile)**
+
+
+
