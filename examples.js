@@ -139,7 +139,7 @@ Instance.effect(() => {
 
 // ── 6. Fetch and load ─────────────────────────────────────────────────────────
 
-class Article extends Article {
+class SubArticle extends Article {
 
     ['@insertion']() {
         const id = this.dataset.articleId;
