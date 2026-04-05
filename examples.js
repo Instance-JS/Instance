@@ -5,17 +5,6 @@
 
 // ── 1. The basics ─────────────────────────────────────────────────────────────
 
-
-class CatDiv extends Div {
-
-    ['@mount']() {
-        this.of.add('class', 'text'); // .add('.text') .add('#id') .add(text)
-
-    }
-
-
-}
-
 class ProductCard extends Div {
 
     ['@insertion']() { // ['@append'](context) // ['@before'](context) ['@after'](context) ['@firstchild'](context) ['@lastchild'](context) {} context optional arg
@@ -40,31 +29,7 @@ class ProductCard extends Div {
 }
 
 new ProductCard('@third from last child of #catalogue')
-    .set('data-id', this.productId)
-
-
-
-class ProductCard extends Div {
-    ['@insertion']() {
-        this.this.addClass('card--loading')
-            .get('/api/product/' + this.dataset.id)
-            .then(r => r.json())
-            .then(product => {
-                this.this.text(product.name)
-                    .removeClass('card--loading')
-                this.$.price = product.price
-            })
-    }
-    ['@rendered']() {
-        this.this.on('click', () => this.this.trigger('add-to-cart'))
-        this.this.addClass('card--visible')
-    }
-    ['@removal']() {
-        this.$.price = null
-    }
-}
-
-
+    .set('data-id', this.productId);
 
 const div  = new Div();
 const span = new Span();
